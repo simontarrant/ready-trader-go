@@ -80,12 +80,15 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
         //                                 << bidPrices[0] << ", "
         //                                 << bidVolumes[0];
 
+        // Remember futures prices for pairwise trading when message for etf comes through
         std::copy(askPrices.begin(), askPrices.end(), prevAskPrices.begin());
         std::copy(askVolumes.begin(), askVolumes.end(), prevAskVolumes.begin());
         std::copy(bidPrices.begin(), bidPrices.end(), prevBidPrices.begin());
         std::copy(bidVolumes.begin(), bidVolumes.end(), prevBidVolumes.begin());
 
-    } else {
+    }
+    // Etf message
+    else {
         // RLOG(LG_AT, LogLevel::LL_INFO) << "ETF order update: " << orderBookTicks++ << " "
         //                                 << prevAskPrices[0] << ", "
         //                                 << prevAskVolumes[0] << ", "
@@ -96,13 +99,53 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
         if (bidPrices[0] && bidPrices[0] > prevAskPrices[0]) {
             RLOG(LG_AT, LogLevel::LL_INFO) << "Pairwise opportunity, ETF > FUT => buy futures, sell ETF";
 
-            const int etfSellVol = (POSITION_LIMIT + etfPosition <= bidVolumes[0])
-                                    ? POSITION_LIMIT + etfPosition : bidVolumes[0];
+            // Find the volume and price we are willing to execute at for fill and kill order
+            int etfIdx = 0;
+            int futIdx = 0;
+            int sellVol = 0;
+            while (etfIdx < ReadyTraderGo::TOP_LEVEL_COUNT && futIdx < ReadyTraderGo::TOP_LEVEL_COUNT &&
+                    bidPrices[etfIdx] > prevAskPrices[futIdx]) {
 
-            if (etfSellVol > 0) {
+                // added volume will be min of either what the position limit will allow, or the smaller volume at this price level
+                int minVolume;
+                int smaller;
+                if (bidVolumes[etfIdx] < prevAskVolumes[futIdx]) {
+                    minVolume = bidVolumes[etfIdx];
+                    smaller = 0;
+                } else if (bidVolumes[etfIdx] > prevAskVolumes[futIdx]) {
+                    minVolume = prevAskVolumes[futIdx];
+                    smaller = 1;
+                } else {
+                    minVolume = bidVolumes[etfIdx];
+                    smaller = 2;
+                }
+
+                int addedVol;
+                if (minVolume <= POSITION_LIMIT + etfPosition - sellVol) addedVol = minVolume;
+                else addedVol = POSITION_LIMIT + etfPosition - sellVol;
+
+                sellVol += addedVol;
+                if (sellVol - etfPosition >= POSITION_LIMIT) break;
+
+                switch (smaller)
+                {
+                case 0:
+                    etfIdx++;
+                    break;
+                case 1:
+                    futIdx++;
+                    break;
+                default:
+                    etfIdx++;
+                    futIdx++;
+                    break;
+                }
+            }
+
+            if (sellVol > 0) {
                 mAskId = mNextMessageId++;
-                RLOG(LG_AT, LogLevel::LL_INFO) << "Sell vol: " << etfSellVol << " order: " << mAskId;
-                SendInsertOrder(mAskId, Side::SELL, bidPrices[0], etfSellVol, Lifespan::FILL_AND_KILL);
+                RLOG(LG_AT, LogLevel::LL_INFO) << "Sell vol: " << sellVol << " order: " << mAskId;
+                SendInsertOrder(mAskId, Side::SELL, bidPrices[0], sellVol, Lifespan::FILL_AND_KILL);
                 mAsks.insert(mAskId);
             }
             
