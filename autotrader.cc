@@ -98,10 +98,14 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
 
             const int etfSellVol = (POSITION_LIMIT + etfPosition <= bidVolumes[0])
                                     ? POSITION_LIMIT + etfPosition : bidVolumes[0];
+
+            if (etfSellVol > 0) {
+                mAskId = mNextMessageId++;
+                RLOG(LG_AT, LogLevel::LL_INFO) << "Sell vol: " << etfSellVol << " order: " << mAskId;
+                SendInsertOrder(mAskId, Side::SELL, bidPrices[0], etfSellVol, Lifespan::FILL_AND_KILL);
+                mAsks.insert(mAskId);
+            }
             
-            mAskId = mNextMessageId++;
-            SendInsertOrder(mAskId, Side::SELL, bidPrices[0], etfSellVol, Lifespan::FILL_AND_KILL);
-            mAsks.insert(mAskId);
 
 
         }
@@ -112,9 +116,12 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
             const int etfBuyVol = (POSITION_LIMIT - etfPosition <= askVolumes[0])
                                     ? POSITION_LIMIT - etfPosition : askVolumes[0];
             
-            mBidId = mNextMessageId++;
-            SendInsertOrder(mBidId, Side::BUY, askPrices[0], etfBuyVol, Lifespan::FILL_AND_KILL);
-            mBids.insert(mBidId);
+            if (etfBuyVol > 0) {
+                mBidId = mNextMessageId++;
+                RLOG(LG_AT, LogLevel::LL_INFO) << "Buy vol: " << etfBuyVol << " order: " << mBidId;
+                SendInsertOrder(mBidId, Side::BUY, askPrices[0], etfBuyVol, Lifespan::FILL_AND_KILL);
+                mBids.insert(mBidId);
+            }
         }
     }
 
