@@ -107,6 +107,7 @@ public:
                                   const std::array<unsigned long, ReadyTraderGo::TOP_LEVEL_COUNT>& bidPrices,
                                   const std::array<unsigned long, ReadyTraderGo::TOP_LEVEL_COUNT>& bidVolumes) override;
 
+
 private:
     unsigned long mNextMessageId = 1;
     unsigned long mAskId = 0;
