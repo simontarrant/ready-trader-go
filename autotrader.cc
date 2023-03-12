@@ -25,13 +25,14 @@
 
 #include <ctime>
 #include <algorithm>
+#include <iostream>
 
 using namespace ReadyTraderGo;
 
 RTG_INLINE_GLOBAL_LOGGER_WITH_CHANNEL(LG_AT, "AUTO")
 
 constexpr int LOT_SIZE = 10;
-constexpr int POSITION_LIMIT = 100;
+constexpr unsigned long POSITION_LIMIT = 100;
 constexpr int TICK_SIZE_IN_CENTS = 100;
 constexpr int MIN_BID_NEARST_TICK = (MINIMUM_BID + TICK_SIZE_IN_CENTS) / TICK_SIZE_IN_CENTS * TICK_SIZE_IN_CENTS;
 constexpr int MAX_ASK_NEAREST_TICK = MAXIMUM_ASK / TICK_SIZE_IN_CENTS * TICK_SIZE_IN_CENTS;
@@ -66,6 +67,8 @@ void AutoTrader::HedgeFilledMessageHandler(unsigned long clientOrderId,
 
 // Handles main logic when order book info comes through about futures or ETF
 // Note: Futures appear to come through first on each tick
+// What if we want to icnrease the volume on one of our makes because there is more availbale to us now???
+// Maybe on the futures call, just make adjustmetns based on the futures, then etf call make adjustments needed
 void AutoTrader::OrderBookMessageHandler(Instrument instrument,
                                          unsigned long sequenceNumber,
                                          const std::array<unsigned long, TOP_LEVEL_COUNT>& askPrices,
@@ -73,182 +76,231 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
                                          const std::array<unsigned long, TOP_LEVEL_COUNT>& bidPrices,
                                          const std::array<unsigned long, TOP_LEVEL_COUNT>& bidVolumes)
 {
+    // Copy futures info into attributes to use when the etf order message comes through after
+    // See if any current order need to be altered
     if (instrument == Instrument::FUTURE) {
-        // RLOG(LG_AT, LogLevel::LL_INFO) << "Futures order update: " << orderBookTicks++ << " "
-        //                                 << askPrices[0] << ", "
-        //                                 << askVolumes[0] << ", "
-        //                                 << bidPrices[0] << ", "
-        //                                 << bidVolumes[0];
+        
+        // No future asks and we have a etf ask -> cancel our ask
+        if (!askPrices[0] && mAskPrice) {
+            cancelOrder(mAskId, true);
+        }
+        // We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+        if (mAskPrice && askPrices[0] && mAskPrice <= askPrices[0]) {
+            cancelOrder(mAskId, true);
+        }
 
-        // Remember futures prices for pairwise trading when message for etf comes through
-        std::copy(askPrices.begin(), askPrices.end(), prevAskPrices.begin());
-        std::copy(askVolumes.begin(), askVolumes.end(), prevAskVolumes.begin());
-        std::copy(bidPrices.begin(), bidPrices.end(), prevBidPrices.begin());
-        std::copy(bidVolumes.begin(), bidVolumes.end(), prevBidVolumes.begin());
+        // No future bids and we have a etf bid -> cancel our bid
+        if (!bidPrices[0] && mBidPrice) {
+            cancelOrder(mBidId, false);
+        }
+        // We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+        if (mBidPrice && bidPrices[0] && mBidPrice >= bidPrices[0]) {
+            cancelOrder(mBidId, false);
+        }
 
+        // Copy in futures values to be used when etf info comes through
+        // std::copy(askPrices.begin(), askPrices.end(), prevAskPrices.begin());
+        // std::copy(askVolumes.begin(), askVolumes.end(), prevAskVolumes.begin());
+        // std::copy(bidPrices.begin(), bidPrices.end(), prevBidPrices.begin());
+        // std::copy(bidVolumes.begin(), bidVolumes.end(), prevBidVolumes.begin());
+        futAskPrice = askPrices[0];
+        futAskVol = askVolumes[0];
+        futBidPrice = bidPrices[0];
+        futBidVol = bidVolumes[0];
     }
-    // Etf message
+    // See if we can make a market with new orders
     else {
-        // RLOG(LG_AT, LogLevel::LL_INFO) << "ETF order update: " << orderBookTicks++ << " "
-        //                                 << prevAskPrices[0] << ", "
-        //                                 << prevAskVolumes[0] << ", "
-        //                                 << prevBidPrices[0] << ", "
-        //                                 << prevBidVolumes[0];
 
-        // Pairwise opportunity, ETF bid > FUT ask => buy futures, sell ETF
-        if (bidPrices[0] && bidPrices[0] > prevAskPrices[0]) {
-            RLOG(LG_AT, LogLevel::LL_INFO) << "Pairwise opportunity, ETF > FUT => buy futures, sell ETF";
-
-            // Find the volume and price we are willing to execute at for fill and kill order
-            int etfIdx = 0;
-            int futIdx = 0;
-            int sellVol = 0;
-            while (etfIdx < ReadyTraderGo::TOP_LEVEL_COUNT && futIdx < ReadyTraderGo::TOP_LEVEL_COUNT &&
-                    bidPrices[etfIdx] > prevAskPrices[futIdx]) {
-
-                // added volume will be min of either what the position limit will allow, or the smaller volume at this price level
-                int minVolume;
-                int smaller;
-                if (bidVolumes[etfIdx] < prevAskVolumes[futIdx]) {
-                    minVolume = bidVolumes[etfIdx];
-                    smaller = 0;
-                } else if (bidVolumes[etfIdx] > prevAskVolumes[futIdx]) {
-                    minVolume = prevAskVolumes[futIdx];
-                    smaller = 1;
-                } else {
-                    minVolume = bidVolumes[etfIdx];
-                    smaller = 2;
-                }
-
-                int addedVol;
-                if (minVolume <= POSITION_LIMIT + etfPosition - sellVol) addedVol = minVolume;
-                else addedVol = POSITION_LIMIT + etfPosition - sellVol;
-
-                sellVol += addedVol;
-                if (sellVol - etfPosition >= POSITION_LIMIT) break;
-
-                switch (smaller)
-                {
-                case 0:
-                    etfIdx++;
-                    break;
-                case 1:
-                    futIdx++;
-                    break;
-                default:
-                    etfIdx++;
-                    futIdx++;
-                    break;
-                }
-            }
-
-            if (sellVol > 0) {
-                mAskId = mNextMessageId++;
-                RLOG(LG_AT, LogLevel::LL_INFO) << "Sell vol: " << sellVol << " order: " << mAskId;
-                SendInsertOrder(mAskId, Side::SELL, bidPrices[etfIdx], sellVol, Lifespan::FILL_AND_KILL);
-                mAsks.insert(mAskId);
-            }
-            
+        // RLOG(LG_AT, LogLevel::LL_INFO) << "mAskPrice " << mAskPrice << "  futAskPrice" << futAskPrice;
 
 
-        }
-        // Pairwise opportunity, FUT bid > ETF ask => buy ETF, sell futures
-        if (askPrices[0] && askPrices[0] < prevBidPrices[0]) {
-            RLOG(LG_AT, LogLevel::LL_INFO) << "Pairwise opportunity, FUT > ETF => buy ETF, sell futures";
+        // 1. Do we need to modify an existing order to increase the spread
+        // 2. Has our order gone out of the money and a new one need to be placed
 
-            // Find the volume and price we are willing to execute at for fill and kill order
-            int etfIdx = 0;
-            int futIdx = 0;
-            int buyVol = 0;
-            while (etfIdx < ReadyTraderGo::TOP_LEVEL_COUNT && futIdx < ReadyTraderGo::TOP_LEVEL_COUNT &&
-                    askPrices[etfIdx] < prevBidPrices[futIdx]) {
-
-                // added volume will be min of either what the position limit will allow, or the smaller volume at this price level
-                int minVolume;
-                int smaller;
-                if (askVolumes[etfIdx] < prevBidVolumes[futIdx]) {
-                    minVolume = askVolumes[etfIdx];
-                    smaller = 0;
-                } else if (askVolumes[etfIdx] > prevBidVolumes[futIdx]) {
-                    minVolume = prevBidVolumes[futIdx];
-                    smaller = 1;
-                } else {
-                    minVolume = askVolumes[etfIdx];
-                    smaller = 2;
-                }
-
-                int addedVol;
-                if (minVolume <= POSITION_LIMIT - etfPosition - buyVol) addedVol = minVolume;
-                else addedVol = POSITION_LIMIT - etfPosition - buyVol;
-
-                buyVol += addedVol;
-                if (buyVol - etfPosition >= POSITION_LIMIT) break;
-
-                switch (smaller)
-                {
-                case 0:
-                    etfIdx++;
-                    break;
-                case 1:
-                    futIdx++;
-                    break;
-                default:
-                    etfIdx++;
-                    futIdx++;
-                    break;
-                }
-            }
-          
-            if (buyVol > 0) {
-                mBidId = mNextMessageId++;
-                RLOG(LG_AT, LogLevel::LL_INFO) << "Buy vol: " << buyVol << " order: " << mBidId;
-                SendInsertOrder(mBidId, Side::BUY, askPrices[etfIdx], buyVol, Lifespan::FILL_AND_KILL);
-                mBids.insert(mBidId);
+        // no current ask -> create a new one
+        if (mAskId == 0) {
+            if (futAskPrice != 0) {
+                RLOG(LG_AT, LogLevel::LL_INFO) << "no current ask, create a new one";
+                RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 1";
+                makeAsk(askPrices[0]);
             }
         }
+        else {
+
+            // Create a better spread (increase ask)
+            if (mAskPrice < askPrices[0] - TICK_SIZE_IN_CENTS) {
+                RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 2";
+                setUpAwaitingCancelOrder(mAskId, askPrices[0] - TICK_SIZE_IN_CENTS, true);
+                cancelOrder(mAskId, true);
+                // mAskId = ++mNextMessageId;
+                // unsigned long makeAskVol = maxAskVol();
+                // RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 2";
+                // mAsks.insert(mAskId);
+                // SendInsertOrder(mAskId, Side::SELL, askPrices[0] - TICK_SIZE_IN_CENTS, makeAskVol, Lifespan::GOOD_FOR_DAY);
+            }
+
+            // Competitors have asks on same level or lower
+            // If there is room to move our ask down but still be above futures price
+            // Then move it down
+            if (mAskPrice >= askPrices[0] && mAskPrice > futAskPrice + TICK_SIZE_IN_CENTS) {
+                RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 3";
+                setUpAwaitingCancelOrder(mAskId, getMakeAskPrice(askPrices[0]), true);
+                cancelOrder(mAskId, true);
+                RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 3";
+                // makeAsk(askPrices[0]);
+            }
+        }
+
+        // No current bid
+        std::cout << bidPrices[0] << std::endl;
+        if (!mBidId) {
+            if (futBidPrice) {
+                RLOG(LG_AT, LogLevel::LL_INFO) << "BID 1: " << bidPrices[0];
+                makeBid(bidPrices[0]);
+            }
+        }
+        else {
+            // Create a better spread, lower bid
+            if (mBidPrice > bidPrices[0] + TICK_SIZE_IN_CENTS) {
+                setUpAwaitingCancelOrder(mBidId, bidPrices[0] + TICK_SIZE_IN_CENTS, false);
+                cancelOrder(mBidId, false);
+                // mBidId = ++mNextMessageId;
+                // unsigned long makeBidVol = maxBidVol();
+                // RLOG(LG_AT, LogLevel::LL_INFO) << "BID 2: " << bidPrices[0];
+                // SendInsertOrder(mBidId, Side::BUY, bidPrices[0] + TICK_SIZE_IN_CENTS, makeBidVol, Lifespan::GOOD_FOR_DAY);
+                // mBids.insert(mBidId);
+            }
+
+            // Better bids have been made
+            // if there is room to move our bid up but not above fut price - 1
+            // Then move bid up to a competitive price or one below fut bid price
+            if (mBidPrice <= bidPrices[0] && mBidPrice < futBidPrice - TICK_SIZE_IN_CENTS) {
+                setUpAwaitingCancelOrder(mBidId, getMakeBidPrice(bidPrices[0]), false);
+                cancelOrder(mBidId, false);
+                RLOG(LG_AT, LogLevel::LL_INFO) << "BID 3: " << bidPrices[0];
+                // makeBid(bidPrices[0]);
+            }
+        } 
+    }
+}
+
+void AutoTrader::makeAsk(unsigned long etfBestAskPrice) {
+
+    unsigned long makeAskVol = maxAskVol();
+    if (!makeAskVol) return;
+
+    // How high do we put aks if there are no asks?????
+    // if (!etfBestAskPrice) mAskPrice = futAskPrice + TICK_SIZE_IN_CENTS;
+    // else mAskPrice = std::max(futAskPrice + TICK_SIZE_IN_CENTS, etfBestAskPrice - TICK_SIZE_IN_CENTS);
+    mAskPrice = getMakeAskPrice(etfBestAskPrice);
+
+    mAskId = ++mNextMessageId;
+
+    RLOG(LG_AT, LogLevel::LL_INFO) << "Sending ask: " << mAskId << " Price:" << mAskPrice << " Volume:" << makeAskVol;
+    SendInsertOrder(mAskId, Side::SELL, mAskPrice, makeAskVol, Lifespan::GOOD_FOR_DAY);
+    mAsks.insert(mAskId);
+
+    mMakeAskAwaitingCancelId = 0;
+
+}
+
+unsigned long AutoTrader::getMakeAskPrice(unsigned long etfBestAskPrice) {
+    if (!etfBestAskPrice) return futAskPrice + TICK_SIZE_IN_CENTS;
+    else return std::max(futAskPrice + TICK_SIZE_IN_CENTS, etfBestAskPrice - TICK_SIZE_IN_CENTS);
+
+}
+
+unsigned long AutoTrader::maxAskVol() {
+    RLOG(LG_AT, LogLevel::LL_INFO) << "Max ask volume: " << std::min(POSITION_LIMIT + etfPosition, futAskVol);
+    return std::min(POSITION_LIMIT + etfPosition, futAskVol);
+}
+
+void AutoTrader::makeBid(unsigned long etfBestBidPrice) {
+
+    unsigned long makeBidVol = maxBidVol();
+    if (!makeBidVol) return;
+
+    // if (!etfBestBidPrice) mBidPrice = futBidPrice - 10 * TICK_SIZE_IN_CENTS;
+    // else mBidPrice = std::min(futBidPrice - TICK_SIZE_IN_CENTS, etfBestBidPrice + TICK_SIZE_IN_CENTS);
+    mBidPrice = getMakeBidPrice(etfBestBidPrice);
+
+    mBidId = ++mNextMessageId;
+
+    RLOG(LG_AT, LogLevel::LL_INFO) << "Sending bid: " << mBidId << " Price:" << mBidPrice << " Volume:" << makeBidVol;
+    SendInsertOrder(mBidId, Side::BUY, mBidPrice, makeBidVol, Lifespan::GOOD_FOR_DAY);
+    mBids.insert(mBidId);
+
+    mMakeBidAwaitingCancelId = 0;
+
+}
+
+unsigned long AutoTrader::getMakeBidPrice(unsigned long etfBestBidPrice) {
+    if (!etfBestBidPrice) return futBidPrice - 10 * TICK_SIZE_IN_CENTS;
+    return std::min(futBidPrice - TICK_SIZE_IN_CENTS, etfBestBidPrice + TICK_SIZE_IN_CENTS);
+}
+
+unsigned long AutoTrader::maxBidVol() {
+    return std::min(POSITION_LIMIT - etfPosition, futBidVol);
+}
+
+void AutoTrader::replaceCancelledTrade(bool ask, unsigned long remainingVol) {
+
+    if (ask) {
+
+        RLOG(LG_AT, LogLevel::LL_INFO) << "Ask: " << mMakeAskAwaitingCancelId << "Cancelled, rem vol: " << remainingVol;
+
+        unsigned long makeAskVol = maxAskVol();
+        if (makeAskVol <= remainingVol) return;
+        makeAskVol -= remainingVol;
+
+        mAskId = ++mNextMessageId;
+        RLOG(LG_AT, LogLevel::LL_INFO) << "Sending ask: " << mAskId << " Price:" << mMakeAskAwaitingCancelPrice << " Volume:" << makeAskVol;
+        SendInsertOrder(mAskId, Side::SELL, mMakeAskAwaitingCancelPrice, makeAskVol, Lifespan::GOOD_FOR_DAY);
+        mMakeAskAwaitingCancelId = 0;
+        mAsks.insert(mAskId);
+
+    } else {
+        RLOG(LG_AT, LogLevel::LL_INFO) << "Bid: " << mMakeBidAwaitingCancelId << "Cancelled, rem vol: " << remainingVol;
+
+        unsigned long makeBidVol = maxBidVol();
+        if (makeBidVol <= remainingVol) return;
+        makeBidVol -= remainingVol;
+
+        mBidId = ++mNextMessageId;
+        RLOG(LG_AT, LogLevel::LL_INFO) << "Sending bid: " << mBidId << " Price:" << mMakeBidAwaitingCancelPrice << " Volume:" << makeBidVol;
+        SendInsertOrder(mBidId, Side::BUY, mMakeBidAwaitingCancelPrice, makeBidVol, Lifespan::GOOD_FOR_DAY);
+        mMakeBidAwaitingCancelId = 0;
+        mBids.insert(mBidId);
+
     }
 
-
-    // RLOG(LG_AT, LogLevel::LL_INFO) << "order book received for " << instrument << " instrument"
-    //                                << ": ask prices: " << askPrices[0]
-    //                                << "; ask volumes: " << askVolumes[0]
-    //                                << "; bid prices: " << bidPrices[0]
-    //                                << "; bid volumes: " << bidVolumes[0];
-
-
-    // if (instrument == Instrument::FUTURE)
-    // {
-    //     unsigned long priceAdjustment = - (mPosition / LOT_SIZE) * TICK_SIZE_IN_CENTS;
-    //     unsigned long newAskPrice = (askPrices[0] != 0) ? askPrices[0] + priceAdjustment : 0;
-    //     unsigned long newBidPrice = (bidPrices[0] != 0) ? bidPrices[0] + priceAdjustment : 0;
-
-    //     if (mAskId != 0 && newAskPrice != 0 && newAskPrice != mAskPrice)
-    //     {
-    //         SendCancelOrder(mAskId);
-    //         mAskId = 0;
-    //     }
-    //     if (mBidId != 0 && newBidPrice != 0 && newBidPrice != mBidPrice)
-    //     {
-    //         SendCancelOrder(mBidId);
-    //         mBidId = 0;
-    //     }
-
-    //     if (mAskId == 0 && newAskPrice != 0 && mPosition > -POSITION_LIMIT)
-    //     {
-    //         mAskId = mNextMessageId++;
-    //         mAskPrice = newAskPrice;
-    //         SendInsertOrder(mAskId, Side::SELL, newAskPrice, LOT_SIZE, Lifespan::GOOD_FOR_DAY);
-    //         mAsks.emplace(mAskId);
-    //     }
-    //     if (mBidId == 0 && newBidPrice != 0 && mPosition < POSITION_LIMIT)
-    //     {
-    //         mBidId = mNextMessageId++;
-    //         mBidPrice = newBidPrice;
-    //         SendInsertOrder(mBidId, Side::BUY, newBidPrice, LOT_SIZE, Lifespan::GOOD_FOR_DAY);
-    //         mBids.emplace(mBidId);
-    //     }
-    // }
 }
+
+void AutoTrader::cancelOrder(unsigned long id, bool ask) {
+
+    RLOG(LG_AT, LogLevel::LL_INFO) << "Cancelling order: " << id;
+
+    SendCancelOrder(id);
+    if (ask) {
+        mAskId = 0;
+        mAskPrice = 0;
+    } else {
+        mBidPrice = 0;
+        mBidPrice = 0;
+    }
+}
+
+void AutoTrader::setUpAwaitingCancelOrder(unsigned long id, unsigned long price, bool ask) {
+    if (ask) {
+        mMakeAskAwaitingCancelId = id;
+        mMakeAskAwaitingCancelPrice = price;
+
+    } else {
+        mMakeBidAwaitingCancelId = id;
+        mMakeBidAwaitingCancelPrice = price;
+    }
+}
+
 
 void AutoTrader::OrderFilledMessageHandler(unsigned long clientOrderId,
                                            unsigned long price,
@@ -259,12 +311,12 @@ void AutoTrader::OrderFilledMessageHandler(unsigned long clientOrderId,
     if (mAsks.count(clientOrderId) == 1)
     {
         etfPosition -= (long)volume;
-        SendHedgeOrder(mNextMessageId++, Side::BUY, MAX_ASK_NEAREST_TICK, volume);
+        SendHedgeOrder(++mNextMessageId, Side::BUY, MAX_ASK_NEAREST_TICK, volume);
     }
     else if (mBids.count(clientOrderId) == 1)
     {
         etfPosition += (long)volume;
-        SendHedgeOrder(mNextMessageId++, Side::SELL, MIN_BID_NEARST_TICK, volume);
+        SendHedgeOrder(++mNextMessageId, Side::SELL, MIN_BID_NEARST_TICK, volume);
     }
 }
 
@@ -273,7 +325,13 @@ void AutoTrader::OrderStatusMessageHandler(unsigned long clientOrderId,
                                            unsigned long remainingVolume,
                                            signed long fees)
 {
-    if (remainingVolume == 0)
+    RLOG(LG_AT, LogLevel::LL_INFO) << "Something happened to order: " << clientOrderId;
+
+    // Check if it is a cancelled trade that now needs ot place a new trade
+    if (clientOrderId == mMakeAskAwaitingCancelId) replaceCancelledTrade(true, remainingVolume);
+    else if (clientOrderId == mMakeBidAwaitingCancelId) replaceCancelledTrade(false, remainingVolume);
+
+    if (!remainingVolume)
     {
         if (clientOrderId == mAskId)
         {
@@ -302,6 +360,6 @@ void AutoTrader::TradeTicksMessageHandler(Instrument instrument,
     //                                << "; bid prices: " << bidPrices[0]
     //                                << "; bid volumes: " << bidVolumes[0];
 
-        RLOG(LG_AT, LogLevel::LL_INFO) << "Trade tick: " << ticks++;
+    // RLOG(LG_AT, LogLevel::LL_INFO) << "Trade tick: " << ticks++;
 
 }
