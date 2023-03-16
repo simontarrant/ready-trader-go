@@ -1,6 +1,6 @@
 {
   "Engine": {
-    "MarketDataFile": "data/market_data1.csv",
+    "MarketDataFile": "data/market_data4.csv",
     "MarketEventInterval": 0.05,
     "MarketOpenDelay": 5.0,
     "MatchEventsFile": "match_events.csv",
@@ -45,6 +45,37 @@
     "npc7": "secret",
     "nothing-trader": "secret",
     "test-trader": "secret",
-    "autotrader": "secret"
+    "autotrader": "secret",
+    "mm-one-order-half-position-limits": "secret",
+    "mm-one-order-half-position-limits-1": "secret",
+    "mm-one-order-half-position-limits-2": "secret",
+    "mm-one-order-half-position-limits-3": "secret",
+    "mm-one-order-half-position-limits-4": "secret",
+    "pairs-simple-both-sides": "secret",
+    "good-vol": "secret",
+    "good-vol-1": "secret",
+    "good-vol-2": "secret",
+    "good-vol-3": "secret",
+
+    "BAC-1_FC-1": "secret",
+    "BAC-1_FC-1_2": "secret",
+
+    "BAC-2_FC-1": "secret",
+    "BAC-2_FC-1_2": "secret",
+    "BAC-3_FC-1": "secret",
+    "BAC-3_FC-1_2": "secret",
+    "BAC-4_FC-1": "secret",
+    "BAC-4_FC-1_2": "secret",
+    "BAC-5_FC-1": "secret",
+    "BAC-5_FC-1_2": "secret",
+
+    "BAC-1_FC-2": "secret",
+    "BAC-1_FC-2_2": "secret",
+    "BAC-1_FC-3": "secret",
+    "BAC-1_FC-3_2": "secret",
+    "BAC-1_FC-4": "secret",
+    "BAC-1_FC-4_2": "secret",
+    "BAC-1_FC-5": "secret",
+    "BAC-1_FC-5_2": "secret"
   }
 }

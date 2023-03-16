@@ -78,6 +78,9 @@ public:
     unsigned long getMakeBidPrice(unsigned long etfBestBidPrice);
     unsigned long getMakeAskPrice(unsigned long etfBestAskPrice);
 
+    void makeAskBasedOnFut(unsigned long futBestAskPrice);
+    void makeBidBasedOnFut(unsigned long futBestBidPrice);
+
 
     // Called when one of your orders is filled, partially or fully.
     void OrderFilledMessageHandler(unsigned long clientOrderId,
