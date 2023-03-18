@@ -16,8 +16,8 @@
 //     License along with Ready Trader Go.  If not, see
 //     <https://www.gnu.org/licenses/>.
 
-// What variables to we have to change here
-// Bid ask clearance, fut clearance
+// Maybe hedge when we hit max either side to stop prolonged fall causing bad directional exposure when there iss lots of momentum
+
 #include <array>
 
 #include <boost/asio/io_context.hpp>
@@ -26,19 +26,15 @@
 
 #include "autotrader.h"
 
-#include <ctime>
-#include <algorithm>
-
 using namespace ReadyTraderGo;
 
 RTG_INLINE_GLOBAL_LOGGER_WITH_CHANNEL(LG_AT, "AUTO")
 
-constexpr int LOT_SIZE = 10;
 constexpr unsigned long POSITION_LIMIT = 100;
 constexpr int TICK_SIZE_IN_CENTS = 100;
 constexpr int BID_ASK_CLEARANCE = 1 * TICK_SIZE_IN_CENTS;
 constexpr int FUT_CLEARANCE = 1 * TICK_SIZE_IN_CENTS;
-constexpr int FUT_CLEARANCE_PAIR = 1 * TICK_SIZE_IN_CENTS;
+// constexpr int FUT_CLEARANCE_PAIR = 1 * TICK_SIZE_IN_CENTS;
 constexpr int MIN_BID_NEARST_TICK = (MINIMUM_BID + TICK_SIZE_IN_CENTS) / TICK_SIZE_IN_CENTS * TICK_SIZE_IN_CENTS;
 constexpr int MAX_ASK_NEAREST_TICK = MAXIMUM_ASK / TICK_SIZE_IN_CENTS * TICK_SIZE_IN_CENTS;
 
