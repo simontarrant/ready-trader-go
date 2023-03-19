@@ -33,16 +33,13 @@ RTG_INLINE_GLOBAL_LOGGER_WITH_CHANNEL(LG_AT, "AUTO")
 
 constexpr unsigned long POSITION_LIMIT = 100;
 constexpr int TICK_SIZE_IN_CENTS = 100;
-constexpr int BID_ASK_CLEARANCE = 1 * TICK_SIZE_IN_CENTS;
 constexpr int FUT_CLEARANCE = 0 * TICK_SIZE_IN_CENTS;
-// constexpr int FUT_CLEARANCE_PAIR = 1 * TICK_SIZE_IN_CENTS;
 constexpr int MIN_BID_NEARST_TICK = (MINIMUM_BID + TICK_SIZE_IN_CENTS) / TICK_SIZE_IN_CENTS * TICK_SIZE_IN_CENTS;
 constexpr int MAX_ASK_NEAREST_TICK = MAXIMUM_ASK / TICK_SIZE_IN_CENTS * TICK_SIZE_IN_CENTS;
 constexpr int TICKS_PER_SECOND = 4;
 constexpr int MAX_UNHEDGED_SEC = 55;
 constexpr int MAX_UNHEDGED_TICKS = MAX_UNHEDGED_SEC * TICKS_PER_SECOND;
 constexpr int HEDGE_LIMIT = 10;
-// constexpr std::string CROSS_ORDER_MESSAGE = "order rejected: in cross with an existing order";
 
 
 AutoTrader::AutoTrader(boost::asio::io_context& context) : BaseAutoTrader(context)
@@ -60,6 +57,14 @@ void AutoTrader::ErrorMessageHandler(unsigned long clientOrderId,
 {
     // RLOG(LG_AT, LogLevel::LL_INFO) << "error with order " << clientOrderId << ": " << errorMessage;
 
+    if (errorMessage[19] == 'c') {
+        // std::cout << "hehe" << std::endl;
+        if (clientOrderId == mAskId) {
+            mAskInCross = true;
+            // RLOG(LG_AT, LogLevel::LL_INFO) << "ASK IN CROSS: " << mAskId;
+        }
+        else if (clientOrderId == mBidId) mBidInCross = true;
+    }
 
     if (clientOrderId != 0 && ((mAsks.count(clientOrderId) == 1) || (mBids.count(clientOrderId) == 1)))
     {
@@ -103,8 +108,6 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
     // See if any current order need to be altered
     if (instrument == Instrument::FUTURE) {
 
-        RLOG(LG_AT, LogLevel::LL_INFO) << "ASK PRICES: " << askPrices[0] << " BID PRICES: " << bidPrices[0];
-
         // There are futures asks
         if (askPrices[0]) {
             // If we have an ask
@@ -126,24 +129,22 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
         }
 
         // If there are futures bids
-        if (bidPrices[0]) {
-            // if we have a current bid
-            if (mBidId) {
-                // If current bid is not in optimal spot -> cancel and make new bid
-                if (mBidPrice != bidPrices[0] - FUT_CLEARANCE) {
-                    
-                    // RLOG(LG_AT, LogLevel::LL_INFO) << "CANCELLING BID: " << mBidId;
-                    mBidCancelId = mBidId;
-                    SendCancelOrder(mBidId);
-                    makeBidBasedOnFut(bidPrices[0]);
-                    // RLOG(LG_AT, LogLevel::LL_INFO) << "SENDING BID: " << mBidId;
-                }
-            }
-            // We have no curr bid -> create a new one
-            else {
+        // if we have a current bid
+        if (mBidId) {
+            // If current bid is not in optimal spot -> cancel and make new bid
+            if (mBidPrice != bidPrices[0] - FUT_CLEARANCE) {
+                
+                // RLOG(LG_AT, LogLevel::LL_INFO) << "CANCELLING BID: " << mBidId;
+                mBidCancelId = mBidId;
+                SendCancelOrder(mBidId);
                 makeBidBasedOnFut(bidPrices[0]);
                 // RLOG(LG_AT, LogLevel::LL_INFO) << "SENDING BID: " << mBidId;
             }
+        }
+        // We have no curr bid -> create a new one
+        else {
+            makeBidBasedOnFut(bidPrices[0]);
+            // RLOG(LG_AT, LogLevel::LL_INFO) << "SENDING BID: " << mBidId;
         }
 
         // Copy in futures values to be used when etf info comes through
@@ -240,11 +241,11 @@ void AutoTrader::OrderFilledMessageHandler(unsigned long clientOrderId,
         // If this was the previous ask that we attempted to cancel
         if (clientOrderId == mAskCancelId) {
             // If most recent bid was cancelled for being in cross with the ask that just got cancelled/filled -> resend bid
-            // if (mBidInCross) {
-            //     RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED BID: " << mBidId;               
-            //     makeBidBasedOnFut(mBidPrice);
-            //     mBidInCross = false;
-            // }
+            if (mBidInCross) {
+                RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED BID: " << mBidId;               
+                makeBidBasedOnFut(mBidPrice);
+                mBidInCross = false;
+            }
             
             // Check if most recent ask has too much volume in case this order was filled when it should have been cancelled
             unsigned long newVol = maxAskVol();
@@ -264,11 +265,11 @@ void AutoTrader::OrderFilledMessageHandler(unsigned long clientOrderId,
         if (clientOrderId == mBidCancelId) {
 
             // If most recent ask was cancelled for being in cross with this order that just got cancelled/filled -> resend ask
-            // if (mAskInCross) {
-            //     RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED ASK: " << mAskId;
-            //     makeAskBasedOnFut(mAskPrice);
-            //     mAskInCross = false;
-            // }
+            if (mAskInCross) {
+                RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED ASK: " << mAskId;
+                makeAskBasedOnFut(mAskPrice);
+                mAskInCross = false;
+            }
 
             // Check if most recent bid now has too much volume in case prev bid filled not cancelled
             unsigned long newVol = maxBidVol();
@@ -292,6 +293,17 @@ void AutoTrader::OrderStatusMessageHandler(unsigned long clientOrderId,
 
     if (!remainingVolume)
     {
+
+        if (clientOrderId == mBidCancelId && mAskInCross) {
+            // RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED ASK: " << mAskId << " FINISHED ORDER: " << clientOrderId << " PRICE: " << mAskPrice << " VOL: " << mAskVol;
+            makeAskBasedOnFut(mAskPrice);
+            mAskInCross = false;
+        }
+        else if (clientOrderId == mAskCancelId && mBidInCross) {
+            // RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED BID: " << mBidId << " FINISHED ORDER: " << clientOrderId << " PRICE: " << mBidPrice << " VOL: " << mBidVol;               
+            makeBidBasedOnFut(mBidPrice);
+            mBidInCross = false;
+        }
 
         if (clientOrderId == mAskId)
         {

@@ -105,10 +105,12 @@ private:
     unsigned long mAskPrice = 0;
     unsigned long mAskVol = 0;
     unsigned long mAskCancelId = 0;
+    bool mAskInCross = false;
     unsigned long mBidId = 0;
     unsigned long mBidPrice = 0;
     unsigned long mBidVol = 0;
     unsigned long mBidCancelId = 0;
+    bool mBidInCross = false;
 
     std::unordered_set<unsigned long> mAsks;
     std::unordered_set<unsigned long> mBids;

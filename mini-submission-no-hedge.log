@@ -1,0 +1,40 @@
+2023-03-17 10:16:30.256740 [INFO   ] [APP] application started
+2023-03-17 10:16:30.257079 [INFO   ] [APP] loading configuration from 'mini-submission-no-hedge.json'
+2023-03-17 10:16:30.257268 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 10:16:30.257451 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 10:16:30.257465 [INFO   ] [BASE] logging in with teamname='mini-submission-no-hedge' and secret='secret'
+2023-03-17 10:20:07.125896 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 10:20:07.125914 [INFO   ] [CON] 'Info' closing
+2023-03-17 10:20:07.125922 [INFO   ] [CON] 'Exec' closing
+2023-03-17 10:20:15.665195 [INFO   ] [APP] application started
+2023-03-17 10:20:15.665631 [INFO   ] [APP] loading configuration from 'mini-submission-no-hedge.json'
+2023-03-17 10:20:15.666331 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 10:20:15.666573 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 10:20:15.666592 [INFO   ] [BASE] logging in with teamname='mini-submission-no-hedge' and secret='secret'
+2023-03-17 10:27:15.799661 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 10:27:15.799685 [INFO   ] [CON] 'Info' closing
+2023-03-17 10:27:15.799699 [INFO   ] [CON] 'Exec' closing
+2023-03-17 19:29:50.759723 [INFO   ] [APP] application started
+2023-03-17 19:29:50.760086 [INFO   ] [APP] loading configuration from 'mini-submission-no-hedge.json'
+2023-03-17 19:29:50.760580 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 19:29:50.760642 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 19:29:50.760649 [INFO   ] [BASE] logging in with teamname='mini-submission-no-hedge' and secret='secret'
+2023-03-17 19:30:06.404014 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 19:30:06.404036 [INFO   ] [CON] 'Info' closing
+2023-03-17 19:30:06.404048 [INFO   ] [CON] 'Exec' closing
+2023-03-17 19:31:26.283730 [INFO   ] [APP] application started
+2023-03-17 19:31:26.284192 [INFO   ] [APP] loading configuration from 'mini-submission-no-hedge.json'
+2023-03-17 19:31:26.284721 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 19:31:26.284873 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 19:31:26.284890 [INFO   ] [BASE] logging in with teamname='mini-submission-no-hedge' and secret='secret'
+2023-03-17 19:36:49.449689 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 19:36:49.449706 [INFO   ] [CON] 'Info' closing
+2023-03-17 19:36:49.449723 [INFO   ] [CON] 'Exec' closing
+2023-03-18 16:03:32.871434 [INFO   ] [APP] application started
+2023-03-18 16:03:32.872269 [INFO   ] [APP] loading configuration from 'mini-submission-no-hedge.json'
+2023-03-18 16:03:32.873108 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 16:03:32.873200 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 16:03:32.873210 [INFO   ] [BASE] logging in with teamname='mini-submission-no-hedge' and secret='secret'
+2023-03-18 16:05:56.842346 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 16:05:56.842357 [INFO   ] [CON] 'Info' closing
+2023-03-18 16:05:56.842368 [INFO   ] [CON] 'Exec' closing

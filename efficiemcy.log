@@ -1,0 +1,176 @@
+2023-03-17 04:47:41.943228 [INFO   ] [APP] application started
+2023-03-17 04:47:41.943556 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 04:47:41.943744 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 04:47:41.943946 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 04:47:41.944020 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 04:48:25.805187 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 04:48:25.805204 [INFO   ] [CON] 'Info' closing
+2023-03-17 04:48:25.805218 [INFO   ] [CON] 'Exec' closing
+2023-03-17 04:49:00.571881 [INFO   ] [APP] application started
+2023-03-17 04:49:00.572686 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 04:49:00.573155 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 04:49:00.573500 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 04:49:00.573527 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 04:50:00.993331 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 04:50:00.993348 [INFO   ] [CON] 'Info' closing
+2023-03-17 04:50:00.993362 [INFO   ] [CON] 'Exec' closing
+2023-03-17 04:59:41.990705 [INFO   ] [APP] application started
+2023-03-17 04:59:41.991195 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 04:59:41.991399 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 04:59:41.991587 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 04:59:41.991607 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 05:09:16.169615 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 05:09:16.169636 [INFO   ] [CON] 'Info' closing
+2023-03-17 05:09:16.169653 [INFO   ] [CON] 'Exec' closing
+2023-03-17 05:09:26.012346 [INFO   ] [APP] application started
+2023-03-17 05:09:26.012631 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 05:09:26.012850 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 05:09:26.013031 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 05:09:26.013046 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 05:16:53.798719 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-17 05:16:53.798730 [INFO   ] [CON] 'Info' closing
+2023-03-17 05:16:53.798740 [INFO   ] [CON] 'Exec' closing
+2023-03-17 05:26:35.909537 [INFO   ] [APP] application started
+2023-03-17 05:26:35.909879 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 05:26:35.910172 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 05:26:35.910343 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 05:26:35.910357 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 05:33:51.044194 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 05:33:51.044207 [INFO   ] [CON] 'Info' closing
+2023-03-17 05:33:51.044218 [INFO   ] [CON] 'Exec' closing
+2023-03-17 05:35:55.792590 [INFO   ] [APP] application started
+2023-03-17 05:35:55.792916 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 05:35:55.793425 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 05:35:55.793623 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 05:35:55.793646 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 05:41:36.474480 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 05:41:36.474497 [INFO   ] [CON] 'Info' closing
+2023-03-17 05:41:36.474511 [INFO   ] [CON] 'Exec' closing
+2023-03-17 05:41:47.516826 [INFO   ] [APP] application started
+2023-03-17 05:41:47.517356 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 05:41:47.517700 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 05:41:47.517944 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 05:41:47.517962 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 05:42:32.354110 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 05:42:32.354124 [INFO   ] [CON] 'Info' closing
+2023-03-17 05:42:32.354131 [INFO   ] [CON] 'Exec' closing
+2023-03-17 05:43:54.403303 [INFO   ] [APP] application started
+2023-03-17 05:43:54.404055 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 05:43:54.404352 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 05:43:54.404488 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 05:43:54.404518 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 05:51:56.462829 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 05:51:56.462847 [INFO   ] [CON] 'Info' closing
+2023-03-17 05:51:56.462860 [INFO   ] [CON] 'Exec' closing
+2023-03-17 05:52:05.361492 [INFO   ] [APP] application started
+2023-03-17 05:52:05.361689 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 05:52:05.362080 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 05:52:05.362210 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 05:52:05.362219 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 05:53:55.753566 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 05:53:55.753591 [INFO   ] [CON] 'Info' closing
+2023-03-17 05:53:55.753604 [INFO   ] [CON] 'Exec' closing
+2023-03-17 05:54:12.382817 [INFO   ] [APP] application started
+2023-03-17 05:54:12.383821 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 05:54:12.384859 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 05:54:12.385125 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 05:54:12.385152 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 05:56:46.555944 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 05:56:46.555962 [INFO   ] [CON] 'Info' closing
+2023-03-17 05:56:46.555968 [INFO   ] [CON] 'Exec' closing
+2023-03-17 05:58:41.430140 [INFO   ] [APP] application started
+2023-03-17 05:58:41.430680 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 05:58:41.430992 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 05:58:41.431323 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 05:58:41.431359 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 06:03:55.348883 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 06:03:55.348898 [INFO   ] [CON] 'Info' closing
+2023-03-17 06:03:55.348907 [INFO   ] [CON] 'Exec' closing
+2023-03-17 09:39:31.152118 [INFO   ] [APP] application started
+2023-03-17 09:39:31.152649 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 09:39:31.153091 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 09:39:31.153215 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 09:39:31.153308 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 09:43:57.498951 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-17 09:43:57.498958 [INFO   ] [CON] 'Info' closing
+2023-03-17 09:43:57.498967 [INFO   ] [CON] 'Exec' closing
+2023-03-17 10:07:49.633065 [INFO   ] [APP] application started
+2023-03-17 10:07:49.633445 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 10:07:49.634473 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 10:07:49.634736 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 10:07:49.634750 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 10:09:49.714425 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 10:09:49.714442 [INFO   ] [CON] 'Info' closing
+2023-03-17 10:09:49.714455 [INFO   ] [CON] 'Exec' closing
+2023-03-17 10:16:29.786279 [INFO   ] [APP] application started
+2023-03-17 10:16:29.786582 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 10:16:29.786764 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 10:16:29.786893 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 10:16:29.786909 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 10:20:07.125904 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 10:20:07.125922 [INFO   ] [CON] 'Info' closing
+2023-03-17 10:20:07.125930 [INFO   ] [CON] 'Exec' closing
+2023-03-17 10:20:15.665888 [INFO   ] [APP] application started
+2023-03-17 10:20:15.666259 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 10:20:15.666498 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 10:20:15.666613 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 10:20:15.666634 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 11:10:36.693241 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-17 11:10:36.693271 [INFO   ] [CON] 'Info' closing
+2023-03-17 11:10:36.693284 [INFO   ] [CON] 'Exec' closing
+2023-03-17 19:29:50.759711 [INFO   ] [APP] application started
+2023-03-17 19:29:50.760072 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 19:29:50.760454 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 19:29:50.760562 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 19:29:50.760570 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 19:30:06.404016 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 19:30:06.404032 [INFO   ] [CON] 'Info' closing
+2023-03-17 19:30:06.404044 [INFO   ] [CON] 'Exec' closing
+2023-03-17 19:31:26.284249 [INFO   ] [APP] application started
+2023-03-17 19:31:26.284521 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-17 19:31:26.284878 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 19:31:26.284993 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 19:31:26.285008 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-17 19:42:03.406121 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 19:42:03.406151 [INFO   ] [CON] 'Info' closing
+2023-03-17 19:42:03.406163 [INFO   ] [CON] 'Exec' closing
+2023-03-18 16:03:32.871245 [INFO   ] [APP] application started
+2023-03-18 16:03:32.871565 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-18 16:03:32.872559 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 16:03:32.872657 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 16:03:32.872668 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-18 16:19:46.827908 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-18 16:19:46.827939 [INFO   ] [CON] 'Info' closing
+2023-03-18 16:19:46.827956 [INFO   ] [CON] 'Exec' closing
+2023-03-18 16:46:23.975404 [INFO   ] [APP] application started
+2023-03-18 16:46:23.975915 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-18 16:46:23.976446 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 16:46:23.976580 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 16:46:23.976598 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-18 17:01:29.014684 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 17:01:29.014703 [INFO   ] [CON] 'Info' closing
+2023-03-18 17:01:29.014717 [INFO   ] [CON] 'Exec' closing
+2023-03-18 17:06:03.609895 [INFO   ] [APP] application started
+2023-03-18 17:06:03.611848 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-18 17:06:03.612826 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 17:06:03.613140 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 17:06:03.613198 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-18 17:21:08.216391 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-18 17:21:08.216415 [INFO   ] [CON] 'Info' closing
+2023-03-18 17:21:08.216419 [INFO   ] [CON] 'Exec' closing
+2023-03-18 17:25:29.550390 [INFO   ] [APP] application started
+2023-03-18 17:25:29.550693 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-18 17:25:29.550985 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 17:25:29.551176 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 17:25:29.551189 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-18 17:40:34.134192 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 17:40:34.134203 [INFO   ] [CON] 'Info' closing
+2023-03-18 17:40:34.134213 [INFO   ] [CON] 'Exec' closing
+2023-03-18 17:42:48.972812 [INFO   ] [APP] application started
+2023-03-18 17:42:48.973116 [INFO   ] [APP] loading configuration from 'efficiemcy.json'
+2023-03-18 17:42:48.973352 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 17:42:48.973540 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 17:42:48.973556 [INFO   ] [BASE] logging in with teamname='efficiemcy' and secret='secret'
+2023-03-18 17:57:53.610095 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-18 17:57:53.610121 [INFO   ] [CON] 'Info' closing
+2023-03-18 17:57:53.610141 [INFO   ] [CON] 'Exec' closing
