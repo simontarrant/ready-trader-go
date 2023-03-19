@@ -60,14 +60,6 @@ void AutoTrader::ErrorMessageHandler(unsigned long clientOrderId,
 {
     // RLOG(LG_AT, LogLevel::LL_INFO) << "error with order " << clientOrderId << ": " << errorMessage;
 
-    if (errorMessage[19] == 'c') {
-        // std::cout << "hehe" << std::endl;
-        if (clientOrderId == mAskId) {
-            mAskInCross = true;
-            // RLOG(LG_AT, LogLevel::LL_INFO) << "ASK IN CROSS: " << mAskId;
-        }
-        else if (clientOrderId == mBidId) mBidInCross = true;
-    }
 
     if (clientOrderId != 0 && ((mAsks.count(clientOrderId) == 1) || (mBids.count(clientOrderId) == 1)))
     {
@@ -110,6 +102,8 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
     // Copy futures info into attributes to use when the etf order message comes through after
     // See if any current order need to be altered
     if (instrument == Instrument::FUTURE) {
+
+        RLOG(LG_AT, LogLevel::LL_INFO) << "ASK PRICES: " << askPrices[0] << " BID PRICES: " << bidPrices[0];
 
         // There are futures asks
         if (askPrices[0]) {
@@ -285,8 +279,8 @@ void AutoTrader::OrderFilledMessageHandler(unsigned long clientOrderId,
             }
         }
     }
-    RLOG(LG_AT, LogLevel::LL_INFO) << "order " << clientOrderId << " filled for " << volume
-                                   << " lots at $" << price << " cents";
+    // RLOG(LG_AT, LogLevel::LL_INFO) << "order " << clientOrderId << " filled for " << volume
+    //                                << " lots at $" << price << " cents";
 }
 
 void AutoTrader::OrderStatusMessageHandler(unsigned long clientOrderId,
@@ -298,17 +292,6 @@ void AutoTrader::OrderStatusMessageHandler(unsigned long clientOrderId,
 
     if (!remainingVolume)
     {
-
-        if (clientOrderId == mBidCancelId && mAskInCross) {
-            // RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED ASK: " << mAskId << " FINISHED ORDER: " << clientOrderId << " PRICE: " << mAskPrice << " VOL: " << mAskVol;
-            makeAskBasedOnFut(mAskPrice);
-            mAskInCross = false;
-        }
-        else if (clientOrderId == mAskCancelId && mBidInCross) {
-            // RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED BID: " << mBidId << " FINISHED ORDER: " << clientOrderId << " PRICE: " << mBidPrice << " VOL: " << mBidVol;               
-            makeBidBasedOnFut(mBidPrice);
-            mBidInCross = false;
-        }
 
         if (clientOrderId == mAskId)
         {
