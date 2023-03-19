@@ -103,17 +103,31 @@ private:
     unsigned long mNextMessageId = 1;
     unsigned long mAskId = 0;
     unsigned long mAskPrice = 0;
+    unsigned long mAskVol = 0;
+    unsigned long mAskCancelId = 0;
+    bool mAskInCross = false;
     unsigned long mBidId = 0;
     unsigned long mBidPrice = 0;
-    signed long etfPosition = 0;
+    unsigned long mBidVol = 0;
+    unsigned long mBidCancelId = 0;
+    bool mBidInCross = false;
 
     std::unordered_set<unsigned long> mAsks;
     std::unordered_set<unsigned long> mBids;
+
+    unsigned long ticksUnhedged = 0;
+    long etfPosition = 0;
+    long futPosition = 0;
+    unsigned long mHedgeAskId = 0;
+    unsigned long mHedgeBidId = 0;
+    std::unordered_set<unsigned long> mHedges;
+
 
     void makeAskBasedOnFut(unsigned long futBestAskPrice);
     void makeBidBasedOnFut(unsigned long futBestBidPrice);
     unsigned long maxAskVol();
     unsigned long maxBidVol();
+
 };
 
 #endif //CPPREADY_TRADER_GO_AUTOTRADER_H
