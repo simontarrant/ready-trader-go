@@ -68,15 +68,6 @@ public:
                                  const std::array<unsigned long, ReadyTraderGo::TOP_LEVEL_COUNT>& bidVolumes) override;
 
 
-    void makeAsk(unsigned long etfBestAskPrice);
-    unsigned long maxAskVol();
-    void makeBid(unsigned long etfBestBidPrice);
-    unsigned long maxBidVol();
-    void cancelOrder(unsigned long id, bool ask);
-    void replaceCancelledTrade(bool ask, unsigned long remainingVol);
-    void setUpAwaitingCancelOrder(unsigned long id, unsigned long price, bool ask);
-    unsigned long getMakeBidPrice(unsigned long etfBestBidPrice);
-    unsigned long getMakeAskPrice(unsigned long etfBestAskPrice);
 
 
     // Called when one of your orders is filled, partially or fully.
@@ -112,33 +103,31 @@ private:
     unsigned long mNextMessageId = 1;
     unsigned long mAskId = 0;
     unsigned long mAskPrice = 0;
+    unsigned long mAskVol = 0;
+    unsigned long mAskCancelId = 0;
+    bool mAskInCross = false;
     unsigned long mBidId = 0;
     unsigned long mBidPrice = 0;
-    signed long etfPosition = 0;
+    unsigned long mBidVol = 0;
+    unsigned long mBidCancelId = 0;
+    bool mBidInCross = false;
 
     std::unordered_set<unsigned long> mAsks;
     std::unordered_set<unsigned long> mBids;
 
-    // Info for making orders after a cancel goes through
-    unsigned long mMakeAskAwaitingCancelId = 0;
-    unsigned long mMakeAskAwaitingCancelPrice = 0;
-    unsigned long mMakeBidAwaitingCancelId = 0;
-    unsigned long mMakeBidAwaitingCancelPrice = 0;
-
-    // Futures info from prev order book message
-    // std::array<unsigned long, ReadyTraderGo::TOP_LEVEL_COUNT> prevAskPrices{{0, 0, 0, 0, 0}};
-    // std::array<unsigned long, ReadyTraderGo::TOP_LEVEL_COUNT> prevAskVolumes{{0, 0, 0, 0, 0}};
-    // std::array<unsigned long, ReadyTraderGo::TOP_LEVEL_COUNT> prevBidPrices{{0, 0, 0, 0, 0}};
-    // std::array<unsigned long, ReadyTraderGo::TOP_LEVEL_COUNT> prevBidVolumes{{0, 0, 0, 0, 0}};
-    unsigned long futAskPrice = 0;
-    unsigned long futAskVol = 0;
-    unsigned long futBidPrice = 0;
-    unsigned long futBidVol = 0;
+    unsigned long ticksUnhedged = 0;
+    long etfPosition = 0;
+    long futPosition = 0;
+    unsigned long mHedgeAskId = 0;
+    unsigned long mHedgeBidId = 0;
+    std::unordered_set<unsigned long> mHedges;
 
 
-    // Clock timing attributes
-    unsigned long orderBookTicks = 0;
-    unsigned long ticks = 0;
+    void makeAskBasedOnFut(unsigned long futBestAskPrice);
+    void makeBidBasedOnFut(unsigned long futBestBidPrice);
+    unsigned long maxAskVol();
+    unsigned long maxBidVol();
+
 };
 
 #endif //CPPREADY_TRADER_GO_AUTOTRADER_H

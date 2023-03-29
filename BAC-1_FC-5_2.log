@@ -1,0 +1,1291 @@
+2023-03-17 00:25:17.452922 [INFO   ] [APP] application started
+2023-03-17 00:25:17.453254 [INFO   ] [APP] loading configuration from 'BAC-1_FC-5_2.json'
+2023-03-17 00:25:17.453418 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 00:25:17.453602 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 00:25:17.453620 [INFO   ] [BASE] logging in with teamname='BAC-1_FC-5_2' and secret='secret'
+2023-03-17 00:25:20.341462 [INFO   ] [AUTO] Sending ask: 2 Price: 148600 Volume:50
+2023-03-17 00:25:20.341468 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:20.341480 [INFO   ] [AUTO] Sending bid: 3 Price: 146600 Volume:50
+2023-03-17 00:25:20.341481 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:20.341789 [INFO   ] [AUTO] Order status update: 2
+2023-03-17 00:25:20.341806 [INFO   ] [AUTO] Order status update: 3
+2023-03-17 00:25:20.579213 [INFO   ] [AUTO] Cancelling: 3 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:20.579260 [INFO   ] [AUTO] Sending ask: 4 Price: 147600 Volume:50
+2023-03-17 00:25:20.579263 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:20.579416 [INFO   ] [AUTO] Order status update: 3
+2023-03-17 00:25:20.579786 [INFO   ] [AUTO] Order status update: 2
+2023-03-17 00:25:20.579820 [INFO   ] [AUTO] Order status update: 4
+2023-03-17 00:25:20.858643 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:20.858696 [INFO   ] [AUTO] Sending bid: 5 Price: 146300 Volume:50
+2023-03-17 00:25:20.858699 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:20.858884 [INFO   ] [AUTO] Order status update: 5
+2023-03-17 00:25:21.044475 [INFO   ] [AUTO] Sending bid: 6 Price: 146500 Volume:50
+2023-03-17 00:25:21.044481 [INFO   ] [AUTO] BID 3: 146400
+2023-03-17 00:25:21.044768 [INFO   ] [AUTO] Order status update: 5
+2023-03-17 00:25:21.044813 [INFO   ] [AUTO] Order status update: 6
+2023-03-17 00:25:21.570819 [INFO   ] [AUTO] Cancelling: 4 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:21.571073 [INFO   ] [AUTO] Order status update: 4
+2023-03-17 00:25:21.801467 [INFO   ] [AUTO] Sending ask: 7 Price: 147600 Volume:50
+2023-03-17 00:25:21.801474 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:21.802164 [INFO   ] [AUTO] Order status update: 7
+2023-03-17 00:25:22.557214 [INFO   ] [AUTO] Cancelling: 6 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:22.557592 [INFO   ] [AUTO] Order status update: 6
+2023-03-17 00:25:22.863046 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:22.863098 [INFO   ] [AUTO] Sending ask: 8 Price: 147500 Volume:50
+2023-03-17 00:25:22.863102 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:22.863105 [INFO   ] [AUTO] Sending bid: 9 Price: 146300 Volume:50
+2023-03-17 00:25:22.863106 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:22.863686 [INFO   ] [AUTO] Order status update: 7
+2023-03-17 00:25:22.863706 [INFO   ] [AUTO] Order status update: 8
+2023-03-17 00:25:22.863729 [INFO   ] [AUTO] Order status update: 9
+2023-03-17 00:25:23.095896 [INFO   ] [AUTO] Cancelling: 9 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:23.096075 [INFO   ] [AUTO] Order status update: 9
+2023-03-17 00:25:23.351232 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:23.351268 [INFO   ] [AUTO] Sending bid: 10 Price: 146200 Volume:50
+2023-03-17 00:25:23.351273 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:23.351481 [INFO   ] [AUTO] Order status update: 10
+2023-03-17 00:25:23.594143 [INFO   ] [AUTO] Sending bid: 11 Price: 146400 Volume:50
+2023-03-17 00:25:23.594147 [INFO   ] [AUTO] BID 3: 146300
+2023-03-17 00:25:23.594329 [INFO   ] [AUTO] Order status update: 10
+2023-03-17 00:25:23.594363 [INFO   ] [AUTO] Order status update: 11
+2023-03-17 00:25:23.872627 [INFO   ] [AUTO] Cancelling: 11 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:23.872779 [INFO   ] [AUTO] Order status update: 11
+2023-03-17 00:25:24.054134 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:24.054165 [INFO   ] [AUTO] Sending bid: 12 Price: 146300 Volume:50
+2023-03-17 00:25:24.054168 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:24.054309 [INFO   ] [AUTO] Order status update: 12
+2023-03-17 00:25:25.087268 [INFO   ] [AUTO] Cancelling: 12 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:25.087311 [INFO   ] [AUTO] Sending ask: 13 Price: 147300 Volume:50
+2023-03-17 00:25:25.087314 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:25.088025 [INFO   ] [AUTO] Order status update: 12
+2023-03-17 00:25:25.088045 [INFO   ] [AUTO] Order status update: 8
+2023-03-17 00:25:25.088066 [INFO   ] [AUTO] Order status update: 13
+2023-03-17 00:25:25.307759 [INFO   ] [AUTO] Cancelling: 13 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:25.307767 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:25.307820 [INFO   ] [AUTO] Sending bid: 14 Price: 146200 Volume:50
+2023-03-17 00:25:25.307823 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:25.308134 [INFO   ] [AUTO] Order status update: 13
+2023-03-17 00:25:25.308641 [INFO   ] [AUTO] Order status update: 14
+2023-03-17 00:25:25.620114 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:25.620160 [INFO   ] [AUTO] Sending ask: 15 Price: 147500 Volume:50
+2023-03-17 00:25:25.620164 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:25.620168 [INFO   ] [AUTO] Sending bid: 16 Price: 146300 Volume:50
+2023-03-17 00:25:25.620169 [INFO   ] [AUTO] BID 3: 146200
+2023-03-17 00:25:25.620502 [INFO   ] [AUTO] Order status update: 15
+2023-03-17 00:25:25.620529 [INFO   ] [AUTO] Order status update: 14
+2023-03-17 00:25:25.620533 [INFO   ] [AUTO] Order status update: 16
+2023-03-17 00:25:25.864768 [INFO   ] [AUTO] Cancelling: 15 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:25.864811 [INFO   ] [AUTO] Sending bid: 17 Price: 146400 Volume:50
+2023-03-17 00:25:25.864814 [INFO   ] [AUTO] BID 3: 146300
+2023-03-17 00:25:25.864956 [INFO   ] [AUTO] Order status update: 15
+2023-03-17 00:25:25.865023 [INFO   ] [AUTO] Order status update: 16
+2023-03-17 00:25:25.865254 [INFO   ] [AUTO] Order status update: 17
+2023-03-17 00:25:26.106103 [INFO   ] [AUTO] Cancelling: 17 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:26.106143 [INFO   ] [AUTO] Sending ask: 18 Price: 147500 Volume:50
+2023-03-17 00:25:26.106146 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:26.106321 [INFO   ] [AUTO] Order status update: 17
+2023-03-17 00:25:26.106340 [INFO   ] [AUTO] Order status update: 18
+2023-03-17 00:25:26.327329 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:26.327357 [INFO   ] [AUTO] Sending bid: 19 Price: 146300 Volume:50
+2023-03-17 00:25:26.327360 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:26.327730 [INFO   ] [AUTO] Order status update: 19
+2023-03-17 00:25:26.572166 [INFO   ] [AUTO] Cancelling: 19 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:26.572213 [INFO   ] [AUTO] Sending ask: 20 Price: 147300 Volume:50
+2023-03-17 00:25:26.572217 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:26.573568 [INFO   ] [AUTO] Order status update: 19
+2023-03-17 00:25:26.573591 [INFO   ] [AUTO] Order status update: 18
+2023-03-17 00:25:26.573606 [INFO   ] [AUTO] Order status update: 20
+2023-03-17 00:25:26.816950 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:26.817006 [INFO   ] [AUTO] Sending ask: 21 Price: 147200 Volume:50
+2023-03-17 00:25:26.817010 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:26.817013 [INFO   ] [AUTO] Sending bid: 22 Price: 146100 Volume:50
+2023-03-17 00:25:26.817014 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:26.817492 [INFO   ] [AUTO] Order status update: 20
+2023-03-17 00:25:26.817543 [INFO   ] [AUTO] Order status update: 21
+2023-03-17 00:25:26.817578 [INFO   ] [AUTO] Order status update: 22
+2023-03-17 00:25:27.068550 [INFO   ] [AUTO] Cancelling: 21 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:27.068601 [INFO   ] [AUTO] Sending bid: 23 Price: 146200 Volume:50
+2023-03-17 00:25:27.068604 [INFO   ] [AUTO] BID 3: 147000
+2023-03-17 00:25:27.069215 [INFO   ] [AUTO] Order status update: 21
+2023-03-17 00:25:27.069234 [INFO   ] [AUTO] Order status update: 22
+2023-03-17 00:25:27.069260 [INFO   ] [AUTO] Order status update: 23
+2023-03-17 00:25:27.383787 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:27.383834 [INFO   ] [AUTO] Sending ask: 24 Price: 147600 Volume:50
+2023-03-17 00:25:27.383837 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:27.383839 [INFO   ] [AUTO] Sending bid: 25 Price: 146400 Volume:50
+2023-03-17 00:25:27.383841 [INFO   ] [AUTO] BID 3: 147000
+2023-03-17 00:25:27.385427 [INFO   ] [AUTO] Order status update: 24
+2023-03-17 00:25:27.385444 [INFO   ] [AUTO] Order status update: 23
+2023-03-17 00:25:27.385471 [INFO   ] [AUTO] Order status update: 25
+2023-03-17 00:25:27.585433 [INFO   ] [AUTO] Cancelling: 25 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:27.585484 [INFO   ] [AUTO] Sending ask: 26 Price: 147500 Volume:50
+2023-03-17 00:25:27.585487 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:27.585798 [INFO   ] [AUTO] Order status update: 25
+2023-03-17 00:25:27.585957 [INFO   ] [AUTO] Order status update: 24
+2023-03-17 00:25:27.586284 [INFO   ] [AUTO] Order status update: 26
+2023-03-17 00:25:27.855632 [INFO   ] [AUTO] Cancelling: 26 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:27.855640 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:27.855692 [INFO   ] [AUTO] Sending bid: 27 Price: 146300 Volume:50
+2023-03-17 00:25:27.855694 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:27.855818 [INFO   ] [AUTO] Order status update: 26
+2023-03-17 00:25:27.855951 [INFO   ] [AUTO] Order status update: 27
+2023-03-17 00:25:28.095180 [INFO   ] [AUTO] Sending ask: 28 Price: 147500 Volume:50
+2023-03-17 00:25:28.095186 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:28.095425 [INFO   ] [AUTO] Order status update: 28
+2023-03-17 00:25:29.093137 [INFO   ] [AUTO] Cancelling: 27 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:29.093183 [INFO   ] [AUTO] Sending ask: 29 Price: 147400 Volume:50
+2023-03-17 00:25:29.093187 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:29.093476 [INFO   ] [AUTO] Order status update: 27
+2023-03-17 00:25:29.093501 [INFO   ] [AUTO] Order status update: 28
+2023-03-17 00:25:29.093540 [INFO   ] [AUTO] Order status update: 29
+2023-03-17 00:25:29.322694 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:29.322744 [INFO   ] [AUTO] Sending bid: 30 Price: 146200 Volume:50
+2023-03-17 00:25:29.322747 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:29.322999 [INFO   ] [AUTO] Order status update: 30
+2023-03-17 00:25:29.828013 [INFO   ] [AUTO] Cancelling: 30 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:29.828051 [INFO   ] [AUTO] Sending ask: 31 Price: 147300 Volume:50
+2023-03-17 00:25:29.828056 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:29.830510 [INFO   ] [AUTO] Order status update: 30
+2023-03-17 00:25:29.830530 [INFO   ] [AUTO] Order status update: 29
+2023-03-17 00:25:29.830551 [INFO   ] [AUTO] Order status update: 31
+2023-03-17 00:25:30.112706 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:30.112758 [INFO   ] [AUTO] Sending ask: 32 Price: 147200 Volume:50
+2023-03-17 00:25:30.112761 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:30.112764 [INFO   ] [AUTO] Sending bid: 33 Price: 146000 Volume:50
+2023-03-17 00:25:30.112765 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:30.113210 [INFO   ] [AUTO] Order status update: 31
+2023-03-17 00:25:30.113240 [INFO   ] [AUTO] Order status update: 32
+2023-03-17 00:25:30.113263 [INFO   ] [AUTO] Order status update: 33
+2023-03-17 00:25:30.365343 [INFO   ] [AUTO] Cancelling: 32 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:30.365379 [INFO   ] [AUTO] Sending bid: 34 Price: 146100 Volume:50
+2023-03-17 00:25:30.365382 [INFO   ] [AUTO] BID 3: 146200
+2023-03-17 00:25:30.365829 [INFO   ] [AUTO] Order status update: 32
+2023-03-17 00:25:30.365871 [INFO   ] [AUTO] Order status update: 33
+2023-03-17 00:25:30.365874 [INFO   ] [AUTO] Order status update: 34
+2023-03-17 00:25:30.603000 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:30.603075 [INFO   ] [AUTO] Sending ask: 35 Price: 147400 Volume:50
+2023-03-17 00:25:30.603079 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:30.603081 [INFO   ] [AUTO] Sending bid: 36 Price: 146200 Volume:50
+2023-03-17 00:25:30.603082 [INFO   ] [AUTO] BID 3: 146300
+2023-03-17 00:25:30.603239 [INFO   ] [AUTO] Order status update: 35
+2023-03-17 00:25:30.603701 [INFO   ] [AUTO] Order status update: 34
+2023-03-17 00:25:30.603738 [INFO   ] [AUTO] Order status update: 36
+2023-03-17 00:25:30.833461 [INFO   ] [AUTO] Sending bid: 37 Price: 146300 Volume:50
+2023-03-17 00:25:30.833469 [INFO   ] [AUTO] BID 3: 146400
+2023-03-17 00:25:30.834595 [INFO   ] [AUTO] Order status update: 36
+2023-03-17 00:25:30.834684 [INFO   ] [AUTO] Order status update: 37
+2023-03-17 00:25:31.083344 [INFO   ] [AUTO] Cancelling: 35 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:31.083390 [INFO   ] [AUTO] Sending bid: 38 Price: 146500 Volume:50
+2023-03-17 00:25:31.083393 [INFO   ] [AUTO] BID 3: 146500
+2023-03-17 00:25:31.083790 [INFO   ] [AUTO] Order status update: 35
+2023-03-17 00:25:31.083811 [INFO   ] [AUTO] Order status update: 37
+2023-03-17 00:25:31.083831 [INFO   ] [AUTO] Order status update: 38
+2023-03-17 00:25:31.378945 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:31.378985 [INFO   ] [AUTO] Sending ask: 39 Price: 147700 Volume:50
+2023-03-17 00:25:31.378989 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:31.380381 [INFO   ] [AUTO] Order status update: 39
+2023-03-17 00:25:31.795105 [INFO   ] [AUTO] Sending bid: 40 Price: 146600 Volume:50
+2023-03-17 00:25:31.795111 [INFO   ] [AUTO] BID 3: 146700
+2023-03-17 00:25:31.795523 [INFO   ] [AUTO] Order status update: 38
+2023-03-17 00:25:31.795547 [INFO   ] [AUTO] Order status update: 40
+2023-03-17 00:25:32.136836 [INFO   ] [AUTO] Cancelling: 40 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:32.136876 [INFO   ] [AUTO] Sending ask: 41 Price: 147600 Volume:50
+2023-03-17 00:25:32.136880 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:32.137536 [INFO   ] [AUTO] Order status update: 40
+2023-03-17 00:25:32.137558 [INFO   ] [AUTO] Order status update: 39
+2023-03-17 00:25:32.137591 [INFO   ] [AUTO] Order status update: 41
+2023-03-17 00:25:32.295826 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:32.295884 [INFO   ] [AUTO] Sending bid: 42 Price: 146400 Volume:50
+2023-03-17 00:25:32.295887 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:32.296138 [INFO   ] [AUTO] Order status update: 42
+2023-03-17 00:25:32.562251 [INFO   ] [AUTO] Cancelling: 42 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:32.563718 [INFO   ] [AUTO] Order status update: 42
+2023-03-17 00:25:32.880420 [INFO   ] [AUTO] Sending bid: 43 Price: 146400 Volume:50
+2023-03-17 00:25:32.880426 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:32.880688 [INFO   ] [AUTO] Order status update: 43
+2023-03-17 00:25:34.133279 [INFO   ] [AUTO] Cancelling: 43 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:34.133333 [INFO   ] [AUTO] Sending ask: 44 Price: 147500 Volume:50
+2023-03-17 00:25:34.133336 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:34.133826 [INFO   ] [AUTO] Order status update: 43
+2023-03-17 00:25:34.133846 [INFO   ] [AUTO] Order status update: 41
+2023-03-17 00:25:34.133870 [INFO   ] [AUTO] Order status update: 44
+2023-03-17 00:25:34.369753 [INFO   ] [AUTO] Cancelling: 44 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:34.369804 [INFO   ] [AUTO] Sending bid: 45 Price: 146400 Volume:50
+2023-03-17 00:25:34.369807 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:34.369967 [INFO   ] [AUTO] Order status update: 44
+2023-03-17 00:25:34.369970 [INFO   ] [AUTO] Order status update: 45
+2023-03-17 00:25:34.609712 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:34.609758 [INFO   ] [AUTO] Sending ask: 46 Price: 147700 Volume:50
+2023-03-17 00:25:34.609761 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:34.609764 [INFO   ] [AUTO] Sending bid: 47 Price: 146500 Volume:50
+2023-03-17 00:25:34.609765 [INFO   ] [AUTO] BID 3: 146600
+2023-03-17 00:25:34.610182 [INFO   ] [AUTO] Order status update: 46
+2023-03-17 00:25:34.610201 [INFO   ] [AUTO] Order status update: 45
+2023-03-17 00:25:34.610203 [INFO   ] [AUTO] Order status update: 47
+2023-03-17 00:25:34.856306 [INFO   ] [AUTO] Cancelling: 47 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:34.856354 [INFO   ] [AUTO] Sending ask: 48 Price: 147600 Volume:50
+2023-03-17 00:25:34.856358 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:34.856712 [INFO   ] [AUTO] Order status update: 47
+2023-03-17 00:25:34.856748 [INFO   ] [AUTO] Order status update: 46
+2023-03-17 00:25:34.856767 [INFO   ] [AUTO] Order status update: 48
+2023-03-17 00:25:35.124549 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:35.124596 [INFO   ] [AUTO] Sending bid: 49 Price: 146400 Volume:50
+2023-03-17 00:25:35.124599 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:35.124838 [INFO   ] [AUTO] Order status update: 49
+2023-03-17 00:25:35.561966 [INFO   ] [AUTO] Sending ask: 50 Price: 147500 Volume:50
+2023-03-17 00:25:35.561975 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:35.562111 [INFO   ] [AUTO] Order status update: 48
+2023-03-17 00:25:35.562154 [INFO   ] [AUTO] Order status update: 50
+2023-03-17 00:25:35.838621 [INFO   ] [AUTO] Cancelling: 49 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:35.838665 [INFO   ] [AUTO] Sending ask: 51 Price: 147400 Volume:50
+2023-03-17 00:25:35.838668 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:35.838809 [INFO   ] [AUTO] Order status update: 49
+2023-03-17 00:25:35.838836 [INFO   ] [AUTO] Order status update: 50
+2023-03-17 00:25:35.838877 [INFO   ] [AUTO] Order status update: 51
+2023-03-17 00:25:36.131745 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:36.131790 [INFO   ] [AUTO] Sending bid: 52 Price: 146300 Volume:50
+2023-03-17 00:25:36.131793 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:36.133113 [INFO   ] [AUTO] Order status update: 52
+2023-03-17 00:25:36.294035 [INFO   ] [AUTO] Cancelling: 51 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:36.294075 [INFO   ] [AUTO] Sending bid: 53 Price: 146400 Volume:50
+2023-03-17 00:25:36.294079 [INFO   ] [AUTO] BID 3: 146600
+2023-03-17 00:25:36.297110 [INFO   ] [AUTO] Order status update: 51
+2023-03-17 00:25:36.297130 [INFO   ] [AUTO] Order status update: 52
+2023-03-17 00:25:36.297149 [INFO   ] [AUTO] Order status update: 53
+2023-03-17 00:25:36.563619 [INFO   ] [AUTO] Cancelling: 53 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:36.563659 [INFO   ] [AUTO] Sending ask: 54 Price: 147400 Volume:50
+2023-03-17 00:25:36.563662 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:36.564144 [INFO   ] [AUTO] Order status update: 53
+2023-03-17 00:25:36.564172 [INFO   ] [AUTO] Order status update: 54
+2023-03-17 00:25:36.826750 [INFO   ] [AUTO] Cancelling: 54 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:36.826757 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:36.826795 [INFO   ] [AUTO] Sending bid: 55 Price: 146300 Volume:50
+2023-03-17 00:25:36.826797 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:36.827024 [INFO   ] [AUTO] Order status update: 54
+2023-03-17 00:25:36.827057 [INFO   ] [AUTO] Order status update: 55
+2023-03-17 00:25:37.122049 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:37.122097 [INFO   ] [AUTO] Sending ask: 56 Price: 147500 Volume:50
+2023-03-17 00:25:37.122101 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:37.122427 [INFO   ] [AUTO] Order status update: 56
+2023-03-17 00:25:37.862251 [INFO   ] [AUTO] Cancelling: 56 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:37.862290 [INFO   ] [AUTO] Sending bid: 57 Price: 146500 Volume:50
+2023-03-17 00:25:37.862293 [INFO   ] [AUTO] BID 3: 146600
+2023-03-17 00:25:37.862469 [INFO   ] [AUTO] Order status update: 56
+2023-03-17 00:25:37.862472 [INFO   ] [AUTO] Order status update: 55
+2023-03-17 00:25:37.862504 [INFO   ] [AUTO] Order status update: 57
+2023-03-17 00:25:38.042662 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:38.042703 [INFO   ] [AUTO] Sending ask: 58 Price: 147700 Volume:50
+2023-03-17 00:25:38.042706 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:38.043027 [INFO   ] [AUTO] Order status update: 58
+2023-03-17 00:25:38.366849 [INFO   ] [AUTO] Sending ask: 59 Price: 147600 Volume:50
+2023-03-17 00:25:38.366855 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:38.367583 [INFO   ] [AUTO] Order status update: 58
+2023-03-17 00:25:38.367618 [INFO   ] [AUTO] Order status update: 59
+2023-03-17 00:25:38.806711 [INFO   ] [AUTO] Cancelling: 59 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:38.807071 [INFO   ] [AUTO] Order status update: 59
+2023-03-17 00:25:39.043395 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:39.043435 [INFO   ] [AUTO] Sending ask: 60 Price: 147700 Volume:50
+2023-03-17 00:25:39.043439 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:39.043532 [INFO   ] [AUTO] Order status update: 60
+2023-03-17 00:25:39.324907 [INFO   ] [AUTO] Cancelling: 57 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:39.324946 [INFO   ] [AUTO] Sending ask: 61 Price: 147600 Volume:50
+2023-03-17 00:25:39.324950 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:39.326129 [INFO   ] [AUTO] Order status update: 57
+2023-03-17 00:25:39.326154 [INFO   ] [AUTO] Order status update: 60
+2023-03-17 00:25:39.326178 [INFO   ] [AUTO] Order status update: 61
+2023-03-17 00:25:39.575314 [INFO   ] [AUTO] Cancelling: 61 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:39.575359 [INFO   ] [AUTO] Sending bid: 62 Price: 146500 Volume:50
+2023-03-17 00:25:39.575365 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:39.575991 [INFO   ] [AUTO] Order status update: 61
+2023-03-17 00:25:39.576015 [INFO   ] [AUTO] Order status update: 62
+2023-03-17 00:25:39.886266 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:39.886297 [INFO   ] [AUTO] Sending ask: 63 Price: 147700 Volume:50
+2023-03-17 00:25:39.886300 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:39.886305 [INFO   ] [AUTO] Sending bid: 64 Price: 146600 Volume:50
+2023-03-17 00:25:39.886306 [INFO   ] [AUTO] BID 3: 146700
+2023-03-17 00:25:39.886608 [INFO   ] [AUTO] Order status update: 63
+2023-03-17 00:25:39.886630 [INFO   ] [AUTO] Order status update: 62
+2023-03-17 00:25:39.886655 [INFO   ] [AUTO] Order status update: 64
+2023-03-17 00:25:40.557781 [INFO   ] [AUTO] Cancelling: 63 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:40.557825 [INFO   ] [AUTO] Sending bid: 65 Price: 146900 Volume:50
+2023-03-17 00:25:40.557828 [INFO   ] [AUTO] BID 3: 146800
+2023-03-17 00:25:40.558017 [INFO   ] [AUTO] Order status update: 63
+2023-03-17 00:25:40.558040 [INFO   ] [AUTO] Order status update: 64
+2023-03-17 00:25:40.558516 [INFO   ] [AUTO] Order status update: 65
+2023-03-17 00:25:40.875755 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:40.875797 [INFO   ] [AUTO] Sending ask: 66 Price: 148400 Volume:50
+2023-03-17 00:25:40.875800 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:40.875832 [INFO   ] [AUTO] Sending bid: 67 Price: 147000 Volume:50
+2023-03-17 00:25:40.875836 [INFO   ] [AUTO] BID 3: 146900
+2023-03-17 00:25:40.876700 [INFO   ] [AUTO] Order status update: 66
+2023-03-17 00:25:40.877155 [INFO   ] [AUTO] Order status update: 65
+2023-03-17 00:25:40.877180 [INFO   ] [AUTO] Order status update: 67
+2023-03-17 00:25:41.132284 [INFO   ] [AUTO] Sending bid: 68 Price: 147300 Volume:50
+2023-03-17 00:25:41.132290 [INFO   ] [AUTO] BID 3: 147600
+2023-03-17 00:25:41.132709 [INFO   ] [AUTO] Order status update: 67
+2023-03-17 00:25:41.132840 [INFO   ] [AUTO] Order status update: 68
+2023-03-17 00:25:41.610097 [INFO   ] [AUTO] Cancelling: 66 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:41.610143 [INFO   ] [AUTO] Sending bid: 69 Price: 147400 Volume:50
+2023-03-17 00:25:41.610146 [INFO   ] [AUTO] BID 3: 147600
+2023-03-17 00:25:41.611010 [INFO   ] [AUTO] Order status update: 66
+2023-03-17 00:25:41.611029 [INFO   ] [AUTO] Order status update: 68
+2023-03-17 00:25:41.611064 [INFO   ] [AUTO] Order status update: 69
+2023-03-17 00:25:41.847102 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:41.847143 [INFO   ] [AUTO] Sending ask: 70 Price: 148500 Volume:50
+2023-03-17 00:25:41.847149 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:41.847279 [INFO   ] [AUTO] Order status update: 70
+2023-03-17 00:25:42.367415 [INFO   ] [AUTO] Cancelling: 70 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:42.367687 [INFO   ] [AUTO] Order status update: 70
+2023-03-17 00:25:42.630355 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:42.630397 [INFO   ] [AUTO] Sending ask: 71 Price: 148600 Volume:50
+2023-03-17 00:25:42.630401 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:42.630403 [INFO   ] [AUTO] Sending bid: 72 Price: 147500 Volume:50
+2023-03-17 00:25:42.630405 [INFO   ] [AUTO] BID 3: 147600
+2023-03-17 00:25:42.630811 [INFO   ] [AUTO] Order status update: 71
+2023-03-17 00:25:42.630832 [INFO   ] [AUTO] Order status update: 69
+2023-03-17 00:25:42.630855 [INFO   ] [AUTO] Order status update: 72
+2023-03-17 00:25:42.887773 [INFO   ] [AUTO] Cancelling: 71 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:42.887830 [INFO   ] [AUTO] Sending bid: 73 Price: 147600 Volume:50
+2023-03-17 00:25:42.887833 [INFO   ] [AUTO] BID 3: 147600
+2023-03-17 00:25:42.888235 [INFO   ] [AUTO] Order status update: 71
+2023-03-17 00:25:42.888282 [INFO   ] [AUTO] Order status update: 72
+2023-03-17 00:25:42.888286 [INFO   ] [AUTO] Order status update: 73
+2023-03-17 00:25:43.082557 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:43.082608 [INFO   ] [AUTO] Sending ask: 74 Price: 148900 Volume:50
+2023-03-17 00:25:43.082611 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:43.085361 [INFO   ] [AUTO] Order status update: 74
+2023-03-17 00:25:43.329481 [INFO   ] [AUTO] Cancelling: 73 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:43.329527 [INFO   ] [AUTO] Sending ask: 75 Price: 148600 Volume:50
+2023-03-17 00:25:43.329530 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:43.330502 [INFO   ] [AUTO] Order status update: 73
+2023-03-17 00:25:43.330524 [INFO   ] [AUTO] Order status update: 74
+2023-03-17 00:25:43.330543 [INFO   ] [AUTO] Order status update: 75
+2023-03-17 00:25:43.593116 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:43.593160 [INFO   ] [AUTO] Sending ask: 76 Price: 148200 Volume:50
+2023-03-17 00:25:43.593163 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:43.593168 [INFO   ] [AUTO] Sending bid: 77 Price: 147100 Volume:50
+2023-03-17 00:25:43.593169 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:43.594167 [INFO   ] [AUTO] Order status update: 75
+2023-03-17 00:25:43.594196 [INFO   ] [AUTO] Order status update: 76
+2023-03-17 00:25:43.594219 [INFO   ] [AUTO] Order status update: 77
+2023-03-17 00:25:44.080717 [INFO   ] [AUTO] Cancelling: 76 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:44.081594 [INFO   ] [AUTO] Order status update: 76
+2023-03-17 00:25:44.311828 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:44.311869 [INFO   ] [AUTO] Sending ask: 78 Price: 148400 Volume:50
+2023-03-17 00:25:44.311873 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:44.311909 [INFO   ] [AUTO] Sending bid: 79 Price: 147200 Volume:50
+2023-03-17 00:25:44.311912 [INFO   ] [AUTO] BID 3: 147300
+2023-03-17 00:25:44.312139 [INFO   ] [AUTO] Order status update: 78
+2023-03-17 00:25:44.312143 [INFO   ] [AUTO] Order status update: 77
+2023-03-17 00:25:44.312176 [INFO   ] [AUTO] Order status update: 79
+2023-03-17 00:25:44.827113 [INFO   ] [AUTO] Cancelling: 78 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:44.827181 [INFO   ] [AUTO] Sending bid: 80 Price: 147300 Volume:50
+2023-03-17 00:25:44.827184 [INFO   ] [AUTO] BID 3: 147300
+2023-03-17 00:25:44.829244 [INFO   ] [AUTO] Order status update: 78
+2023-03-17 00:25:44.829273 [INFO   ] [AUTO] Order status update: 79
+2023-03-17 00:25:44.829714 [INFO   ] [AUTO] Order status update: 80
+2023-03-17 00:25:45.102858 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:45.102929 [INFO   ] [AUTO] Sending ask: 81 Price: 148800 Volume:50
+2023-03-17 00:25:45.102933 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:45.102935 [INFO   ] [AUTO] Sending bid: 82 Price: 147500 Volume:50
+2023-03-17 00:25:45.102937 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:25:45.103088 [INFO   ] [AUTO] Order status update: 81
+2023-03-17 00:25:45.103250 [INFO   ] [AUTO] Order status update: 80
+2023-03-17 00:25:45.103285 [INFO   ] [AUTO] Order status update: 82
+2023-03-17 00:25:45.299440 [INFO   ] [AUTO] Cancelling: 81 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:45.299507 [INFO   ] [AUTO] Sending bid: 83 Price: 147700 Volume:50
+2023-03-17 00:25:45.299510 [INFO   ] [AUTO] BID 3: 147600
+2023-03-17 00:25:45.299985 [INFO   ] [AUTO] Order status update: 81
+2023-03-17 00:25:45.300005 [INFO   ] [AUTO] Order status update: 82
+2023-03-17 00:25:45.300029 [INFO   ] [AUTO] order 83 filled for 12 lots at $147700 cents
+2023-03-17 00:25:45.300048 [INFO   ] [AUTO] Order status update: 83
+2023-03-17 00:25:45.300210 [INFO   ] [AUTO] hedge order 84 filled for 12 lots at $148200 average price in cents
+2023-03-17 00:25:45.561305 [INFO   ] [AUTO] Cancelling: 83 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:45.561341 [INFO   ] [AUTO] Sending ask: 85 Price: 148700 Volume:56
+2023-03-17 00:25:45.561345 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:45.562047 [INFO   ] [AUTO] Order status update: 83
+2023-03-17 00:25:45.562087 [INFO   ] [AUTO] Order status update: 85
+2023-03-17 00:25:45.806771 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:45.806816 [INFO   ] [AUTO] Sending bid: 86 Price: 147400 Volume:44
+2023-03-17 00:25:45.806818 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:45.807496 [INFO   ] [AUTO] Order status update: 86
+2023-03-17 00:25:46.072085 [INFO   ] [AUTO] Sending ask: 87 Price: 148600 Volume:56
+2023-03-17 00:25:46.072092 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:46.072648 [INFO   ] [AUTO] Order status update: 85
+2023-03-17 00:25:46.072668 [INFO   ] [AUTO] Order status update: 87
+2023-03-17 00:25:46.382973 [INFO   ] [AUTO] Sending ask: 88 Price: 148500 Volume:56
+2023-03-17 00:25:46.382979 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:46.383966 [INFO   ] [AUTO] Order status update: 87
+2023-03-17 00:25:46.383991 [INFO   ] [AUTO] Order status update: 88
+2023-03-17 00:25:46.606345 [INFO   ] [AUTO] Cancelling: 86 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:46.606463 [INFO   ] [AUTO] Order status update: 86
+2023-03-17 00:25:46.890175 [INFO   ] [AUTO] Sending bid: 89 Price: 147400 Volume:44
+2023-03-17 00:25:46.890179 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:46.890366 [INFO   ] [AUTO] Order status update: 89
+2023-03-17 00:25:47.487803 [INFO   ] [AUTO] order 89 filled for 1 lots at $147400 cents
+2023-03-17 00:25:47.487846 [INFO   ] [AUTO] Order status update: 89
+2023-03-17 00:25:47.487965 [INFO   ] [AUTO] hedge order 90 filled for 1 lots at $147900 average price in cents
+2023-03-17 00:25:47.576761 [INFO   ] [AUTO] Cancelling: 88 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:47.578340 [INFO   ] [AUTO] Order status update: 88
+2023-03-17 00:25:47.810628 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:47.810665 [INFO   ] [AUTO] Sending ask: 91 Price: 148700 Volume:56
+2023-03-17 00:25:47.810669 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:47.811503 [INFO   ] [AUTO] Order status update: 91
+2023-03-17 00:25:48.124922 [INFO   ] [AUTO] Cancelling: 89 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:48.124959 [INFO   ] [AUTO] Sending ask: 92 Price: 148500 Volume:56
+2023-03-17 00:25:48.124965 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:48.125292 [INFO   ] [AUTO] Order status update: 89
+2023-03-17 00:25:48.125318 [INFO   ] [AUTO] Order status update: 91
+2023-03-17 00:25:48.125321 [INFO   ] [AUTO] Order status update: 92
+2023-03-17 00:25:48.363293 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:48.363322 [INFO   ] [AUTO] Sending ask: 93 Price: 148300 Volume:56
+2023-03-17 00:25:48.363325 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:48.363329 [INFO   ] [AUTO] Sending bid: 94 Price: 147200 Volume:43
+2023-03-17 00:25:48.363330 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:48.363811 [INFO   ] [AUTO] Order status update: 92
+2023-03-17 00:25:48.363837 [INFO   ] [AUTO] Order status update: 93
+2023-03-17 00:25:48.363861 [INFO   ] [AUTO] Order status update: 94
+2023-03-17 00:25:48.635940 [INFO   ] [AUTO] Cancelling: 94 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:48.635983 [INFO   ] [AUTO] Sending ask: 95 Price: 148200 Volume:56
+2023-03-17 00:25:48.635987 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:48.636709 [INFO   ] [AUTO] Order status update: 94
+2023-03-17 00:25:48.636896 [INFO   ] [AUTO] Order status update: 93
+2023-03-17 00:25:48.636938 [INFO   ] [AUTO] Order status update: 95
+2023-03-17 00:25:48.832744 [INFO   ] [AUTO] Cancelling: 95 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:48.832749 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:48.832789 [INFO   ] [AUTO] Sending bid: 96 Price: 147100 Volume:43
+2023-03-17 00:25:48.832792 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:48.833091 [INFO   ] [AUTO] Order status update: 95
+2023-03-17 00:25:48.833112 [INFO   ] [AUTO] Order status update: 96
+2023-03-17 00:25:49.050701 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:49.050752 [INFO   ] [AUTO] Sending ask: 97 Price: 148400 Volume:56
+2023-03-17 00:25:49.050755 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:49.050906 [INFO   ] [AUTO] Order status update: 97
+2023-03-17 00:25:49.366592 [INFO   ] [AUTO] Sending ask: 98 Price: 148300 Volume:56
+2023-03-17 00:25:49.366596 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:49.366884 [INFO   ] [AUTO] Order status update: 97
+2023-03-17 00:25:49.366926 [INFO   ] [AUTO] Order status update: 98
+2023-03-17 00:25:49.884166 [INFO   ] [AUTO] Cancelling: 96 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:49.884203 [INFO   ] [AUTO] Sending ask: 99 Price: 148000 Volume:56
+2023-03-17 00:25:49.884206 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:49.884952 [INFO   ] [AUTO] Order status update: 96
+2023-03-17 00:25:49.884975 [INFO   ] [AUTO] Order status update: 98
+2023-03-17 00:25:49.885417 [INFO   ] [AUTO] Order status update: 99
+2023-03-17 00:25:50.058476 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:50.058516 [INFO   ] [AUTO] Sending ask: 100 Price: 147900 Volume:56
+2023-03-17 00:25:50.058520 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:50.058555 [INFO   ] [AUTO] Sending bid: 101 Price: 146700 Volume:43
+2023-03-17 00:25:50.058559 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:50.058647 [INFO   ] [AUTO] Order status update: 99
+2023-03-17 00:25:50.059115 [INFO   ] [AUTO] Order status update: 100
+2023-03-17 00:25:50.059135 [INFO   ] [AUTO] Order status update: 101
+2023-03-17 00:25:51.085303 [INFO   ] [AUTO] Sending bid: 102 Price: 146800 Volume:43
+2023-03-17 00:25:51.085309 [INFO   ] [AUTO] BID 3: 146900
+2023-03-17 00:25:51.085593 [INFO   ] [AUTO] Order status update: 101
+2023-03-17 00:25:51.085619 [INFO   ] [AUTO] Order status update: 102
+2023-03-17 00:25:51.384491 [INFO   ] [AUTO] Cancelling: 100 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:51.384542 [INFO   ] [AUTO] Sending bid: 103 Price: 146900 Volume:43
+2023-03-17 00:25:51.384545 [INFO   ] [AUTO] BID 3: 147000
+2023-03-17 00:25:51.384863 [INFO   ] [AUTO] Order status update: 100
+2023-03-17 00:25:51.384894 [INFO   ] [AUTO] Order status update: 102
+2023-03-17 00:25:51.384915 [INFO   ] [AUTO] Order status update: 103
+2023-03-17 00:25:51.582934 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:51.583022 [INFO   ] [AUTO] Sending ask: 104 Price: 148200 Volume:56
+2023-03-17 00:25:51.583025 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:51.583028 [INFO   ] [AUTO] Sending bid: 105 Price: 147000 Volume:43
+2023-03-17 00:25:51.583029 [INFO   ] [AUTO] BID 3: 147100
+2023-03-17 00:25:51.583754 [INFO   ] [AUTO] Order status update: 104
+2023-03-17 00:25:51.583773 [INFO   ] [AUTO] Order status update: 103
+2023-03-17 00:25:51.583804 [INFO   ] [AUTO] Order status update: 105
+2023-03-17 00:25:51.823817 [INFO   ] [AUTO] Cancelling: 104 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:51.824027 [INFO   ] [AUTO] Order status update: 104
+2023-03-17 00:25:52.068326 [INFO   ] [AUTO] Sending ask: 106 Price: 148200 Volume:56
+2023-03-17 00:25:52.068333 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:52.068342 [INFO   ] [AUTO] Sending bid: 107 Price: 147100 Volume:43
+2023-03-17 00:25:52.068344 [INFO   ] [AUTO] BID 3: 147200
+2023-03-17 00:25:52.068473 [INFO   ] [AUTO] Order status update: 106
+2023-03-17 00:25:52.068506 [INFO   ] [AUTO] Order status update: 105
+2023-03-17 00:25:52.068509 [INFO   ] [AUTO] Order status update: 107
+2023-03-17 00:25:52.340879 [INFO   ] [AUTO] Cancelling: 106 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:52.341077 [INFO   ] [AUTO] Order status update: 106
+2023-03-17 00:25:52.627776 [INFO   ] [AUTO] Sending ask: 108 Price: 148200 Volume:56
+2023-03-17 00:25:52.627783 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:52.628086 [INFO   ] [AUTO] Order status update: 108
+2023-03-17 00:25:52.804222 [INFO   ] [AUTO] Cancelling: 108 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:52.804347 [INFO   ] [AUTO] Order status update: 108
+2023-03-17 00:25:53.129476 [INFO   ] [AUTO] Cancelling: 107 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:53.129524 [INFO   ] [AUTO] Sending ask: 109 Price: 148000 Volume:56
+2023-03-17 00:25:53.129528 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:53.130657 [INFO   ] [AUTO] Order status update: 107
+2023-03-17 00:25:53.130700 [INFO   ] [AUTO] Order status update: 109
+2023-03-17 00:25:53.373732 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:53.373758 [INFO   ] [AUTO] Sending ask: 110 Price: 147900 Volume:56
+2023-03-17 00:25:53.373765 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:53.373770 [INFO   ] [AUTO] Sending bid: 111 Price: 146700 Volume:43
+2023-03-17 00:25:53.373772 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:53.373871 [INFO   ] [AUTO] Order status update: 109
+2023-03-17 00:25:53.374351 [INFO   ] [AUTO] Order status update: 110
+2023-03-17 00:25:53.374378 [INFO   ] [AUTO] Order status update: 111
+2023-03-17 00:25:53.637931 [INFO   ] [AUTO] Sending ask: 112 Price: 147800 Volume:56
+2023-03-17 00:25:53.637936 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:53.638353 [INFO   ] [AUTO] Order status update: 110
+2023-03-17 00:25:53.638375 [INFO   ] [AUTO] Order status update: 112
+2023-03-17 00:25:54.543896 [INFO   ] [AUTO] Cancelling: 112 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:54.543901 [INFO   ] [AUTO] Cancelling: 111 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:54.544142 [INFO   ] [AUTO] Order status update: 112
+2023-03-17 00:25:54.544177 [INFO   ] [AUTO] Order status update: 111
+2023-03-17 00:25:54.870267 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:54.870274 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:54.870310 [INFO   ] [AUTO] Sending ask: 113 Price: 147900 Volume:56
+2023-03-17 00:25:54.870312 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:54.870360 [INFO   ] [AUTO] Sending bid: 114 Price: 146600 Volume:43
+2023-03-17 00:25:54.870363 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:54.870733 [INFO   ] [AUTO] Order status update: 113
+2023-03-17 00:25:54.870800 [INFO   ] [AUTO] Order status update: 114
+2023-03-17 00:25:55.380351 [INFO   ] [AUTO] Sending ask: 115 Price: 147800 Volume:56
+2023-03-17 00:25:55.380359 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:55.380481 [INFO   ] [AUTO] Order status update: 113
+2023-03-17 00:25:55.380503 [INFO   ] [AUTO] Order status update: 115
+2023-03-17 00:25:55.636676 [INFO   ] [AUTO] Cancelling: 115 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:55.636718 [INFO   ] [AUTO] Sending bid: 116 Price: 146700 Volume:43
+2023-03-17 00:25:55.636721 [INFO   ] [AUTO] BID 3: 146900
+2023-03-17 00:25:55.636777 [INFO   ] [AUTO] Order status update: 115
+2023-03-17 00:25:55.637018 [INFO   ] [AUTO] Order status update: 114
+2023-03-17 00:25:55.637062 [INFO   ] [AUTO] Order status update: 116
+2023-03-17 00:25:55.872431 [INFO   ] [AUTO] Cancelling: 116 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:55.872464 [INFO   ] [AUTO] Sending ask: 117 Price: 147600 Volume:56
+2023-03-17 00:25:55.872466 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:55.874209 [INFO   ] [AUTO] Order status update: 116
+2023-03-17 00:25:55.874265 [INFO   ] [AUTO] Order status update: 117
+2023-03-17 00:25:56.066809 [INFO   ] [AUTO] Cancelling: 117 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:56.066862 [INFO   ] [AUTO] Sending bid: 118 Price: 146700 Volume:43
+2023-03-17 00:25:56.066866 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:56.067009 [INFO   ] [AUTO] Order status update: 117
+2023-03-17 00:25:56.067066 [INFO   ] [AUTO] Order status update: 118
+2023-03-17 00:25:56.370638 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:56.370690 [INFO   ] [AUTO] Sending ask: 119 Price: 147900 Volume:56
+2023-03-17 00:25:56.370693 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:56.371273 [INFO   ] [AUTO] Order status update: 119
+2023-03-17 00:25:56.639959 [INFO   ] [AUTO] Cancelling: 118 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:56.640002 [INFO   ] [AUTO] Sending ask: 120 Price: 147800 Volume:56
+2023-03-17 00:25:56.640006 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:56.640106 [INFO   ] [AUTO] Order status update: 118
+2023-03-17 00:25:56.640146 [INFO   ] [AUTO] Order status update: 119
+2023-03-17 00:25:56.640527 [INFO   ] [AUTO] Order status update: 120
+2023-03-17 00:25:56.810948 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:56.811002 [INFO   ] [AUTO] Sending bid: 121 Price: 146600 Volume:43
+2023-03-17 00:25:56.811006 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:56.811370 [INFO   ] [AUTO] Order status update: 121
+2023-03-17 00:25:57.308933 [INFO   ] [AUTO] Cancelling: 121 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:57.309124 [INFO   ] [AUTO] Order status update: 121
+2023-03-17 00:25:57.558313 [INFO   ] [AUTO] Sending bid: 122 Price: 146600 Volume:43
+2023-03-17 00:25:57.558321 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:57.558548 [INFO   ] [AUTO] Order status update: 122
+2023-03-17 00:25:57.865451 [INFO   ] [AUTO] Cancelling: 120 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:57.865488 [INFO   ] [AUTO] Sending bid: 123 Price: 146800 Volume:43
+2023-03-17 00:25:57.865492 [INFO   ] [AUTO] BID 3: 147200
+2023-03-17 00:25:57.865855 [INFO   ] [AUTO] Order status update: 120
+2023-03-17 00:25:57.865875 [INFO   ] [AUTO] Order status update: 122
+2023-03-17 00:25:57.865939 [INFO   ] [AUTO] Order status update: 123
+2023-03-17 00:25:58.044059 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:58.044103 [INFO   ] [AUTO] Sending ask: 124 Price: 148000 Volume:56
+2023-03-17 00:25:58.044106 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:58.044327 [INFO   ] [AUTO] Order status update: 124
+2023-03-17 00:25:58.300039 [INFO   ] [AUTO] Sending bid: 125 Price: 146900 Volume:43
+2023-03-17 00:25:58.300043 [INFO   ] [AUTO] BID 3: 147200
+2023-03-17 00:25:58.300364 [INFO   ] [AUTO] Order status update: 123
+2023-03-17 00:25:58.300403 [INFO   ] [AUTO] Order status update: 125
+2023-03-17 00:25:58.555738 [INFO   ] [AUTO] Cancelling: 124 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:58.555921 [INFO   ] [AUTO] Order status update: 124
+2023-03-17 00:25:58.857497 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:58.857536 [INFO   ] [AUTO] Sending ask: 126 Price: 148100 Volume:56
+2023-03-17 00:25:58.857539 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:58.857641 [INFO   ] [AUTO] Order status update: 126
+2023-03-17 00:25:59.049906 [INFO   ] [AUTO] Cancelling: 126 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:59.049946 [INFO   ] [AUTO] Sending bid: 127 Price: 147000 Volume:43
+2023-03-17 00:25:59.049950 [INFO   ] [AUTO] BID 3: 147200
+2023-03-17 00:25:59.050433 [INFO   ] [AUTO] Order status update: 126
+2023-03-17 00:25:59.050458 [INFO   ] [AUTO] Order status update: 125
+2023-03-17 00:25:59.050481 [INFO   ] [AUTO] Order status update: 127
+2023-03-17 00:25:59.294086 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:25:59.294119 [INFO   ] [AUTO] Sending ask: 128 Price: 148200 Volume:56
+2023-03-17 00:25:59.294123 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:25:59.294406 [INFO   ] [AUTO] Order status update: 128
+2023-03-17 00:25:59.608542 [INFO   ] [AUTO] Cancelling: 127 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:59.608584 [INFO   ] [AUTO] Sending ask: 129 Price: 148100 Volume:56
+2023-03-17 00:25:59.608587 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:25:59.608765 [INFO   ] [AUTO] Order status update: 127
+2023-03-17 00:25:59.608810 [INFO   ] [AUTO] Order status update: 128
+2023-03-17 00:25:59.609198 [INFO   ] [AUTO] Order status update: 129
+2023-03-17 00:25:59.816585 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:25:59.816624 [INFO   ] [AUTO] Sending bid: 130 Price: 146800 Volume:43
+2023-03-17 00:25:59.816628 [INFO   ] [AUTO] BID 1
+2023-03-17 00:25:59.818027 [INFO   ] [AUTO] Order status update: 130
+2023-03-17 00:26:00.140345 [INFO   ] [AUTO] Sending ask: 131 Price: 148000 Volume:56
+2023-03-17 00:26:00.140350 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:00.140711 [INFO   ] [AUTO] Order status update: 129
+2023-03-17 00:26:00.140755 [INFO   ] [AUTO] Order status update: 131
+2023-03-17 00:26:00.839472 [INFO   ] [AUTO] Cancelling: 130 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:00.839520 [INFO   ] [AUTO] Sending ask: 132 Price: 147900 Volume:56
+2023-03-17 00:26:00.839522 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:00.840090 [INFO   ] [AUTO] Order status update: 130
+2023-03-17 00:26:00.840109 [INFO   ] [AUTO] Order status update: 131
+2023-03-17 00:26:00.840111 [INFO   ] [AUTO] Order status update: 132
+2023-03-17 00:26:01.101518 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:01.101566 [INFO   ] [AUTO] Sending bid: 133 Price: 146700 Volume:43
+2023-03-17 00:26:01.101569 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:01.101791 [INFO   ] [AUTO] Order status update: 133
+2023-03-17 00:26:01.337585 [INFO   ] [AUTO] Sending ask: 134 Price: 147800 Volume:56
+2023-03-17 00:26:01.337592 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:01.338380 [INFO   ] [AUTO] Order status update: 132
+2023-03-17 00:26:01.338399 [INFO   ] [AUTO] Order status update: 134
+2023-03-17 00:26:01.602307 [INFO   ] [AUTO] Cancelling: 134 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:01.602313 [INFO   ] [AUTO] Cancelling: 133 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:01.602530 [INFO   ] [AUTO] Order status update: 134
+2023-03-17 00:26:01.602556 [INFO   ] [AUTO] Order status update: 133
+2023-03-17 00:26:01.825775 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:01.825824 [INFO   ] [AUTO] Sending ask: 135 Price: 147900 Volume:56
+2023-03-17 00:26:01.825828 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:01.825835 [INFO   ] [AUTO] Sending bid: 136 Price: 146700 Volume:43
+2023-03-17 00:26:01.825837 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:01.826155 [INFO   ] [AUTO] Order status update: 135
+2023-03-17 00:26:01.826480 [INFO   ] [AUTO] Order status update: 136
+2023-03-17 00:26:02.355707 [INFO   ] [AUTO] Cancelling: 136 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:02.355898 [INFO   ] [AUTO] Order status update: 136
+2023-03-17 00:26:02.619799 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:02.619845 [INFO   ] [AUTO] Sending bid: 137 Price: 146600 Volume:43
+2023-03-17 00:26:02.619848 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:02.620137 [INFO   ] [AUTO] Order status update: 137
+2023-03-17 00:26:02.891501 [INFO   ] [AUTO] Sending bid: 138 Price: 146700 Volume:43
+2023-03-17 00:26:02.891505 [INFO   ] [AUTO] BID 3: 147100
+2023-03-17 00:26:02.892205 [INFO   ] [AUTO] Order status update: 137
+2023-03-17 00:26:02.892238 [INFO   ] [AUTO] Order status update: 138
+2023-03-17 00:26:03.064924 [INFO   ] [AUTO] Cancelling: 135 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:03.064964 [INFO   ] [AUTO] Sending bid: 139 Price: 146800 Volume:43
+2023-03-17 00:26:03.064968 [INFO   ] [AUTO] BID 3: 147100
+2023-03-17 00:26:03.065223 [INFO   ] [AUTO] Order status update: 135
+2023-03-17 00:26:03.065256 [INFO   ] [AUTO] Order status update: 138
+2023-03-17 00:26:03.065296 [INFO   ] [AUTO] Order status update: 139
+2023-03-17 00:26:03.360336 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:03.360384 [INFO   ] [AUTO] Sending ask: 140 Price: 148000 Volume:56
+2023-03-17 00:26:03.360387 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:03.360570 [INFO   ] [AUTO] Order status update: 140
+2023-03-17 00:26:03.575688 [INFO   ] [AUTO] Sending ask: 141 Price: 147900 Volume:56
+2023-03-17 00:26:03.575695 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:03.576202 [INFO   ] [AUTO] Order status update: 140
+2023-03-17 00:26:03.576239 [INFO   ] [AUTO] Order status update: 141
+2023-03-17 00:26:03.820587 [INFO   ] [AUTO] Cancelling: 139 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:03.820903 [INFO   ] [AUTO] Order status update: 139
+2023-03-17 00:26:04.063731 [INFO   ] [AUTO] Cancelling: 141 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:04.063771 [INFO   ] [AUTO] Sending bid: 142 Price: 146900 Volume:43
+2023-03-17 00:26:04.063776 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:04.064701 [INFO   ] [AUTO] Order status update: 141
+2023-03-17 00:26:04.064808 [INFO   ] [AUTO] Order status update: 142
+2023-03-17 00:26:04.320306 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:04.320341 [INFO   ] [AUTO] Sending ask: 143 Price: 148100 Volume:56
+2023-03-17 00:26:04.320347 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:04.320590 [INFO   ] [AUTO] Order status update: 143
+2023-03-17 00:26:04.891089 [INFO   ] [AUTO] Cancelling: 142 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:04.891932 [INFO   ] [AUTO] Order status update: 142
+2023-03-17 00:26:05.132044 [INFO   ] [AUTO] Sending bid: 144 Price: 146900 Volume:43
+2023-03-17 00:26:05.132049 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:05.132214 [INFO   ] [AUTO] Order status update: 144
+2023-03-17 00:26:05.344596 [INFO   ] [AUTO] Sending ask: 145 Price: 148000 Volume:56
+2023-03-17 00:26:05.344600 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:05.344827 [INFO   ] [AUTO] Order status update: 143
+2023-03-17 00:26:05.344873 [INFO   ] [AUTO] Order status update: 145
+2023-03-17 00:26:05.579049 [INFO   ] [AUTO] Cancelling: 145 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:05.579090 [INFO   ] [AUTO] Sending bid: 146 Price: 147000 Volume:43
+2023-03-17 00:26:05.579094 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:26:05.579493 [INFO   ] [AUTO] Order status update: 145
+2023-03-17 00:26:05.579513 [INFO   ] [AUTO] Order status update: 144
+2023-03-17 00:26:05.579549 [INFO   ] [AUTO] Order status update: 146
+2023-03-17 00:26:05.880837 [INFO   ] [AUTO] Cancelling: 146 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:05.880880 [INFO   ] [AUTO] Sending ask: 147 Price: 147900 Volume:56
+2023-03-17 00:26:05.880886 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:05.881243 [INFO   ] [AUTO] Order status update: 146
+2023-03-17 00:26:05.881268 [INFO   ] [AUTO] Order status update: 147
+2023-03-17 00:26:06.045148 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:06.045199 [INFO   ] [AUTO] Sending bid: 148 Price: 146700 Volume:43
+2023-03-17 00:26:06.045203 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:06.045388 [INFO   ] [AUTO] Order status update: 148
+2023-03-17 00:26:07.107484 [INFO   ] [AUTO] Cancelling: 148 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:07.107528 [INFO   ] [AUTO] Sending ask: 149 Price: 147700 Volume:56
+2023-03-17 00:26:07.107531 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:07.107833 [INFO   ] [AUTO] Order status update: 148
+2023-03-17 00:26:07.107857 [INFO   ] [AUTO] Order status update: 147
+2023-03-17 00:26:07.107912 [INFO   ] [AUTO] Order status update: 149
+2023-03-17 00:26:07.331489 [INFO   ] [AUTO] Cancelling: 149 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:07.331497 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:07.331534 [INFO   ] [AUTO] Sending bid: 150 Price: 146600 Volume:43
+2023-03-17 00:26:07.331539 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:07.331812 [INFO   ] [AUTO] Order status update: 149
+2023-03-17 00:26:07.331853 [INFO   ] [AUTO] Order status update: 150
+2023-03-17 00:26:07.639008 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:07.639070 [INFO   ] [AUTO] Sending ask: 151 Price: 147800 Volume:56
+2023-03-17 00:26:07.639074 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:07.639411 [INFO   ] [AUTO] Order status update: 151
+2023-03-17 00:26:07.815688 [INFO   ] [AUTO] Cancelling: 151 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:07.815731 [INFO   ] [AUTO] Sending bid: 152 Price: 146700 Volume:43
+2023-03-17 00:26:07.815736 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:26:07.816133 [INFO   ] [AUTO] Order status update: 151
+2023-03-17 00:26:07.816168 [INFO   ] [AUTO] Order status update: 150
+2023-03-17 00:26:07.816611 [INFO   ] [AUTO] Order status update: 152
+2023-03-17 00:26:08.042119 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:08.042164 [INFO   ] [AUTO] Sending ask: 153 Price: 147900 Volume:56
+2023-03-17 00:26:08.042168 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:08.042397 [INFO   ] [AUTO] Order status update: 153
+2023-03-17 00:26:08.374188 [INFO   ] [AUTO] Cancelling: 152 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:08.374235 [INFO   ] [AUTO] Sending ask: 154 Price: 147800 Volume:56
+2023-03-17 00:26:08.374238 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:08.374714 [INFO   ] [AUTO] Order status update: 152
+2023-03-17 00:26:08.374734 [INFO   ] [AUTO] Order status update: 153
+2023-03-17 00:26:08.374755 [INFO   ] [AUTO] Order status update: 154
+2023-03-17 00:26:08.590521 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:08.590585 [INFO   ] [AUTO] Sending bid: 155 Price: 146500 Volume:43
+2023-03-17 00:26:08.590588 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:08.590816 [INFO   ] [AUTO] Order status update: 155
+2023-03-17 00:26:08.883205 [INFO   ] [AUTO] Sending bid: 156 Price: 146600 Volume:43
+2023-03-17 00:26:08.883214 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:26:08.883593 [INFO   ] [AUTO] Order status update: 155
+2023-03-17 00:26:08.883621 [INFO   ] [AUTO] Order status update: 156
+2023-03-17 00:26:09.554315 [INFO   ] [AUTO] Cancelling: 154 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:09.554372 [INFO   ] [AUTO] Sending bid: 157 Price: 146900 Volume:43
+2023-03-17 00:26:09.554377 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:26:09.554523 [INFO   ] [AUTO] Order status update: 154
+2023-03-17 00:26:09.554584 [INFO   ] [AUTO] Order status update: 156
+2023-03-17 00:26:09.554806 [INFO   ] [AUTO] Order status update: 157
+2023-03-17 00:26:09.804121 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:09.804168 [INFO   ] [AUTO] Sending ask: 158 Price: 148100 Volume:56
+2023-03-17 00:26:09.804171 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:09.804339 [INFO   ] [AUTO] Order status update: 158
+2023-03-17 00:26:10.061937 [INFO   ] [AUTO] Cancelling: 157 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:10.061983 [INFO   ] [AUTO] Sending ask: 159 Price: 148000 Volume:56
+2023-03-17 00:26:10.061987 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:10.062059 [INFO   ] [AUTO] Order status update: 157
+2023-03-17 00:26:10.062089 [INFO   ] [AUTO] Order status update: 158
+2023-03-17 00:26:10.062450 [INFO   ] [AUTO] Order status update: 159
+2023-03-17 00:26:10.295797 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:10.295855 [INFO   ] [AUTO] Sending bid: 160 Price: 146800 Volume:43
+2023-03-17 00:26:10.295858 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:10.296006 [INFO   ] [AUTO] Order status update: 160
+2023-03-17 00:26:10.600978 [INFO   ] [AUTO] Cancelling: 159 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:10.601024 [INFO   ] [AUTO] Sending bid: 161 Price: 146900 Volume:43
+2023-03-17 00:26:10.601027 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:26:10.601348 [INFO   ] [AUTO] Order status update: 159
+2023-03-17 00:26:10.601372 [INFO   ] [AUTO] Order status update: 160
+2023-03-17 00:26:10.601393 [INFO   ] [AUTO] Order status update: 161
+2023-03-17 00:26:10.793779 [INFO   ] [AUTO] Cancelling: 161 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:10.793810 [INFO   ] [AUTO] Sending ask: 162 Price: 148000 Volume:56
+2023-03-17 00:26:10.793812 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:10.794848 [INFO   ] [AUTO] Order status update: 161
+2023-03-17 00:26:10.794884 [INFO   ] [AUTO] Order status update: 162
+2023-03-17 00:26:11.118258 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:11.118298 [INFO   ] [AUTO] Sending ask: 163 Price: 147900 Volume:56
+2023-03-17 00:26:11.118301 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:11.118308 [INFO   ] [AUTO] Sending bid: 164 Price: 146700 Volume:43
+2023-03-17 00:26:11.118310 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:11.118930 [INFO   ] [AUTO] Order status update: 162
+2023-03-17 00:26:11.119393 [INFO   ] [AUTO] Order status update: 163
+2023-03-17 00:26:11.119413 [INFO   ] [AUTO] Order status update: 164
+2023-03-17 00:26:11.385323 [INFO   ] [AUTO] Sending ask: 165 Price: 147800 Volume:56
+2023-03-17 00:26:11.385328 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:11.385751 [INFO   ] [AUTO] Order status update: 163
+2023-03-17 00:26:11.385792 [INFO   ] [AUTO] Order status update: 165
+2023-03-17 00:26:11.636022 [INFO   ] [AUTO] Cancelling: 164 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:11.636779 [INFO   ] [AUTO] Order status update: 164
+2023-03-17 00:26:11.827855 [INFO   ] [AUTO] Cancelling: 165 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:11.827920 [INFO   ] [AUTO] Sending bid: 166 Price: 146700 Volume:43
+2023-03-17 00:26:11.827923 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:11.828158 [INFO   ] [AUTO] Order status update: 165
+2023-03-17 00:26:11.828192 [INFO   ] [AUTO] Order status update: 166
+2023-03-17 00:26:12.074278 [INFO   ] [AUTO] Sending ask: 167 Price: 147800 Volume:56
+2023-03-17 00:26:12.074283 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:12.074672 [INFO   ] [AUTO] Order status update: 167
+2023-03-17 00:26:12.364614 [INFO   ] [AUTO] Cancelling: 167 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:12.364835 [INFO   ] [AUTO] Order status update: 167
+2023-03-17 00:26:12.639582 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:12.639629 [INFO   ] [AUTO] Sending ask: 168 Price: 148000 Volume:56
+2023-03-17 00:26:12.639632 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:12.639905 [INFO   ] [AUTO] Order status update: 168
+2023-03-17 00:26:12.872598 [INFO   ] [AUTO] Cancelling: 166 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:12.872639 [INFO   ] [AUTO] Sending ask: 169 Price: 147900 Volume:56
+2023-03-17 00:26:12.872642 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:12.873004 [INFO   ] [AUTO] Order status update: 166
+2023-03-17 00:26:12.873023 [INFO   ] [AUTO] Order status update: 168
+2023-03-17 00:26:12.873045 [INFO   ] [AUTO] Order status update: 169
+2023-03-17 00:26:13.070187 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:13.070224 [INFO   ] [AUTO] Sending ask: 170 Price: 147800 Volume:56
+2023-03-17 00:26:13.070227 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:13.070230 [INFO   ] [AUTO] Sending bid: 171 Price: 146600 Volume:43
+2023-03-17 00:26:13.070231 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:13.071675 [INFO   ] [AUTO] Order status update: 169
+2023-03-17 00:26:13.071715 [INFO   ] [AUTO] Order status update: 170
+2023-03-17 00:26:13.071745 [INFO   ] [AUTO] Order status update: 171
+2023-03-17 00:26:13.361460 [INFO   ] [AUTO] Cancelling: 170 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:13.361715 [INFO   ] [AUTO] Order status update: 170
+2023-03-17 00:26:13.593120 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:13.593183 [INFO   ] [AUTO] Sending ask: 172 Price: 147900 Volume:56
+2023-03-17 00:26:13.593186 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:13.593362 [INFO   ] [AUTO] Order status update: 172
+2023-03-17 00:26:14.046192 [INFO   ] [AUTO] Sending bid: 173 Price: 146700 Volume:43
+2023-03-17 00:26:14.046201 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:26:14.047310 [INFO   ] [AUTO] Order status update: 171
+2023-03-17 00:26:14.047344 [INFO   ] [AUTO] Order status update: 173
+2023-03-17 00:26:14.298632 [INFO   ] [AUTO] Cancelling: 172 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:14.298695 [INFO   ] [AUTO] Sending bid: 174 Price: 146900 Volume:43
+2023-03-17 00:26:14.298699 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:26:14.299224 [INFO   ] [AUTO] Order status update: 172
+2023-03-17 00:26:14.299245 [INFO   ] [AUTO] Order status update: 173
+2023-03-17 00:26:14.299266 [INFO   ] [AUTO] Order status update: 174
+2023-03-17 00:26:14.605752 [INFO   ] [AUTO] Cancelling: 174 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:14.605796 [INFO   ] [AUTO] Sending ask: 175 Price: 147700 Volume:56
+2023-03-17 00:26:14.605800 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:14.607369 [INFO   ] [AUTO] Order status update: 174
+2023-03-17 00:26:14.607391 [INFO   ] [AUTO] Order status update: 175
+2023-03-17 00:26:14.841721 [INFO   ] [AUTO] Cancelling: 175 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:14.841726 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:14.841761 [INFO   ] [AUTO] Sending bid: 176 Price: 146700 Volume:43
+2023-03-17 00:26:14.841764 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:14.842284 [INFO   ] [AUTO] Order status update: 175
+2023-03-17 00:26:14.842305 [INFO   ] [AUTO] Order status update: 176
+2023-03-17 00:26:15.072980 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:15.072986 [INFO   ] [AUTO] Cancelling: 176 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:15.073031 [INFO   ] [AUTO] Sending ask: 177 Price: 147800 Volume:56
+2023-03-17 00:26:15.073035 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:15.074273 [INFO   ] [AUTO] Order status update: 176
+2023-03-17 00:26:15.074318 [INFO   ] [AUTO] Order status update: 177
+2023-03-17 00:26:15.301132 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:15.301173 [INFO   ] [AUTO] Sending bid: 178 Price: 146600 Volume:43
+2023-03-17 00:26:15.301176 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:15.301601 [INFO   ] [AUTO] Order status update: 178
+2023-03-17 00:26:15.575698 [INFO   ] [AUTO] Cancelling: 177 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:15.575758 [INFO   ] [AUTO] Sending bid: 179 Price: 146700 Volume:43
+2023-03-17 00:26:15.575762 [INFO   ] [AUTO] BID 3: 147400
+2023-03-17 00:26:15.576022 [INFO   ] [AUTO] Order status update: 177
+2023-03-17 00:26:15.576040 [INFO   ] [AUTO] Order status update: 178
+2023-03-17 00:26:15.576059 [INFO   ] [AUTO] Order status update: 179
+2023-03-17 00:26:15.808924 [INFO   ] [AUTO] Cancelling: 179 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:15.808970 [INFO   ] [AUTO] Sending ask: 180 Price: 147800 Volume:56
+2023-03-17 00:26:15.808974 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:15.810513 [INFO   ] [AUTO] Order status update: 179
+2023-03-17 00:26:15.810557 [INFO   ] [AUTO] Order status update: 180
+2023-03-17 00:26:16.128791 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:16.128830 [INFO   ] [AUTO] Sending ask: 181 Price: 147600 Volume:56
+2023-03-17 00:26:16.128832 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:16.128840 [INFO   ] [AUTO] Sending bid: 182 Price: 146500 Volume:43
+2023-03-17 00:26:16.128841 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:16.129176 [INFO   ] [AUTO] Order status update: 180
+2023-03-17 00:26:16.129201 [INFO   ] [AUTO] Order status update: 181
+2023-03-17 00:26:16.129232 [INFO   ] [AUTO] Order status update: 182
+2023-03-17 00:26:16.597285 [INFO   ] [AUTO] Cancelling: 182 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:16.597501 [INFO   ] [AUTO] Order status update: 182
+2023-03-17 00:26:16.884849 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:16.884921 [INFO   ] [AUTO] Sending bid: 183 Price: 146400 Volume:43
+2023-03-17 00:26:16.884925 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:16.885693 [INFO   ] [AUTO] Order status update: 183
+2023-03-17 00:26:17.060045 [INFO   ] [AUTO] Sending ask: 184 Price: 147500 Volume:56
+2023-03-17 00:26:17.060051 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:17.062002 [INFO   ] [AUTO] Order status update: 181
+2023-03-17 00:26:17.062026 [INFO   ] [AUTO] Order status update: 184
+2023-03-17 00:26:17.302465 [INFO   ] [AUTO] Cancelling: 183 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:17.302498 [INFO   ] [AUTO] Sending ask: 185 Price: 147400 Volume:56
+2023-03-17 00:26:17.302501 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:17.302780 [INFO   ] [AUTO] Order status update: 183
+2023-03-17 00:26:17.302806 [INFO   ] [AUTO] Order status update: 184
+2023-03-17 00:26:17.302843 [INFO   ] [AUTO] Order status update: 185
+2023-03-17 00:26:17.542447 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:17.542507 [INFO   ] [AUTO] Sending bid: 186 Price: 146200 Volume:43
+2023-03-17 00:26:17.542511 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:17.542774 [INFO   ] [AUTO] Order status update: 186
+2023-03-17 00:26:17.820688 [INFO   ] [AUTO] Cancelling: 186 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:17.820746 [INFO   ] [AUTO] Sending ask: 187 Price: 147200 Volume:56
+2023-03-17 00:26:17.820749 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:17.820950 [INFO   ] [AUTO] Order status update: 186
+2023-03-17 00:26:17.820971 [INFO   ] [AUTO] Order status update: 185
+2023-03-17 00:26:17.820990 [INFO   ] [AUTO] Order status update: 187
+2023-03-17 00:26:18.134136 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:18.134192 [INFO   ] [AUTO] Sending bid: 188 Price: 146000 Volume:43
+2023-03-17 00:26:18.134197 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:18.134680 [INFO   ] [AUTO] Order status update: 188
+2023-03-17 00:26:18.629564 [INFO   ] [AUTO] Cancelling: 187 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:18.629604 [INFO   ] [AUTO] Sending bid: 189 Price: 146100 Volume:43
+2023-03-17 00:26:18.629608 [INFO   ] [AUTO] BID 3: 146900
+2023-03-17 00:26:18.630770 [INFO   ] [AUTO] Order status update: 187
+2023-03-17 00:26:18.630797 [INFO   ] [AUTO] Order status update: 188
+2023-03-17 00:26:18.630800 [INFO   ] [AUTO] Order status update: 189
+2023-03-17 00:26:18.843927 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:18.843969 [INFO   ] [AUTO] Sending ask: 190 Price: 147400 Volume:56
+2023-03-17 00:26:18.843973 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:18.843978 [INFO   ] [AUTO] Sending bid: 191 Price: 146200 Volume:43
+2023-03-17 00:26:18.843979 [INFO   ] [AUTO] BID 3: 146900
+2023-03-17 00:26:18.844459 [INFO   ] [AUTO] Order status update: 190
+2023-03-17 00:26:18.844480 [INFO   ] [AUTO] Order status update: 189
+2023-03-17 00:26:18.844505 [INFO   ] [AUTO] Order status update: 191
+2023-03-17 00:26:19.056730 [INFO   ] [AUTO] Cancelling: 191 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:19.056778 [INFO   ] [AUTO] Sending ask: 192 Price: 147200 Volume:56
+2023-03-17 00:26:19.056781 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:19.057219 [INFO   ] [AUTO] Order status update: 191
+2023-03-17 00:26:19.057240 [INFO   ] [AUTO] Order status update: 190
+2023-03-17 00:26:19.057262 [INFO   ] [AUTO] Order status update: 192
+2023-03-17 00:26:19.337360 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:19.337399 [INFO   ] [AUTO] Sending bid: 193 Price: 146000 Volume:43
+2023-03-17 00:26:19.337402 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:19.338233 [INFO   ] [AUTO] Order status update: 193
+2023-03-17 00:26:19.553473 [INFO   ] [AUTO] Sending ask: 194 Price: 147100 Volume:56
+2023-03-17 00:26:19.553481 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:19.553755 [INFO   ] [AUTO] Order status update: 192
+2023-03-17 00:26:19.553790 [INFO   ] [AUTO] Order status update: 194
+2023-03-17 00:26:20.368541 [INFO   ] [AUTO] Cancelling: 194 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:20.368546 [INFO   ] [AUTO] Cancelling: 193 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:20.369399 [INFO   ] [AUTO] Order status update: 194
+2023-03-17 00:26:20.369422 [INFO   ] [AUTO] Order status update: 193
+2023-03-17 00:26:20.581266 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:20.581322 [INFO   ] [AUTO] Sending ask: 195 Price: 147200 Volume:56
+2023-03-17 00:26:20.581325 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:20.581328 [INFO   ] [AUTO] Sending bid: 196 Price: 146100 Volume:43
+2023-03-17 00:26:20.581329 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:20.581826 [INFO   ] [AUTO] Order status update: 195
+2023-03-17 00:26:20.581868 [INFO   ] [AUTO] Order status update: 196
+2023-03-17 00:26:20.866314 [INFO   ] [AUTO] Cancelling: 195 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:20.866464 [INFO   ] [AUTO] Order status update: 195
+2023-03-17 00:26:21.110154 [INFO   ] [AUTO] Cancelling: 196 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:21.110214 [INFO   ] [AUTO] Sending ask: 197 Price: 147100 Volume:56
+2023-03-17 00:26:21.110218 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:21.110768 [INFO   ] [AUTO] Order status update: 196
+2023-03-17 00:26:21.110792 [INFO   ] [AUTO] Order status update: 197
+2023-03-17 00:26:21.340209 [INFO   ] [AUTO] Cancelling: 197 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:21.340216 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:21.340258 [INFO   ] [AUTO] Sending bid: 198 Price: 146000 Volume:43
+2023-03-17 00:26:21.340263 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:21.340336 [INFO   ] [AUTO] Order status update: 197
+2023-03-17 00:26:21.340575 [INFO   ] [AUTO] Order status update: 198
+2023-03-17 00:26:21.544943 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:21.544984 [INFO   ] [AUTO] Sending ask: 199 Price: 147200 Volume:56
+2023-03-17 00:26:21.544987 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:21.545168 [INFO   ] [AUTO] Order status update: 199
+2023-03-17 00:26:21.877723 [INFO   ] [AUTO] Cancelling: 198 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:21.877784 [INFO   ] [AUTO] Sending ask: 200 Price: 147100 Volume:56
+2023-03-17 00:26:21.877787 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:21.878345 [INFO   ] [AUTO] Order status update: 198
+2023-03-17 00:26:21.878366 [INFO   ] [AUTO] Order status update: 199
+2023-03-17 00:26:21.878401 [INFO   ] [AUTO] Order status update: 200
+2023-03-17 00:26:22.057725 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:22.057769 [INFO   ] [AUTO] Sending bid: 201 Price: 145900 Volume:43
+2023-03-17 00:26:22.057772 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:22.058492 [INFO   ] [AUTO] Order status update: 201
+2023-03-17 00:26:22.560740 [INFO   ] [AUTO] Cancelling: 201 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:22.560797 [INFO   ] [AUTO] Sending ask: 202 Price: 146800 Volume:56
+2023-03-17 00:26:22.560800 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:22.562492 [INFO   ] [AUTO] Order status update: 201
+2023-03-17 00:26:22.562517 [INFO   ] [AUTO] Order status update: 200
+2023-03-17 00:26:22.562520 [INFO   ] [AUTO] Order status update: 202
+2023-03-17 00:26:22.836091 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:22.836131 [INFO   ] [AUTO] Sending bid: 203 Price: 145700 Volume:43
+2023-03-17 00:26:22.836137 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:22.836211 [INFO   ] [AUTO] Order status update: 203
+2023-03-17 00:26:23.118552 [INFO   ] [AUTO] Cancelling: 202 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:23.118611 [INFO   ] [AUTO] Sending bid: 204 Price: 145800 Volume:43
+2023-03-17 00:26:23.118616 [INFO   ] [AUTO] BID 3: 146600
+2023-03-17 00:26:23.118946 [INFO   ] [AUTO] Order status update: 202
+2023-03-17 00:26:23.119110 [INFO   ] [AUTO] Order status update: 203
+2023-03-17 00:26:23.119532 [INFO   ] [AUTO] Order status update: 204
+2023-03-17 00:26:23.329546 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:23.329551 [INFO   ] [AUTO] Cancelling: 204 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:23.329632 [INFO   ] [AUTO] Sending ask: 205 Price: 146900 Volume:56
+2023-03-17 00:26:23.329636 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:23.329997 [INFO   ] [AUTO] Order status update: 204
+2023-03-17 00:26:23.330017 [INFO   ] [AUTO] Order status update: 205
+2023-03-17 00:26:23.580639 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:23.580690 [INFO   ] [AUTO] Sending bid: 206 Price: 145700 Volume:43
+2023-03-17 00:26:23.580693 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:23.580864 [INFO   ] [AUTO] Order status update: 206
+2023-03-17 00:26:23.882526 [INFO   ] [AUTO] Cancelling: 205 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:23.882578 [INFO   ] [AUTO] Sending bid: 207 Price: 145800 Volume:43
+2023-03-17 00:26:23.882582 [INFO   ] [AUTO] BID 3: 146600
+2023-03-17 00:26:23.884650 [INFO   ] [AUTO] Order status update: 205
+2023-03-17 00:26:23.884672 [INFO   ] [AUTO] Order status update: 206
+2023-03-17 00:26:23.884698 [INFO   ] [AUTO] Order status update: 207
+2023-03-17 00:26:24.058491 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:24.058558 [INFO   ] [AUTO] Sending ask: 208 Price: 147000 Volume:56
+2023-03-17 00:26:24.058561 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:24.058753 [INFO   ] [AUTO] Order status update: 208
+2023-03-17 00:26:24.321845 [INFO   ] [AUTO] Cancelling: 208 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:24.321890 [INFO   ] [AUTO] Sending bid: 209 Price: 146200 Volume:43
+2023-03-17 00:26:24.321897 [INFO   ] [AUTO] BID 3: 146600
+2023-03-17 00:26:24.322276 [INFO   ] [AUTO] Order status update: 208
+2023-03-17 00:26:24.322298 [INFO   ] [AUTO] Order status update: 207
+2023-03-17 00:26:24.322322 [INFO   ] [AUTO] Order status update: 209
+2023-03-17 00:26:24.560590 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:24.560595 [INFO   ] [AUTO] Cancelling: 209 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:24.560655 [INFO   ] [AUTO] Sending ask: 210 Price: 147300 Volume:56
+2023-03-17 00:26:24.560658 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:24.561213 [INFO   ] [AUTO] Order status update: 209
+2023-03-17 00:26:24.561263 [INFO   ] [AUTO] Order status update: 210
+2023-03-17 00:26:24.816667 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:24.816729 [INFO   ] [AUTO] Sending bid: 211 Price: 146100 Volume:43
+2023-03-17 00:26:24.816731 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:24.816917 [INFO   ] [AUTO] Order status update: 211
+2023-03-17 00:26:25.312140 [INFO   ] [AUTO] Cancelling: 210 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:25.312414 [INFO   ] [AUTO] Order status update: 210
+2023-03-17 00:26:25.572986 [INFO   ] [AUTO] Sending ask: 212 Price: 147300 Volume:56
+2023-03-17 00:26:25.572992 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:25.573640 [INFO   ] [AUTO] Order status update: 212
+2023-03-17 00:26:26.625450 [INFO   ] [AUTO] Cancelling: 212 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:26.625497 [INFO   ] [AUTO] Sending bid: 213 Price: 146200 Volume:43
+2023-03-17 00:26:26.625502 [INFO   ] [AUTO] BID 3: 146600
+2023-03-17 00:26:26.625782 [INFO   ] [AUTO] Order status update: 212
+2023-03-17 00:26:26.625805 [INFO   ] [AUTO] Order status update: 211
+2023-03-17 00:26:26.625832 [INFO   ] [AUTO] Order status update: 213
+2023-03-17 00:26:26.869632 [INFO   ] [AUTO] Cancelling: 213 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:26.869674 [INFO   ] [AUTO] Sending ask: 214 Price: 147300 Volume:56
+2023-03-17 00:26:26.869677 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:26.869845 [INFO   ] [AUTO] Order status update: 213
+2023-03-17 00:26:26.869911 [INFO   ] [AUTO] Order status update: 214
+2023-03-17 00:26:27.050829 [INFO   ] [AUTO] Cancelling: 214 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:27.050873 [INFO   ] [AUTO] Sending bid: 215 Price: 146200 Volume:43
+2023-03-17 00:26:27.050876 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:27.051083 [INFO   ] [AUTO] Order status update: 214
+2023-03-17 00:26:27.051103 [INFO   ] [AUTO] Order status update: 215
+2023-03-17 00:26:27.322594 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:27.322599 [INFO   ] [AUTO] Cancelling: 215 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:27.322631 [INFO   ] [AUTO] Sending ask: 216 Price: 147400 Volume:56
+2023-03-17 00:26:27.322635 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:27.323038 [INFO   ] [AUTO] Order status update: 215
+2023-03-17 00:26:27.323061 [INFO   ] [AUTO] Order status update: 216
+2023-03-17 00:26:27.623881 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:27.623930 [INFO   ] [AUTO] Sending ask: 217 Price: 147300 Volume:56
+2023-03-17 00:26:27.623933 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:27.623936 [INFO   ] [AUTO] Sending bid: 218 Price: 146100 Volume:43
+2023-03-17 00:26:27.623938 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:27.625181 [INFO   ] [AUTO] Order status update: 216
+2023-03-17 00:26:27.625612 [INFO   ] [AUTO] Order status update: 217
+2023-03-17 00:26:27.625632 [INFO   ] [AUTO] Order status update: 218
+2023-03-17 00:26:27.880122 [INFO   ] [AUTO] Cancelling: 217 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:27.880154 [INFO   ] [AUTO] Sending bid: 219 Price: 146200 Volume:43
+2023-03-17 00:26:27.880158 [INFO   ] [AUTO] BID 3: 146500
+2023-03-17 00:26:27.880527 [INFO   ] [AUTO] Order status update: 217
+2023-03-17 00:26:27.880565 [INFO   ] [AUTO] Order status update: 218
+2023-03-17 00:26:27.880864 [INFO   ] [AUTO] Order status update: 219
+2023-03-17 00:26:28.139414 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:28.139469 [INFO   ] [AUTO] Sending ask: 220 Price: 147400 Volume:56
+2023-03-17 00:26:28.139473 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:28.139734 [INFO   ] [AUTO] Order status update: 220
+2023-03-17 00:26:28.383131 [INFO   ] [AUTO] Sending ask: 221 Price: 147300 Volume:56
+2023-03-17 00:26:28.383136 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:28.383474 [INFO   ] [AUTO] Order status update: 220
+2023-03-17 00:26:28.383505 [INFO   ] [AUTO] Order status update: 221
+2023-03-17 00:26:28.543551 [INFO   ] [AUTO] Cancelling: 221 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:28.543745 [INFO   ] [AUTO] Order status update: 221
+2023-03-17 00:26:28.818761 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:28.818796 [INFO   ] [AUTO] Sending ask: 222 Price: 147400 Volume:56
+2023-03-17 00:26:28.818801 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:28.819061 [INFO   ] [AUTO] Order status update: 222
+2023-03-17 00:26:29.081962 [INFO   ] [AUTO] Cancelling: 222 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:29.082020 [INFO   ] [AUTO] Sending bid: 223 Price: 146400 Volume:43
+2023-03-17 00:26:29.082023 [INFO   ] [AUTO] BID 3: 146600
+2023-03-17 00:26:29.083066 [INFO   ] [AUTO] Order status update: 222
+2023-03-17 00:26:29.083070 [INFO   ] [AUTO] Order status update: 219
+2023-03-17 00:26:29.083092 [INFO   ] [AUTO] Order status update: 223
+2023-03-17 00:26:29.318503 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:29.318506 [INFO   ] [AUTO] Cancelling: 223 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:29.318562 [INFO   ] [AUTO] Sending ask: 224 Price: 147500 Volume:56
+2023-03-17 00:26:29.318565 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:29.318737 [INFO   ] [AUTO] Order status update: 223
+2023-03-17 00:26:29.318809 [INFO   ] [AUTO] Order status update: 224
+2023-03-17 00:26:29.588320 [INFO   ] [AUTO] Cancelling: 224 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:29.588328 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:29.588371 [INFO   ] [AUTO] Sending bid: 225 Price: 146300 Volume:43
+2023-03-17 00:26:29.588373 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:29.588579 [INFO   ] [AUTO] Order status update: 224
+2023-03-17 00:26:29.588627 [INFO   ] [AUTO] Order status update: 225
+2023-03-17 00:26:29.839302 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:29.839356 [INFO   ] [AUTO] Sending ask: 226 Price: 147800 Volume:56
+2023-03-17 00:26:29.839359 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:29.839362 [INFO   ] [AUTO] Sending bid: 227 Price: 146500 Volume:43
+2023-03-17 00:26:29.839363 [INFO   ] [AUTO] BID 3: 146500
+2023-03-17 00:26:29.839806 [INFO   ] [AUTO] Order status update: 226
+2023-03-17 00:26:29.839841 [INFO   ] [AUTO] Order status update: 225
+2023-03-17 00:26:29.839845 [INFO   ] [AUTO] Order status update: 227
+2023-03-17 00:26:30.383154 [INFO   ] [AUTO] Sending ask: 228 Price: 147700 Volume:56
+2023-03-17 00:26:30.383162 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:30.383316 [INFO   ] [AUTO] Order status update: 226
+2023-03-17 00:26:30.383452 [INFO   ] [AUTO] Order status update: 228
+2023-03-17 00:26:30.609629 [INFO   ] [AUTO] Cancelling: 227 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:30.610045 [INFO   ] [AUTO] Order status update: 227
+2023-03-17 00:26:30.828516 [INFO   ] [AUTO] Sending bid: 229 Price: 146500 Volume:43
+2023-03-17 00:26:30.828520 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:30.828856 [INFO   ] [AUTO] Order status update: 229
+2023-03-17 00:26:31.551271 [INFO   ] [AUTO] Cancelling: 228 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:31.551322 [INFO   ] [AUTO] Sending bid: 230 Price: 146600 Volume:43
+2023-03-17 00:26:31.551325 [INFO   ] [AUTO] BID 3: 146700
+2023-03-17 00:26:31.552765 [INFO   ] [AUTO] Order status update: 228
+2023-03-17 00:26:31.552787 [INFO   ] [AUTO] Order status update: 229
+2023-03-17 00:26:31.552809 [INFO   ] [AUTO] Order status update: 230
+2023-03-17 00:26:31.828059 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:31.828117 [INFO   ] [AUTO] Sending ask: 231 Price: 147900 Volume:56
+2023-03-17 00:26:31.828120 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:31.828123 [INFO   ] [AUTO] Sending bid: 232 Price: 146700 Volume:43
+2023-03-17 00:26:31.828124 [INFO   ] [AUTO] BID 3: 146800
+2023-03-17 00:26:31.828284 [INFO   ] [AUTO] Order status update: 231
+2023-03-17 00:26:31.828635 [INFO   ] [AUTO] Order status update: 230
+2023-03-17 00:26:31.828659 [INFO   ] [AUTO] Order status update: 232
+2023-03-17 00:26:32.106745 [INFO   ] [AUTO] Cancelling: 232 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:32.106818 [INFO   ] [AUTO] Sending ask: 233 Price: 147800 Volume:56
+2023-03-17 00:26:32.106822 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:32.107358 [INFO   ] [AUTO] Order status update: 232
+2023-03-17 00:26:32.107380 [INFO   ] [AUTO] Order status update: 231
+2023-03-17 00:26:32.107383 [INFO   ] [AUTO] Order status update: 233
+2023-03-17 00:26:32.302507 [INFO   ] [AUTO] Cancelling: 233 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:32.302512 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:32.302551 [INFO   ] [AUTO] Sending bid: 234 Price: 146600 Volume:43
+2023-03-17 00:26:32.302554 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:32.302797 [INFO   ] [AUTO] Order status update: 233
+2023-03-17 00:26:32.302852 [INFO   ] [AUTO] Order status update: 234
+2023-03-17 00:26:32.588689 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:32.588735 [INFO   ] [AUTO] Sending ask: 235 Price: 147900 Volume:56
+2023-03-17 00:26:32.588738 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:32.588899 [INFO   ] [AUTO] Order status update: 235
+2023-03-17 00:26:32.820430 [INFO   ] [AUTO] Sending bid: 236 Price: 146700 Volume:43
+2023-03-17 00:26:32.820435 [INFO   ] [AUTO] BID 3: 147500
+2023-03-17 00:26:32.820886 [INFO   ] [AUTO] Order status update: 234
+2023-03-17 00:26:32.820916 [INFO   ] [AUTO] Order status update: 236
+2023-03-17 00:26:33.092660 [INFO   ] [AUTO] Cancelling: 235 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:33.092789 [INFO   ] [AUTO] Order status update: 235
+2023-03-17 00:26:33.381945 [INFO   ] [AUTO] Sending ask: 237 Price: 147900 Volume:56
+2023-03-17 00:26:33.381950 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:33.382140 [INFO   ] [AUTO] Order status update: 237
+2023-03-17 00:26:34.094002 [INFO   ] [AUTO] Cancelling: 237 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:34.094051 [INFO   ] [AUTO] Sending bid: 238 Price: 146800 Volume:43
+2023-03-17 00:26:34.094055 [INFO   ] [AUTO] BID 3: 147500
+2023-03-17 00:26:34.094141 [INFO   ] [AUTO] Order status update: 237
+2023-03-17 00:26:34.094162 [INFO   ] [AUTO] Order status update: 236
+2023-03-17 00:26:34.094554 [INFO   ] [AUTO] Order status update: 238
+2023-03-17 00:26:34.296695 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:34.296753 [INFO   ] [AUTO] Sending ask: 239 Price: 148100 Volume:56
+2023-03-17 00:26:34.296756 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:34.296759 [INFO   ] [AUTO] Sending bid: 240 Price: 146900 Volume:43
+2023-03-17 00:26:34.296760 [INFO   ] [AUTO] BID 3: 147500
+2023-03-17 00:26:34.297111 [INFO   ] [AUTO] Order status update: 239
+2023-03-17 00:26:34.297131 [INFO   ] [AUTO] Order status update: 238
+2023-03-17 00:26:34.297163 [INFO   ] [AUTO] Order status update: 240
+2023-03-17 00:26:34.571149 [INFO   ] [AUTO] Cancelling: 240 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:34.571185 [INFO   ] [AUTO] Sending ask: 241 Price: 148000 Volume:56
+2023-03-17 00:26:34.571189 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:34.572640 [INFO   ] [AUTO] Order status update: 240
+2023-03-17 00:26:34.572662 [INFO   ] [AUTO] Order status update: 239
+2023-03-17 00:26:34.572685 [INFO   ] [AUTO] Order status update: 241
+2023-03-17 00:26:34.810934 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:34.810969 [INFO   ] [AUTO] Sending ask: 242 Price: 147900 Volume:56
+2023-03-17 00:26:34.810973 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:34.810975 [INFO   ] [AUTO] Sending bid: 243 Price: 146600 Volume:43
+2023-03-17 00:26:34.810976 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:34.812461 [INFO   ] [AUTO] Order status update: 241
+2023-03-17 00:26:34.812485 [INFO   ] [AUTO] Order status update: 242
+2023-03-17 00:26:34.812499 [INFO   ] [AUTO] Order status update: 243
+2023-03-17 00:26:35.061100 [INFO   ] [AUTO] Cancelling: 242 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:35.061149 [INFO   ] [AUTO] Sending bid: 244 Price: 146700 Volume:43
+2023-03-17 00:26:35.061152 [INFO   ] [AUTO] BID 3: 147500
+2023-03-17 00:26:35.061413 [INFO   ] [AUTO] Order status update: 242
+2023-03-17 00:26:35.061431 [INFO   ] [AUTO] Order status update: 243
+2023-03-17 00:26:35.061447 [INFO   ] [AUTO] Order status update: 244
+2023-03-17 00:26:35.391997 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:35.392035 [INFO   ] [AUTO] Sending ask: 245 Price: 148000 Volume:56
+2023-03-17 00:26:35.392038 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:35.392280 [INFO   ] [AUTO] Order status update: 245
+2023-03-17 00:26:35.548249 [INFO   ] [AUTO] Sending ask: 246 Price: 147900 Volume:56
+2023-03-17 00:26:35.548258 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:35.548728 [INFO   ] [AUTO] Order status update: 245
+2023-03-17 00:26:35.548786 [INFO   ] [AUTO] Order status update: 246
+2023-03-17 00:26:35.886264 [INFO   ] [AUTO] Cancelling: 246 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:35.886308 [INFO   ] [AUTO] Sending bid: 247 Price: 146800 Volume:43
+2023-03-17 00:26:35.886313 [INFO   ] [AUTO] BID 3: 147500
+2023-03-17 00:26:35.886609 [INFO   ] [AUTO] Order status update: 246
+2023-03-17 00:26:35.886636 [INFO   ] [AUTO] Order status update: 244
+2023-03-17 00:26:35.886693 [INFO   ] [AUTO] Order status update: 247
+2023-03-17 00:26:36.055202 [INFO   ] [AUTO] Sending ask: 248 Price: 147900 Volume:56
+2023-03-17 00:26:36.055209 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:36.055469 [INFO   ] [AUTO] Order status update: 248
+2023-03-17 00:26:36.358684 [INFO   ] [AUTO] Cancelling: 247 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:36.359018 [INFO   ] [AUTO] Order status update: 247
+2023-03-17 00:26:36.622491 [INFO   ] [AUTO] Cancelling: 248 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:36.622533 [INFO   ] [AUTO] Sending bid: 249 Price: 146800 Volume:43
+2023-03-17 00:26:36.622536 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:36.624555 [INFO   ] [AUTO] Order status update: 248
+2023-03-17 00:26:36.624579 [INFO   ] [AUTO] Order status update: 249
+2023-03-17 00:26:36.848261 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:36.848291 [INFO   ] [AUTO] Sending ask: 250 Price: 148100 Volume:56
+2023-03-17 00:26:36.848294 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:36.848299 [INFO   ] [AUTO] Sending bid: 251 Price: 147000 Volume:43
+2023-03-17 00:26:36.848301 [INFO   ] [AUTO] BID 3: 147500
+2023-03-17 00:26:36.848526 [INFO   ] [AUTO] Order status update: 250
+2023-03-17 00:26:36.848548 [INFO   ] [AUTO] Order status update: 249
+2023-03-17 00:26:36.848574 [INFO   ] [AUTO] Order status update: 251
+2023-03-17 00:26:37.126537 [INFO   ] [AUTO] Cancelling: 251 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:37.126684 [INFO   ] [AUTO] Order status update: 251
+2023-03-17 00:26:37.333494 [INFO   ] [AUTO] Cancelling: 0 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:37.333537 [INFO   ] [AUTO] Sending ask: 252 Price: 147900 Volume:56
+2023-03-17 00:26:37.333540 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:37.333543 [INFO   ] [AUTO] Sending bid: 253 Price: 146700 Volume:43
+2023-03-17 00:26:37.333544 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:37.333941 [INFO   ] [AUTO] Order status update: 250
+2023-03-17 00:26:37.333964 [INFO   ] [AUTO] Order status update: 252
+2023-03-17 00:26:37.333988 [INFO   ] [AUTO] Order status update: 253
+2023-03-17 00:26:38.561055 [INFO   ] [AUTO] Cancelling: 253 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:38.561492 [INFO   ] [AUTO] Order status update: 253
+2023-03-17 00:26:38.813579 [INFO   ] [AUTO] Cancelling: 252 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:38.813617 [INFO   ] [AUTO] Sending bid: 254 Price: 146700 Volume:43
+2023-03-17 00:26:38.813619 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:38.814049 [INFO   ] [AUTO] Order status update: 252
+2023-03-17 00:26:38.814086 [INFO   ] [AUTO] Order status update: 254
+2023-03-17 00:26:39.092459 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:39.092500 [INFO   ] [AUTO] Sending ask: 255 Price: 148000 Volume:56
+2023-03-17 00:26:39.092504 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:39.092507 [INFO   ] [AUTO] Sending bid: 256 Price: 146800 Volume:43
+2023-03-17 00:26:39.092508 [INFO   ] [AUTO] BID 3: 146700
+2023-03-17 00:26:39.092626 [INFO   ] [AUTO] Order status update: 255
+2023-03-17 00:26:39.092985 [INFO   ] [AUTO] Order status update: 254
+2023-03-17 00:26:39.093041 [INFO   ] [AUTO] Order status update: 256
+2023-03-17 00:26:39.337533 [INFO   ] [AUTO] Cancelling: 255 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:39.337593 [INFO   ] [AUTO] Sending bid: 257 Price: 147100 Volume:43
+2023-03-17 00:26:39.337597 [INFO   ] [AUTO] BID 3: 147000
+2023-03-17 00:26:39.337673 [INFO   ] [AUTO] Order status update: 255
+2023-03-17 00:26:39.337908 [INFO   ] [AUTO] Order status update: 256
+2023-03-17 00:26:39.337956 [INFO   ] [AUTO] Order status update: 257
+2023-03-17 00:26:39.548241 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:39.548246 [INFO   ] [AUTO] Cancelling: 257 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:39.548283 [INFO   ] [AUTO] Sending ask: 258 Price: 148200 Volume:56
+2023-03-17 00:26:39.548287 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:39.548834 [INFO   ] [AUTO] Order status update: 257
+2023-03-17 00:26:39.548855 [INFO   ] [AUTO] Order status update: 258
+2023-03-17 00:26:39.809978 [INFO   ] [AUTO] Cancelling: 258 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:39.810035 [INFO   ] [AUTO] Sending bid: 259 Price: 147300 Volume:43
+2023-03-17 00:26:39.810038 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:39.810561 [INFO   ] [AUTO] Order status update: 258
+2023-03-17 00:26:39.810579 [INFO   ] [AUTO] Order status update: 259
+2023-03-17 00:26:40.095870 [INFO   ] [AUTO] Cancelling: 0 We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
+2023-03-17 00:26:40.095926 [INFO   ] [AUTO] Sending ask: 260 Price: 149200 Volume:56
+2023-03-17 00:26:40.095932 [INFO   ] [AUTO] ASK 1
+2023-03-17 00:26:40.095935 [INFO   ] [AUTO] Sending bid: 261 Price: 147800 Volume:43
+2023-03-17 00:26:40.095936 [INFO   ] [AUTO] BID 3: 147700
+2023-03-17 00:26:40.096575 [INFO   ] [AUTO] Order status update: 260
+2023-03-17 00:26:40.096600 [INFO   ] [AUTO] Order status update: 259
+2023-03-17 00:26:40.096631 [INFO   ] [AUTO] Order status update: 261
+2023-03-17 00:26:40.308190 [INFO   ] [AUTO] Cancelling: 261 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:40.308228 [INFO   ] [AUTO] Sending ask: 262 Price: 148900 Volume:56
+2023-03-17 00:26:40.308232 [INFO   ] [AUTO] ASK 3
+2023-03-17 00:26:40.308369 [INFO   ] [AUTO] Order status update: 261
+2023-03-17 00:26:40.308407 [INFO   ] [AUTO] Order status update: 260
+2023-03-17 00:26:40.308688 [INFO   ] [AUTO] Order status update: 262
+2023-03-17 00:26:40.605168 [INFO   ] [AUTO] Sending bid: 263 Price: 147800 Volume:43
+2023-03-17 00:26:40.605173 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:40.605733 [INFO   ] [AUTO] Order status update: 263
+2023-03-17 00:26:40.810531 [INFO   ] [AUTO] Cancelling: 263 We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
+2023-03-17 00:26:40.810715 [INFO   ] [AUTO] Order status update: 263
+2023-03-17 00:26:41.082372 [INFO   ] [AUTO] Sending bid: 264 Price: 147800 Volume:43
+2023-03-17 00:26:41.082378 [INFO   ] [AUTO] BID 1
+2023-03-17 00:26:41.083028 [INFO   ] [AUTO] Order status update: 264
+2023-03-17 00:26:41.632625 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 00:26:41.632639 [INFO   ] [AUTO] execution connection lost
+2023-03-17 00:26:41.632642 [INFO   ] [CON] 'Info' closing
+2023-03-17 00:26:41.632649 [INFO   ] [CON] 'Exec' closing

@@ -16,8 +16,8 @@
 //     License along with Ready Trader Go.  If not, see
 //     <https://www.gnu.org/licenses/>.
 
-// What variables to we have to change here
-// Bid ask clearance, fut clearance
+// Maybe hedge when we hit max either side to stop prolonged fall causing bad directional exposure when there iss lots of momentum
+
 #include <array>
 
 #include <boost/asio/io_context.hpp>
@@ -25,22 +25,22 @@
 #include <ready_trader_go/logging.h>
 
 #include "autotrader.h"
-
-#include <ctime>
-#include <algorithm>
 #include <iostream>
 
 using namespace ReadyTraderGo;
 
 RTG_INLINE_GLOBAL_LOGGER_WITH_CHANNEL(LG_AT, "AUTO")
 
-constexpr int LOT_SIZE = 10;
 constexpr unsigned long POSITION_LIMIT = 100;
 constexpr int TICK_SIZE_IN_CENTS = 100;
-constexpr int BID_ASK_CLEARANCE = 1 * TICK_SIZE_IN_CENTS;
-constexpr int FUT_CLEARANCE = 1 * TICK_SIZE_IN_CENTS;
+constexpr int FUT_CLEARANCE = 0 * TICK_SIZE_IN_CENTS;
 constexpr int MIN_BID_NEARST_TICK = (MINIMUM_BID + TICK_SIZE_IN_CENTS) / TICK_SIZE_IN_CENTS * TICK_SIZE_IN_CENTS;
 constexpr int MAX_ASK_NEAREST_TICK = MAXIMUM_ASK / TICK_SIZE_IN_CENTS * TICK_SIZE_IN_CENTS;
+constexpr int TICKS_PER_SECOND = 4;
+constexpr int MAX_UNHEDGED_SEC = 55;
+constexpr int MAX_UNHEDGED_TICKS = MAX_UNHEDGED_SEC * TICKS_PER_SECOND;
+constexpr int HEDGE_LIMIT = 10;
+
 
 AutoTrader::AutoTrader(boost::asio::io_context& context) : BaseAutoTrader(context)
 {
@@ -55,7 +55,17 @@ void AutoTrader::DisconnectHandler()
 void AutoTrader::ErrorMessageHandler(unsigned long clientOrderId,
                                      const std::string& errorMessage)
 {
-    RLOG(LG_AT, LogLevel::LL_INFO) << "error with order " << clientOrderId << ": " << errorMessage;
+    // RLOG(LG_AT, LogLevel::LL_INFO) << "error with order " << clientOrderId << ": " << errorMessage;
+
+    if (errorMessage[19] == 'c') {
+        // std::cout << "hehe" << std::endl;
+        if (clientOrderId == mAskId) {
+            mAskInCross = true;
+            // RLOG(LG_AT, LogLevel::LL_INFO) << "ASK IN CROSS: " << mAskId;
+        }
+        else if (clientOrderId == mBidId) mBidInCross = true;
+    }
+
     if (clientOrderId != 0 && ((mAsks.count(clientOrderId) == 1) || (mBids.count(clientOrderId) == 1)))
     {
         OrderStatusMessageHandler(clientOrderId, 0, 0, 0);
@@ -66,8 +76,21 @@ void AutoTrader::HedgeFilledMessageHandler(unsigned long clientOrderId,
                                            unsigned long price,
                                            unsigned long volume)
 {
-    RLOG(LG_AT, LogLevel::LL_INFO) << "hedge order " << clientOrderId << " filled for " << volume
-                                   << " lots at $" << price << " average price in cents";
+    // RLOG(LG_AT, LogLevel::LL_INFO) << "hedge order " << clientOrderId << " filled for " << volume
+    //                                << " lots at $" << price << " average price in cents";
+    if (clientOrderId == mHedgeAskId) {
+        futPosition -= volume;
+        mHedgeAskId = 0;
+    }
+
+    else if (clientOrderId == mHedgeBidId) {
+        futPosition += volume;
+        mHedgeBidId = 0;
+    }
+
+    else {
+        RLOG(LG_AT, LogLevel::LL_INFO) << "Unrecognised hedge order: " << clientOrderId;
+    }
 }
 
 // Handles main logic when order book info comes through about futures or ETF
@@ -84,253 +107,181 @@ void AutoTrader::OrderBookMessageHandler(Instrument instrument,
     // Copy futures info into attributes to use when the etf order message comes through after
     // See if any current order need to be altered
     if (instrument == Instrument::FUTURE) {
-        
-        // No future asks and we have a etf ask -> cancel our ask
-        if (!askPrices[0] && mAskPrice) {
-            SendCancelOrder(mAskId);
-            RLOG(LG_AT, LogLevel::LL_INFO) << "Cancelling: " << mAskId << " No future asks and we have a etf ask -> cancel our ask";
-        }
-        // We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask
-        if (mAskPrice && askPrices[0] && mAskPrice < askPrices[0] + FUT_CLEARANCE) {
-            SendCancelOrder(mAskId);
-            RLOG(LG_AT, LogLevel::LL_INFO) << "Cancelling: " << mAskId << " We have an ask and there is future ask and our ask is below the futures ask (bad) -> cancel our ask";
+
+        // There are futures asks
+        if (askPrices[0]) {
+            // If we have an ask
+            if (mAskId) {
+                // If ask is not at ideal price
+                if (mAskPrice != askPrices[0] + FUT_CLEARANCE) {
+                    // RLOG(LG_AT, LogLevel::LL_INFO) << "CANCELLING ASK: " << mAskId;
+                    mAskCancelId = mAskId;
+                    SendCancelOrder(mAskId);
+                    makeAskBasedOnFut(askPrices[0]);
+                    // RLOG(LG_AT, LogLevel::LL_INFO) << "SENDING ASK: " << mAskId;                    
+                }
+            }
+            // If we dont have an ask -> make a new one
+            else {
+                makeAskBasedOnFut(askPrices[0]);
+                // RLOG(LG_AT, LogLevel::LL_INFO) << "SENDING ASK: " << mAskId;                    
+            }
         }
 
-        // No future bids and we have a etf bid -> cancel our bid
-        if (!bidPrices[0] && mBidPrice) {
-            SendCancelOrder(mBidId);
-            RLOG(LG_AT, LogLevel::LL_INFO) << "Cancelling: " << mBidId << " No future bids and we have a etf bid -> cancel our bid";
+        // If there are futures bids
+        // if we have a current bid
+        if (mBidId) {
+            // If current bid is not in optimal spot -> cancel and make new bid
+            if (mBidPrice != bidPrices[0] - FUT_CLEARANCE) {
+                
+                // RLOG(LG_AT, LogLevel::LL_INFO) << "CANCELLING BID: " << mBidId;
+                mBidCancelId = mBidId;
+                SendCancelOrder(mBidId);
+                makeBidBasedOnFut(bidPrices[0]);
+                // RLOG(LG_AT, LogLevel::LL_INFO) << "SENDING BID: " << mBidId;
+            }
         }
-        // We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid
-        if (mBidPrice && bidPrices[0] && mBidPrice > bidPrices[0] - FUT_CLEARANCE) {
-            SendCancelOrder(mBidId);
-            RLOG(LG_AT, LogLevel::LL_INFO) << "Cancelling: " << mBidId << " We have a bid and there is future id and our bid is above the futures bid (bad) -> cancel our bid";
+        // We have no curr bid -> create a new one
+        else {
+            makeBidBasedOnFut(bidPrices[0]);
+            // RLOG(LG_AT, LogLevel::LL_INFO) << "SENDING BID: " << mBidId;
         }
 
         // Copy in futures values to be used when etf info comes through
-        // std::copy(askPrices.begin(), askPrices.end(), prevAskPrices.begin());
-        // std::copy(askVolumes.begin(), askVolumes.end(), prevAskVolumes.begin());
-        // std::copy(bidPrices.begin(), bidPrices.end(), prevBidPrices.begin());
-        // std::copy(bidVolumes.begin(), bidVolumes.end(), prevBidVolumes.begin());
-        futAskPrice = askPrices[0];
-        futAskVol = askVolumes[0];
-        futBidPrice = bidPrices[0];
-        futBidVol = bidVolumes[0];
+        // futAskPrice = askPrices[0];
+        // futBidPrice = bidPrices[0];
+
+        // RLOG(LG_AT, LogLevel::LL_INFO) << "BID: " << bidPrices[0] << " ASK: " << askPrices[0];
     }
-    // See if we can make a market with new orders
+
+    // ETF order book update
     else {
 
-        // RLOG(LG_AT, LogLevel::LL_INFO) << "mAskPrice " << mAskPrice << "  futAskPrice" << futAskPrice;
+        // if (ticksUnhedged % 10 == 0) {
+        //     RLOG(LG_AT, LogLevel::LL_INFO) << "SECONDS UNHEDGED: " << ticksUnhedged / 4 << "  ETF POS: " << etfPosition << " FUT POS: " << futPosition;
+            
+        // }
 
-        // 1. Do we need to modify an existing order to increase the spread
-        // 2. Has our order gone out of the money and a new one need to be placed
-
-        // no current ask -> create a new one
-        if (mAskId == 0) {
-            if (futAskPrice != 0) {
-                makeAsk(askPrices[0]);
-                RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 1";
-            }
+        // Check hedging info - only happens on etf order updates, 4x second
+        // If hedge is within limits
+        unsigned int unhedgedVol = abs((-etfPosition) - futPosition);
+        if (unhedgedVol <= HEDGE_LIMIT) {
+            ticksUnhedged = 0;
         }
+        // Hedge out of limit
         else {
-
-            // Create a better spread (increase ask)
-            // My order is less than our ideal ask (askPrices[0] - BID_ASK_CLEARACE)
-            if (mAskPrice < askPrices[0] - BID_ASK_CLEARANCE) {
-                // RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 2";
-                // setUpAwaitingCancelOrder(mAskId, askPrices[0] - TICK_SIZE_IN_CENTS, true);
-                // cancelOrder(mAskId, true);
-                SendCancelOrder(mAskId);
-                mAskId = ++mNextMessageId;
-                unsigned long makeAskVol = maxAskVol();
-                RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 2";
-                mAsks.insert(mAskId);
-                SendInsertOrder(mAskId, Side::SELL, askPrices[0] - BID_ASK_CLEARANCE, makeAskVol, Lifespan::GOOD_FOR_DAY);
-                RLOG(LG_AT, LogLevel::LL_INFO) << "Sending ask: " << mAskId << " Price: " << askPrices[0] << " Vol: " << makeAskVol;
-            }
-
-            // Our ask is greater than ideal position based on competitors
-            // Our ask is above ideal position based on futures ask price
-            // Then move it down
-            if (mAskPrice > askPrices[0] - BID_ASK_CLEARANCE && mAskPrice > futAskPrice + FUT_CLEARANCE) {
-                // RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 3";
-                // setUpAwaitingCancelOrder(mAskId, getMakeAskPrice(askPrices[0]), true);
-                // cancelOrder(mAskId, true);
-                SendCancelOrder(mAskId);
-                makeAsk(askPrices[0]);
-                RLOG(LG_AT, LogLevel::LL_INFO) << "ASK 3";
+            // See if we have been unhedged too long
+            if (ticksUnhedged > MAX_UNHEDGED_TICKS) {
+                int futTargetPosition = -etfPosition;
+                int futTargetDiff = futTargetPosition - futPosition;
+                // Need to sell hedge to get down to target fut position
+                if (futTargetDiff < 0) {
+                    // RLOG(LG_AT, LogLevel::LL_INFO) << "HEDGE, SELL VOL: " << -futTargetDiff;
+                    SendHedgeOrder(++mNextMessageId, Side::SELL, MIN_BID_NEARST_TICK, -futTargetDiff);
+                    mHedgeAskId = mNextMessageId;
+                }
+                // Need to buy to get up to fut target pos
+                else {
+                    // RLOG(LG_AT, LogLevel::LL_INFO) << "HEDGE, BUY VOL: " << futTargetDiff;
+                    SendHedgeOrder(++mNextMessageId, Side::BUY, MAX_ASK_NEAREST_TICK, futTargetDiff);
+                    mHedgeBidId = mNextMessageId;
+                }
+                ticksUnhedged = 0;
+            } else {
+                ticksUnhedged++;
             }
         }
-
-        // No current bid
-        std::cout << bidPrices[0] << std::endl;
-        if (!mBidId) {
-            if (futBidPrice) {
-                makeBid(bidPrices[0]);
-                RLOG(LG_AT, LogLevel::LL_INFO) << "BID 1";
-            }
-        }
-        else {
-            // Create a better spread, lower bid
-            // our bid is higher than ideal price based on competitors bids
-            if (mBidPrice > bidPrices[0] + BID_ASK_CLEARANCE) {
-                // setUpAwaitingCancelOrder(mBidId, bidPrices[0] + TICK_SIZE_IN_CENTS, false);
-                // cancelOrder(mBidId, false);
-                SendCancelOrder(mBidId);
-                mBidId = ++mNextMessageId;
-                unsigned long makeBidVol = maxBidVol();
-                SendInsertOrder(mBidId, Side::BUY, bidPrices[0] + BID_ASK_CLEARANCE, makeBidVol, Lifespan::GOOD_FOR_DAY);
-                mBids.insert(mBidId);
-                RLOG(LG_AT, LogLevel::LL_INFO) << "BID 2";
-                RLOG(LG_AT, LogLevel::LL_INFO) << "Sending bid: " << mBidId << " Price: " << bidPrices[0] << " Vol: " << makeBidVol;
-            }
-
-            // Our bid is lower than ideal price based on competitors 
-            // Our bid is less than ideal price based on futures bid
-            // Then move bid up to a competitive price or just below fut bid price
-            if (mBidPrice < bidPrices[0] + BID_ASK_CLEARANCE && mBidPrice < futBidPrice - FUT_CLEARANCE) {
-                // setUpAwaitingCancelOrder(mBidId, getMakeBidPrice(bidPrices[0]), false);
-                // cancelOrder(mBidId, false);
-                SendCancelOrder(mBidId);
-                makeBid(bidPrices[0]);
-                RLOG(LG_AT, LogLevel::LL_INFO) << "BID 3: " << bidPrices[0];
-            }
-        } 
     }
 }
 
-void AutoTrader::makeAsk(unsigned long etfBestAskPrice) {
-
+void AutoTrader::makeAskBasedOnFut(unsigned long futBestAskPrice) {
     unsigned long makeAskVol = maxAskVol();
-    if (!makeAskVol) return;
+    if (makeAskVol) {
 
-    // How high do we put aks if there are no asks?????
-    // if (!etfBestAskPrice) mAskPrice = futAskPrice + TICK_SIZE_IN_CENTS;
-    // else mAskPrice = std::max(futAskPrice + TICK_SIZE_IN_CENTS, etfBestAskPrice - TICK_SIZE_IN_CENTS);
-    mAskPrice = getMakeAskPrice(etfBestAskPrice);
+        mAskPrice = futBestAskPrice + FUT_CLEARANCE;
 
-    mAskId = ++mNextMessageId;
-
-    SendInsertOrder(mAskId, Side::SELL, mAskPrice, makeAskVol, Lifespan::GOOD_FOR_DAY);
-    RLOG(LG_AT, LogLevel::LL_INFO) << "Sending ask: " << mAskId << " Price: " << mAskPrice << " Volume:" << makeAskVol;
-    mAsks.insert(mAskId);
-
-    // is this redundant??
-    mMakeAskAwaitingCancelId = 0;
+        SendInsertOrder(++mNextMessageId, Side::SELL, mAskPrice, makeAskVol, Lifespan::GOOD_FOR_DAY);
+        mAskId = mNextMessageId;
+        mAskVol = makeAskVol;
+        mAsks.insert(mAskId);
+    }
 }
 
-unsigned long AutoTrader::getMakeAskPrice(unsigned long etfBestAskPrice) {
-    if (!etfBestAskPrice) return futAskPrice + 3 * FUT_CLEARANCE;
-    else return std::max(futAskPrice + FUT_CLEARANCE, etfBestAskPrice - BID_ASK_CLEARANCE);
+void AutoTrader::makeBidBasedOnFut(unsigned long futBestBidPrice) {
+    unsigned long makeBidVol = maxBidVol();
+    if (makeBidVol) {
+
+        mBidPrice = futBestBidPrice - FUT_CLEARANCE;
+
+        SendInsertOrder(++mNextMessageId, Side::BUY, mBidPrice, makeBidVol, Lifespan::GOOD_FOR_DAY);
+        mBidId = mNextMessageId;
+        mBids.insert(mBidId);
+        mBidVol = makeBidVol;
+    }
 }
 
 unsigned long AutoTrader::maxAskVol() {
     return (POSITION_LIMIT + etfPosition) / 2;
 }
 
-void AutoTrader::makeBid(unsigned long etfBestBidPrice) {
-
-    unsigned long makeBidVol = maxBidVol();
-    if (!makeBidVol) return;
-
-    // if (!etfBestBidPrice) mBidPrice = futBidPrice - 10 * TICK_SIZE_IN_CENTS;
-    // else mBidPrice = std::min(futBidPrice - TICK_SIZE_IN_CENTS, etfBestBidPrice + TICK_SIZE_IN_CENTS);
-    mBidPrice = getMakeBidPrice(etfBestBidPrice);
-
-    mBidId = ++mNextMessageId;
-
-    SendInsertOrder(mBidId, Side::BUY, mBidPrice, makeBidVol, Lifespan::GOOD_FOR_DAY);
-    RLOG(LG_AT, LogLevel::LL_INFO) << "Sending bid: " << mBidId << " Price: " << mBidPrice << " Volume:" << makeBidVol;
-    mBids.insert(mBidId);
-
-    mMakeBidAwaitingCancelId = 0;
-
-}
-
-unsigned long AutoTrader::getMakeBidPrice(unsigned long etfBestBidPrice) {
-    if (!etfBestBidPrice) return futBidPrice - 3 * TICK_SIZE_IN_CENTS;
-    return std::min(futBidPrice - FUT_CLEARANCE, etfBestBidPrice + BID_ASK_CLEARANCE);
-}
-
 unsigned long AutoTrader::maxBidVol() {
     return (POSITION_LIMIT - etfPosition) / 2;
 }
-
-void AutoTrader::replaceCancelledTrade(bool ask, unsigned long remainingVol) {
-
-    if (ask) {
-
-
-        unsigned long makeAskVol = maxAskVol();
-        if (makeAskVol <= remainingVol) return;
-        makeAskVol -= remainingVol;
-
-        mAskId = ++mNextMessageId;
-        SendInsertOrder(mAskId, Side::SELL, mMakeAskAwaitingCancelPrice, makeAskVol, Lifespan::GOOD_FOR_DAY);
-        RLOG(LG_AT, LogLevel::LL_INFO) << "Sending ask: " << mAskId << " Price:" << mMakeAskAwaitingCancelPrice << " Volume:" << makeAskVol;
-        RLOG(LG_AT, LogLevel::LL_INFO) << "Ask: " << mMakeAskAwaitingCancelId << "Cancelled, rem vol: " << remainingVol;
-        mMakeAskAwaitingCancelId = 0;
-        mAsks.insert(mAskId);
-
-    } else {
-
-        unsigned long makeBidVol = maxBidVol();
-        if (makeBidVol <= remainingVol) return;
-        makeBidVol -= remainingVol;
-
-        mBidId = ++mNextMessageId;
-        SendInsertOrder(mBidId, Side::BUY, mMakeBidAwaitingCancelPrice, makeBidVol, Lifespan::GOOD_FOR_DAY);
-        RLOG(LG_AT, LogLevel::LL_INFO) << "Bid: " << mMakeBidAwaitingCancelId << "Cancelled, rem vol: " << remainingVol;
-        RLOG(LG_AT, LogLevel::LL_INFO) << "Sending bid: " << mBidId << " Price:" << mMakeBidAwaitingCancelPrice << " Volume:" << makeBidVol;
-        mMakeBidAwaitingCancelId = 0;
-        mBids.insert(mBidId);
-
-    }
-
-}
-
-void AutoTrader::cancelOrder(unsigned long id, bool ask) {
-
-    RLOG(LG_AT, LogLevel::LL_INFO) << "Cancelling order: " << id;
-
-    SendCancelOrder(id);
-    if (ask) {
-        mAskId = 0;
-        mAskPrice = 0;
-    } else {
-        mBidId = 0;
-        mBidPrice = 0;
-    }
-}
-
-void AutoTrader::setUpAwaitingCancelOrder(unsigned long id, unsigned long price, bool ask) {
-    if (ask) {
-        mMakeAskAwaitingCancelId = id;
-        mMakeAskAwaitingCancelPrice = price;
-
-    } else {
-        mMakeBidAwaitingCancelId = id;
-        mMakeBidAwaitingCancelPrice = price;
-    }
-}
-
 
 void AutoTrader::OrderFilledMessageHandler(unsigned long clientOrderId,
                                            unsigned long price,
                                            unsigned long volume)
 {
+    // RLOG(LG_AT, LogLevel::LL_INFO) << "ORDER FILLED: " << clientOrderId << " PRICE: " << price << " VOL: " << volume;
     if (mAsks.count(clientOrderId) == 1)
     {
         etfPosition -= (long)volume;
-        SendHedgeOrder(++mNextMessageId, Side::BUY, MAX_ASK_NEAREST_TICK, volume);
+        // SendHedgeOrder(++mNextMessageId, Side::BUY, MAX_ASK_NEAREST_TICK, volume);
+        
+        // If this was the previous ask that we attempted to cancel
+        if (clientOrderId == mAskCancelId) {
+            // If most recent bid was cancelled for being in cross with the ask that just got cancelled/filled -> resend bid
+            if (mBidInCross) {
+                RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED BID: " << mBidId;               
+                makeBidBasedOnFut(mBidPrice);
+                mBidInCross = false;
+            }
+            
+            // Check if most recent ask has too much volume in case this order was filled when it should have been cancelled
+            unsigned long newVol = maxAskVol();
+            if (newVol < mAskVol) {
+                SendAmendOrder(mAskId, newVol);
+                // RLOG(LG_AT, LogLevel::LL_INFO) << "ORDER AMENDED: " << mAskId << " FROM: " << mAskVol << " TO: " << newVol;
+                mBidVol = newVol;
+            }
+        }
     }
     else if (mBids.count(clientOrderId) == 1)
     {
         etfPosition += (long)volume;
-        SendHedgeOrder(++mNextMessageId, Side::SELL, MIN_BID_NEARST_TICK, volume);
+        // SendHedgeOrder(++mNextMessageId, Side::SELL, MIN_BID_NEARST_TICK, volume);
+
+        // If this was the prev bid we attempted to cancel
+        if (clientOrderId == mBidCancelId) {
+
+            // If most recent ask was cancelled for being in cross with this order that just got cancelled/filled -> resend ask
+            if (mAskInCross) {
+                RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED ASK: " << mAskId;
+                makeAskBasedOnFut(mAskPrice);
+                mAskInCross = false;
+            }
+
+            // Check if most recent bid now has too much volume in case prev bid filled not cancelled
+            unsigned long newVol = maxBidVol();
+            if (newVol < mBidVol) {
+                SendAmendOrder(mBidId, newVol);
+                // RLOG(LG_AT, LogLevel::LL_INFO) << "ORDER AMENDED: " << mBidId << " FROM: " << mBidVol << " TO: " << newVol;
+                mBidVol = newVol;
+            }
+        }
     }
-    RLOG(LG_AT, LogLevel::LL_INFO) << "order " << clientOrderId << " filled for " << volume
-                                   << " lots at $" << price << " cents";
+    // RLOG(LG_AT, LogLevel::LL_INFO) << "order " << clientOrderId << " filled for " << volume
+    //                                << " lots at $" << price << " cents";
 }
 
 void AutoTrader::OrderStatusMessageHandler(unsigned long clientOrderId,
@@ -338,14 +289,22 @@ void AutoTrader::OrderStatusMessageHandler(unsigned long clientOrderId,
                                            unsigned long remainingVolume,
                                            signed long fees)
 {
-    RLOG(LG_AT, LogLevel::LL_INFO) << "Order status update: " << clientOrderId;
-
-    // Check if it is a cancelled trade that now needs ot place a new trade
-    // if (clientOrderId == mMakeAskAwaitingCancelId) replaceCancelledTrade(true, remainingVolume);
-    // else if (clientOrderId == mMakeBidAwaitingCancelId) replaceCancelledTrade(false, remainingVolume);
+    // RLOG(LG_AT, LogLevel::LL_INFO) << "Order status update: " << clientOrderId;
 
     if (!remainingVolume)
     {
+
+        if (clientOrderId == mBidCancelId && mAskInCross) {
+            // RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED ASK: " << mAskId << " FINISHED ORDER: " << clientOrderId << " PRICE: " << mAskPrice << " VOL: " << mAskVol;
+            makeAskBasedOnFut(mAskPrice);
+            mAskInCross = false;
+        }
+        else if (clientOrderId == mAskCancelId && mBidInCross) {
+            // RLOG(LG_AT, LogLevel::LL_INFO) << "REPLACING CROSSED BID: " << mBidId << " FINISHED ORDER: " << clientOrderId << " PRICE: " << mBidPrice << " VOL: " << mBidVol;               
+            makeBidBasedOnFut(mBidPrice);
+            mBidInCross = false;
+        }
+
         if (clientOrderId == mAskId)
         {
             mAskId = 0;
@@ -357,6 +316,7 @@ void AutoTrader::OrderStatusMessageHandler(unsigned long clientOrderId,
 
         mAsks.erase(clientOrderId);
         mBids.erase(clientOrderId);
+
     }
 }
 

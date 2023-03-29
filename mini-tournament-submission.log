@@ -1,0 +1,400 @@
+2023-03-17 10:20:15.793889 [INFO   ] [APP] application started
+2023-03-17 10:20:15.794298 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-17 10:20:15.794502 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 10:20:15.794702 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 10:20:15.794718 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-17 11:10:36.693421 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-17 11:10:36.693444 [INFO   ] [CON] 'Info' closing
+2023-03-17 11:10:36.693450 [INFO   ] [CON] 'Exec' closing
+2023-03-17 19:31:26.408588 [INFO   ] [APP] application started
+2023-03-17 19:31:26.408911 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-17 19:31:26.409296 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-17 19:31:26.409510 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-17 19:31:26.409525 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-17 19:42:03.406191 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-17 19:42:03.406220 [INFO   ] [CON] 'Info' closing
+2023-03-17 19:42:03.406230 [INFO   ] [CON] 'Exec' closing
+2023-03-18 16:03:32.871563 [INFO   ] [APP] application started
+2023-03-18 16:03:32.872314 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 16:03:32.873055 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 16:03:32.873174 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 16:03:32.873187 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 16:19:46.828252 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-18 16:19:46.828276 [INFO   ] [CON] 'Info' closing
+2023-03-18 16:19:46.828289 [INFO   ] [CON] 'Exec' closing
+2023-03-18 16:46:23.976977 [INFO   ] [APP] application started
+2023-03-18 16:46:23.977355 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 16:46:23.977724 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 16:46:23.978010 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 16:46:23.978026 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 17:01:29.014755 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 17:01:29.014778 [INFO   ] [CON] 'Info' closing
+2023-03-18 17:01:29.014786 [INFO   ] [CON] 'Exec' closing
+2023-03-18 17:06:03.609789 [INFO   ] [APP] application started
+2023-03-18 17:06:03.611782 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 17:06:03.612836 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 17:06:03.613203 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 17:06:03.613268 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 17:21:08.216434 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-18 17:21:08.216454 [INFO   ] [CON] 'Info' closing
+2023-03-18 17:21:08.216466 [INFO   ] [CON] 'Exec' closing
+2023-03-18 17:25:29.599690 [INFO   ] [APP] application started
+2023-03-18 17:25:29.600076 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 17:25:29.600533 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 17:25:29.600667 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 17:25:29.600703 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 17:40:34.134436 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 17:40:34.134448 [INFO   ] [CON] 'Info' closing
+2023-03-18 17:40:34.134455 [INFO   ] [CON] 'Exec' closing
+2023-03-18 17:42:49.015326 [INFO   ] [APP] application started
+2023-03-18 17:42:49.015612 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 17:42:49.016122 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 17:42:49.016317 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 17:42:49.016354 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 17:57:53.610264 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-18 17:57:53.610280 [INFO   ] [CON] 'Info' closing
+2023-03-18 17:57:53.610294 [INFO   ] [CON] 'Exec' closing
+2023-03-18 22:23:14.089452 [INFO   ] [APP] application started
+2023-03-18 22:23:14.089744 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 22:23:14.090162 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 22:23:14.090355 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 22:23:14.090365 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 22:23:41.582042 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 22:23:41.582060 [INFO   ] [CON] 'Info' closing
+2023-03-18 22:23:41.582069 [INFO   ] [CON] 'Exec' closing
+2023-03-18 22:25:01.443485 [INFO   ] [APP] application started
+2023-03-18 22:25:01.443725 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 22:25:01.443902 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 22:25:01.444060 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 22:25:01.444073 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 22:30:03.346922 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 22:30:03.346946 [INFO   ] [CON] 'Info' closing
+2023-03-18 22:30:03.346961 [INFO   ] [CON] 'Exec' closing
+2023-03-18 22:32:52.815703 [INFO   ] [APP] application started
+2023-03-18 22:32:52.815967 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 22:32:52.816313 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 22:32:52.816483 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 22:32:52.816494 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 22:39:53.510162 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 22:39:53.510192 [INFO   ] [CON] 'Info' closing
+2023-03-18 22:39:53.510214 [INFO   ] [CON] 'Exec' closing
+2023-03-18 22:41:51.834933 [INFO   ] [APP] application started
+2023-03-18 22:41:51.835227 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 22:41:51.835582 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 22:41:51.835759 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 22:41:51.835769 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 22:51:40.941304 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 22:51:40.941322 [INFO   ] [CON] 'Info' closing
+2023-03-18 22:51:40.941338 [INFO   ] [CON] 'Exec' closing
+2023-03-18 22:54:29.544593 [INFO   ] [APP] application started
+2023-03-18 22:54:29.544880 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 22:54:29.545098 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 22:54:29.545195 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 22:54:29.545207 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 23:00:42.141576 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 23:00:42.141596 [INFO   ] [CON] 'Info' closing
+2023-03-18 23:00:42.141611 [INFO   ] [CON] 'Exec' closing
+2023-03-18 23:00:45.310964 [INFO   ] [APP] application started
+2023-03-18 23:00:45.311177 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 23:00:45.311451 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 23:00:45.311655 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 23:00:45.311667 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 23:01:28.277830 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 23:01:28.277848 [INFO   ] [CON] 'Info' closing
+2023-03-18 23:01:28.277857 [INFO   ] [CON] 'Exec' closing
+2023-03-18 23:02:18.157850 [INFO   ] [APP] application started
+2023-03-18 23:02:18.158248 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 23:02:18.158406 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 23:02:18.158603 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 23:02:18.158613 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 23:09:38.891661 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 23:09:38.891683 [INFO   ] [CON] 'Info' closing
+2023-03-18 23:09:38.891697 [INFO   ] [CON] 'Exec' closing
+2023-03-18 23:11:07.318212 [INFO   ] [APP] application started
+2023-03-18 23:11:07.318386 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 23:11:07.318745 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 23:11:07.318929 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 23:11:07.318939 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 23:11:10.871473 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 23:11:10.871493 [INFO   ] [CON] 'Info' closing
+2023-03-18 23:11:10.871504 [INFO   ] [CON] 'Exec' closing
+2023-03-18 23:11:36.958681 [INFO   ] [APP] application started
+2023-03-18 23:11:36.959014 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 23:11:36.959147 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 23:11:36.959324 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 23:11:36.959343 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 23:14:19.626373 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-18 23:14:19.626390 [INFO   ] [CON] 'Info' closing
+2023-03-18 23:14:19.626405 [INFO   ] [CON] 'Exec' closing
+2023-03-18 23:32:22.650732 [INFO   ] [APP] application started
+2023-03-18 23:32:22.651033 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 23:32:22.651466 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 23:32:22.651636 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 23:32:22.651647 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-18 23:47:27.182218 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-18 23:47:27.182253 [INFO   ] [CON] 'Info' closing
+2023-03-18 23:47:27.182271 [INFO   ] [CON] 'Exec' closing
+2023-03-18 23:59:00.062259 [INFO   ] [APP] application started
+2023-03-18 23:59:00.062524 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-18 23:59:00.063061 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-18 23:59:00.063266 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-18 23:59:00.063281 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 00:14:04.816612 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 00:14:04.816639 [INFO   ] [CON] 'Info' closing
+2023-03-19 00:14:04.816651 [INFO   ] [CON] 'Exec' closing
+2023-03-19 00:15:04.514890 [INFO   ] [APP] application started
+2023-03-19 00:15:04.515180 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 00:15:04.515555 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 00:15:04.515730 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 00:15:04.515743 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 00:30:08.802438 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 00:30:08.802453 [INFO   ] [CON] 'Info' closing
+2023-03-19 00:30:08.802465 [INFO   ] [CON] 'Exec' closing
+2023-03-19 00:45:17.488768 [INFO   ] [APP] application started
+2023-03-19 00:45:17.489208 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 00:45:17.489403 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 00:45:17.489558 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 00:45:17.489570 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 01:01:59.036031 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 01:01:59.036075 [INFO   ] [CON] 'Info' closing
+2023-03-19 01:01:59.036098 [INFO   ] [CON] 'Exec' closing
+2023-03-19 01:06:13.571022 [INFO   ] [APP] application started
+2023-03-19 01:06:13.571301 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 01:06:13.571558 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 01:06:13.571731 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 01:06:13.571744 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 01:21:18.124153 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 01:21:18.124195 [INFO   ] [CON] 'Info' closing
+2023-03-19 01:21:18.124218 [INFO   ] [CON] 'Exec' closing
+2023-03-19 01:23:36.215922 [INFO   ] [APP] application started
+2023-03-19 01:23:36.216312 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 01:23:36.216688 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 01:23:36.216890 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 01:23:36.216900 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 01:38:40.960652 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 01:38:40.960661 [INFO   ] [CON] 'Info' closing
+2023-03-19 01:38:40.960668 [INFO   ] [CON] 'Exec' closing
+2023-03-19 01:43:27.228590 [INFO   ] [APP] application started
+2023-03-19 01:43:27.229482 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 01:43:27.229959 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 01:43:27.230130 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 01:43:27.230151 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 01:43:54.528270 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 01:43:54.528287 [INFO   ] [CON] 'Info' closing
+2023-03-19 01:43:54.528303 [INFO   ] [CON] 'Exec' closing
+2023-03-19 01:49:19.240902 [INFO   ] [APP] application started
+2023-03-19 01:49:19.241510 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 01:49:19.241724 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 01:49:19.241920 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 01:49:19.241938 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 02:04:24.102348 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 02:04:24.102393 [INFO   ] [CON] 'Info' closing
+2023-03-19 02:04:24.102409 [INFO   ] [CON] 'Exec' closing
+2023-03-19 02:05:09.512627 [INFO   ] [APP] application started
+2023-03-19 02:05:09.512894 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 02:05:09.513367 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 02:05:09.513451 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 02:05:09.513462 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 02:13:48.544547 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 02:13:48.544572 [INFO   ] [CON] 'Info' closing
+2023-03-19 02:13:48.544590 [INFO   ] [CON] 'Exec' closing
+2023-03-19 07:13:21.082303 [INFO   ] [APP] application started
+2023-03-19 07:13:21.082692 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 07:13:21.083078 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 07:13:21.083188 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 07:13:21.083198 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 11:33:16.924571 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 11:33:16.924605 [INFO   ] [CON] 'Info' closing
+2023-03-19 11:33:16.924615 [INFO   ] [CON] 'Exec' closing
+2023-03-19 11:40:30.255944 [INFO   ] [APP] application started
+2023-03-19 11:40:30.256681 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 11:40:30.257214 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 11:40:30.257413 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 11:40:30.257427 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 11:55:35.056225 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 11:55:35.056247 [INFO   ] [CON] 'Info' closing
+2023-03-19 11:55:35.056262 [INFO   ] [CON] 'Exec' closing
+2023-03-19 11:58:27.469694 [INFO   ] [APP] application started
+2023-03-19 11:58:27.470129 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 11:58:27.470824 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 11:58:27.471085 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 11:58:27.471096 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 12:13:35.147110 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 12:13:35.147131 [INFO   ] [CON] 'Info' closing
+2023-03-19 12:13:35.147145 [INFO   ] [CON] 'Exec' closing
+2023-03-19 14:50:24.918955 [INFO   ] [APP] application started
+2023-03-19 14:50:24.919360 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 14:50:24.919644 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 14:50:24.919769 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 14:50:24.919780 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 20:24:27.404987 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 20:24:27.405020 [INFO   ] [CON] 'Info' closing
+2023-03-19 20:24:27.405055 [INFO   ] [CON] 'Exec' closing
+2023-03-19 20:55:09.401257 [INFO   ] [APP] application started
+2023-03-19 20:55:09.401557 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 20:55:09.401846 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 20:55:09.402033 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 20:55:09.402049 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 20:56:03.899894 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 20:56:03.899907 [INFO   ] [CON] 'Info' closing
+2023-03-19 20:56:03.899927 [INFO   ] [CON] 'Exec' closing
+2023-03-19 20:56:42.689665 [INFO   ] [APP] application started
+2023-03-19 20:56:42.690047 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 20:56:42.690325 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 20:56:42.690466 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 20:56:42.690482 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 21:11:47.320577 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 21:11:47.320591 [INFO   ] [CON] 'Info' closing
+2023-03-19 21:11:47.320601 [INFO   ] [CON] 'Exec' closing
+2023-03-19 21:49:50.391543 [INFO   ] [APP] application started
+2023-03-19 21:49:50.391946 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 21:49:50.392552 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 21:49:50.392711 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 21:49:50.392723 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 22:00:07.633182 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 22:00:07.633195 [INFO   ] [CON] 'Info' closing
+2023-03-19 22:00:07.633202 [INFO   ] [CON] 'Exec' closing
+2023-03-19 22:03:36.204958 [INFO   ] [APP] application started
+2023-03-19 22:03:36.205344 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 22:03:36.205589 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 22:03:36.205703 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 22:03:36.205722 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 22:03:51.069903 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 22:03:51.069921 [INFO   ] [CON] 'Info' closing
+2023-03-19 22:03:51.069930 [INFO   ] [CON] 'Exec' closing
+2023-03-19 22:04:10.919002 [INFO   ] [APP] application started
+2023-03-19 22:04:10.919635 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 22:04:10.920240 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 22:04:10.920541 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 22:04:10.920564 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 22:10:54.886131 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 22:10:54.886148 [INFO   ] [CON] 'Info' closing
+2023-03-19 22:10:54.886156 [INFO   ] [CON] 'Exec' closing
+2023-03-19 22:22:53.461363 [INFO   ] [APP] application started
+2023-03-19 22:22:53.462010 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 22:22:53.462589 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 22:22:53.462835 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 22:22:53.462860 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 22:37:58.081470 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-19 22:37:58.081485 [INFO   ] [CON] 'Info' closing
+2023-03-19 22:37:58.081498 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:16:46.002080 [INFO   ] [APP] application started
+2023-03-19 23:16:46.002403 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:16:46.002899 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:16:46.003094 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:16:46.003112 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:17:15.498576 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:17:15.498591 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:17:15.498599 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:19:11.305985 [INFO   ] [APP] application started
+2023-03-19 23:19:11.306598 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:19:11.307031 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:19:11.307456 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:19:11.307489 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:19:39.260889 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:19:39.260902 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:19:39.260910 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:20:07.516314 [INFO   ] [APP] application started
+2023-03-19 23:20:07.517101 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:20:07.517346 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:20:07.517573 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:20:07.517592 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:20:32.495566 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:20:32.495581 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:20:32.495593 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:22:32.829490 [INFO   ] [APP] application started
+2023-03-19 23:22:32.829986 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:22:32.830388 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:22:32.830621 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:22:32.830641 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:22:49.724072 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:22:49.724089 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:22:49.724100 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:25:45.891484 [INFO   ] [APP] application started
+2023-03-19 23:25:45.891992 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:25:45.892518 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:25:45.892773 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:25:45.892795 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:26:40.372778 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:26:40.372794 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:26:40.372806 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:41:16.075435 [INFO   ] [APP] application started
+2023-03-19 23:41:16.075905 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:41:16.076435 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:41:16.076609 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:41:16.076633 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:41:48.551734 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:41:48.551749 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:41:48.551758 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:45:41.058601 [INFO   ] [APP] application started
+2023-03-19 23:45:41.059166 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:45:41.059537 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:45:41.059792 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:45:41.059810 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:48:33.973020 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:48:33.973035 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:48:33.973046 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:48:43.956424 [INFO   ] [APP] application started
+2023-03-19 23:48:43.956806 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:48:43.957088 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:48:43.957200 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:48:43.957221 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:54:29.485179 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:54:29.485192 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:54:29.485200 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:55:23.513393 [INFO   ] [APP] application started
+2023-03-19 23:55:23.513663 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:55:23.514216 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:55:23.514293 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:55:23.514304 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-19 23:55:25.586990 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-19 23:55:25.587010 [INFO   ] [CON] 'Info' closing
+2023-03-19 23:55:25.587017 [INFO   ] [CON] 'Exec' closing
+2023-03-19 23:55:38.635572 [INFO   ] [APP] application started
+2023-03-19 23:55:38.636300 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-19 23:55:38.636812 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-19 23:55:38.637082 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-19 23:55:38.637106 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-20 00:00:25.980793 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-20 00:00:25.980807 [INFO   ] [CON] 'Info' closing
+2023-03-20 00:00:25.980819 [INFO   ] [CON] 'Exec' closing
+2023-03-20 00:00:46.389812 [INFO   ] [APP] application started
+2023-03-20 00:00:46.390363 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-20 00:00:46.390888 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-20 00:00:46.391140 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-20 00:00:46.391156 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-20 00:01:16.682447 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-20 00:01:16.682466 [INFO   ] [CON] 'Info' closing
+2023-03-20 00:01:16.682474 [INFO   ] [CON] 'Exec' closing
+2023-03-20 00:02:31.824178 [INFO   ] [APP] application started
+2023-03-20 00:02:31.824894 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-20 00:02:31.825212 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-20 00:02:31.825434 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-20 00:02:31.825461 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-20 00:03:27.114424 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-20 00:03:27.114458 [INFO   ] [CON] 'Info' closing
+2023-03-20 00:03:27.114492 [INFO   ] [CON] 'Exec' closing
+2023-03-20 00:07:25.274628 [INFO   ] [APP] application started
+2023-03-20 00:07:25.275689 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-20 00:07:25.275999 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-20 00:07:25.276232 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-20 00:07:25.276254 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-20 00:08:27.863151 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-20 00:08:27.863165 [INFO   ] [CON] 'Info' closing
+2023-03-20 00:08:27.863173 [INFO   ] [CON] 'Exec' closing
+2023-03-20 00:13:20.561013 [INFO   ] [APP] application started
+2023-03-20 00:13:20.561424 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-20 00:13:20.562397 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-20 00:13:20.562748 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-20 00:13:20.562765 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-20 00:18:44.748711 [INFO   ] [CON] 'Exec' remote disconnect
+2023-03-20 00:18:44.748728 [INFO   ] [CON] 'Info' closing
+2023-03-20 00:18:44.748735 [INFO   ] [CON] 'Exec' closing
+2023-03-20 00:18:55.821661 [INFO   ] [APP] application started
+2023-03-20 00:18:55.822017 [INFO   ] [APP] loading configuration from 'mini-tournament-submission.json'
+2023-03-20 00:18:55.822349 [INFO   ] [CON] connecting to: 127.0.0.1:12345
+2023-03-20 00:18:55.822523 [INFO   ] [CON] connected successfully to: 127.0.0.1:12345
+2023-03-20 00:18:55.822536 [INFO   ] [BASE] logging in with teamname='mini-tournament-submission' and secret='secret'
+2023-03-20 00:22:33.963377 [ERROR  ] [CON] 'Exec' read error: Connection reset by peer
+2023-03-20 00:22:33.963385 [INFO   ] [CON] 'Info' closing
+2023-03-20 00:22:33.963391 [INFO   ] [CON] 'Exec' closing
